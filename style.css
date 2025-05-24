@@ -44,16 +44,19 @@ h2 {
 
 .buttons {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 2rem;   /* vertical gap between rows */
+  column-gap: 2%;  /* horizontal gap between buttons */
   margin: 0 auto 2rem auto;
-  max-width: 1000px;
-  padding: 0 20px;
+  max-width: 90%;
+  padding: 0;
 }
 
 button {
-  flex: 1 1 18%;
+  flex: 1 1 28%;
+  max-width: 160px;
+  min-width: 100px;
   aspect-ratio: 1 / 1;
   background-color: #283338;
   color: white;
@@ -65,10 +68,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1rem; /* fallback spacing */
 }
 
+
+
 button:hover {
-  background-color: #a200ca;
+  background-color: #0080a0;
 }
 
 footer {
@@ -80,7 +86,7 @@ footer {
 }
 
 a {
-  color: #a200ca;
+  color: #0080a0;
   text-decoration: none;
 }
 
@@ -107,22 +113,27 @@ a {
   max-width: 600px;
   padding: 5%;
   border-radius: 7px;
-  border: 50% solid #283338;
+  border: 3px solid #283338;
   text-align: center;
 }
 
 .back-btn {
   background-color: #283338;
-  width: 10%;
   color: white;
   border: none;
-  padding: 0.5em 1em;
+  height: 2em;              /* control height */
+  line-height: 2em;
+  padding: 0 1.2em;         /* horizontal padding only */
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  margin-bottom: 1em;
+  margin: 1.5em auto 0 auto;
+  display: block;
+  width: fit-content;
 }
 
+
+
 .back-btn:hover {
-  background-color: #a200ca;
+  background-color: #0080a0;
 }
