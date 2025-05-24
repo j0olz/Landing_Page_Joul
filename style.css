@@ -9,7 +9,7 @@ body {
 
 header {
   background: #222;
-  color: white;
+  color: #ffffff;
   padding: 2rem 1rem;
 }
 
@@ -21,6 +21,7 @@ header h1 {
 header p {
   font-size: 1rem;
   margin: 0.3rem 0;
+  color:  #ffffff;
 }
 
 section {
@@ -28,11 +29,11 @@ section {
 }
 
 h2 {
-  color: #283338;
+  color: #333;
   margin-top: 0;
-}
+} 
 
-.cover-letter, .projects, .contact {
+.who, .projects, .contact {
   background: white;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -67,7 +68,7 @@ button {
 }
 
 button:hover {
-  background-color: #0077cc;
+  background-color: #a200ca;
 }
 
 footer {
@@ -79,7 +80,7 @@ footer {
 }
 
 a {
-  color: #283338;
+  color: #a200ca;
   text-decoration: none;
 }
 
@@ -106,7 +107,7 @@ a {
   max-width: 600px;
   padding: 5%;
   border-radius: 7px;
-  border: 3px solid #283338;
+  border: 50% solid #283338;
   text-align: center;
 }
 
@@ -123,5 +124,5 @@ a {
 }
 
 .back-btn:hover {
-  background-color: #0077cc;
+  background-color: #a200ca;
 }
