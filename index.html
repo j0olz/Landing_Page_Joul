@@ -19,7 +19,11 @@
 
   <section class="who">
     <h2>Who?</h2>
-    <p>I am a passionate Mechatronics Engineering graduate with experience in technical innovation, project leadership, and global student engagement.</p>
+    <p>A mechatronics enthusiast who loves mixing tech, creativity, and hands-on problem solving. 
+      From building sensor fusion systems to organizing international student events
+       (and even throwing a few punches in the ring 🥊),
+       I've packed a lot of stories into these projects. Feel free to click around,
+        check out my work. </p>
   </section>
 
   <section class="projects">
@@ -51,24 +55,65 @@
   </div>
 </div>
 
+<script>
+  const popupTexts = {
+    "sports": `
+🏅 Sports Activities & Achievements
 
-  <script>
-    const popupTexts = {
-      "sports": "Gold medals in Muay Thai and international competitions. Represented Morocco at IFMA.",
-      "part-time": "Assistant Manager at Beauhope Café – managed operations and installed technical systems.",
-      "freelance": "Academic writing, tutoring, and electronics repair via Khamsat and Mostaql.",
-      "academic": "Sensor fusion project using LiDAR and camera; internship at Hitronik with CNC restoration.",
-      "extra": "VP of USMi Society, led 100+ person events and cultural exchange programs."
-    };
+Outside of tech, sports have always grounded me. From the discipline of Muay Thai to the community feel of weekend futsal, I’ve found a lot of lessons that shape how I work.
 
-    function showPopup(category) {
-      document.getElementById('popup-text').innerText = popupTexts[category];
-      document.getElementById('popup').style.display = 'flex';
-    }
+🥊 Martial Arts
+- 🥇 Gold Medalist – UAE Muay Thai Championship (–60kg, 2018 & 2019)
+- 🥇 Primal Fight Night Champion – 1st Place, Open Muay Thai, UAE (2017)
+- 🌍 International Representation – Competed for Morocco in the IFMA Youth World Championship (Thailand), following intensive national training
+- 🥇 Gold Medal – UAE Kickboxing Youth Category, 2018
+- 🥇🥈 Multiple Medals – Emirates Boxing Championships (–57kg, 2017–2019), earning both Gold and Silver finishes
 
-    function closePopup() {
-      document.getElementById('popup').style.display = 'none';
-    }
-  </script>
+🏊‍♂️ Swimming
+- ✅ Regular Swimmer – Ongoing habit for fitness and recovery
+- 🏁 Swimming Marathon Participant – (Please provide event name, year, and distance to complete this entry)
+
+ Local Sports in Malaysia
+- ⚽ Futsal – Played 3× per week with hostel mates, building teamwork and endurance
+- 🏸 Badminton – Practiced weekly with friends and competed informally with locals
+- 🏃‍♂️ Jogging – Developed a consistent morning run routine during COVID-19 lockdowns
+    `,
+    "part-time": "Assistant Manager at Beauhope Café – managed operations and installed technical systems.",
+    "freelance": "Academic writing, tutoring, and electronics repair via Khamsat and Mostaql.",
+    "academic": "Sensor fusion project using LiDAR and camera; internship at Hitronik with CNC restoration.",
+    "extra": `
+🌍 Extracurricular Activities & Student Leadership
+
+Getting involved beyond the classroom has helped me grow as a communicator, planner, and team player. From cultural events to international exchanges, each activity brought something new to the table.
+
+🎓 Leadership Roles
+- Deputy President (2023–2024) and Deputy Secretary General (2024–2025)
+  - International Student Society (USMi), Universiti Sains Malaysia
+  - Oversaw interdepartmental coordination and society-wide initiatives
+  - Organized large-scale events: International Food Fiesta (RM 20,000+ budget, 100+ participants)
+  - Co-directed the Explorace Treasure Hunt; led society inaugurations
+  - Delivered impromptu speeches and handled internal documentation and policy updates
+
+🌐 Cultural Exchange & Integration
+- METAMORPHOSIS Camp participant – Teambuilding and multicultural awareness program
+- Exchange programs with NYP Singapore and South Korea – cross-cultural engagement and learning
+
+🙌 Volunteering & Social Impact
+- Takatof Volunteer Program – Community engagement in the UAE
+- Sustainability volunteer – Beach cleanup with Keysight Technologies, Malaysia
+`
+
+  };
+
+  function showPopup(category) {
+ document.getElementById('popup-text').innerHTML = popupTexts[category].replace(/\n/g, "<br>");
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
