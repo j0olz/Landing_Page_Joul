@@ -46,36 +46,33 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 2rem;   /* vertical gap between rows */
-  column-gap: 2%;  /* horizontal gap between buttons */
+  gap: 2% 2%;  /* vertical and horizontal gap */
   margin: 0 auto 2rem auto;
   max-width: 90%;
   padding: 0;
 }
 
-button {
+.button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  background-color: #283338;
+  border-radius: 7px;
   flex: 1 1 28%;
   max-width: 160px;
   min-width: 100px;
   aspect-ratio: 1 / 1;
-  background-color: #283338;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 7px;
-  transition: background 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem; /* fallback spacing */
+  transition: background-color 0.3s ease;
 }
 
-
-
-button:hover {
+.button-link:hover {
   background-color: #0080a0;
 }
+
 
 footer {
   background: #222;
