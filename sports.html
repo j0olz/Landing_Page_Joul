@@ -3,53 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🏅 Sports Activities & Achievements | Seif-Eddine Joul</title>
+  <title>🏅 Sports Activities & Achievements</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Seif-Eddine Joul</h1>
-    <p>Practical & Observant Engineer | Witty & Adaptable Leader | Always a Student</p>
-    <p>
-      <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> | 
-      <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
-    </p>
-  </header>
-
-  <section class="who">
-    <h2>🏅 Sports Activities & Achievements</h2>
-    <p>Outside of tech, sports have always grounded me. From the discipline of Muay Thai to the community feel of weekend futsal, I’ve found a lot of lessons that shape how I work.</p>
-  </section>
-
-  <section class="projects">
-    <h2>My Projects</h2>
-    <div class="project-body" style="white-space: pre-wrap; text-align: left; max-width: 800px; margin: 0 auto;">
+<header>
+  <h1>Seif-Eddine Joul</h1>
+  <p>Practical & Observant Engineer | Witty & Adaptable Leader | Always a Student</p>
+  <p>
+    <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> | 
+    <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
+  </p>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <span class="icon">🌙</span>
+  </button>
+</header>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const icon = toggle.querySelector('.icon');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      icon.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      icon.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    }
+  });
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    icon.textContent = '☀️';
+  }
+</script>
+<section class="who">
+  <h2>🏅 Sports Activities & Achievements</h2>
+  <p>Outside of tech, sports have always grounded me. From the discipline of Muay Thai to the community feel of weekend futsal, I’ve found a lot of lessons that shape how I work.</p>
+</section>
+<section class="projects">
+  <h2>My Projects</h2>
+  <div class="project-body" style="white-space: pre-wrap; text-align: left; max-width: 800px; margin: 0 auto;">
 🥊 Martial Arts
-- Gold Medalist – UAE Muay Thai Championship (–60kg, 2018 & 2019)
-- Primal Fight Night Champion – 1st Place, Open Muay Thai, UAE (2017)
-- International Representation – Competed for Morocco in the IFMA Youth World Championship (Thailand), following intensive national training
-- Gold Medal – UAE Kickboxing Youth Category, 2018
-- Multiple Medals – Emirates Boxing Championships (–57kg, 2017–2019), earning both Gold and Silver finishes
+- 🥇 Gold Medalist – UAE Muay Thai Championship (–60kg, 2018 & 2019)
+- 🥇 Primal Fight Night Champion – 1st Place, Open Muay Thai, UAE (2017)
+- 🌍 Represented Morocco at the IFMA Youth World Championship (Thailand)
 
 🏊‍♂️ Swimming
-- Regular Swimmer – Ongoing habit for fitness and recovery
-- Swimming Marathon Participant – (Please provide event name, year, and distance to complete this entry)
+- ✅ Regular Swimmer – ongoing habit for fitness
+- 🏁 Participated in swimming marathons (details coming)
 
-🇲🇾 Local Sports in Malaysia
-- Futsal – Played 3× per week with hostel mates, building teamwork and endurance
-- Badminton – Practiced weekly with friends and competed informally with locals
-- Jogging – Developed a consistent morning run routine during COVID-19 lockdowns
+🇲🇾 Malaysian Activities
+- ⚽ Futsal – Played 3x weekly with hostel mates
+- 🏸 Badminton – Practiced weekly and competed informally
+- 🏃‍♂️ Jogging – Early runs during COVID lockdowns
 </div>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
-    <p>Phone: +212 631293071 <img src="wts.png" alt="WhatsApp" class="icon"> </p>
-  </section>
-
-  <footer>
-    &copy; 2025 Seif-Eddine Joul | All rights reserved.
-  </footer>
+</section>
+<section class="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
+  <p>Phone: +212 631293071 <img src="wts.png" alt="WhatsApp" class="icon"> </p>
+</section>
+<button onclick="location.href='index.html'" class="home-btn">🏠 Home</button>
+<footer>
+  &copy; 2025 Seif-Eddine Joul | All rights reserved.
+</footer>
 </body>
 </html>
