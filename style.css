@@ -127,3 +127,30 @@ body.dark .button-link:hover {
 .home-btn:hover {
   background-color: #0080a0;
 }
+
+.project-divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 2rem 0;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: white;
+  width: 80%;
+  max-width: 600px;
+  padding: 5%;
+  border-radius: 7px;
+  border: 3px solid #283338;
+  text-align: center;
+}

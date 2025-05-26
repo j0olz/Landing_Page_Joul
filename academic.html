@@ -6,6 +6,16 @@
   <title>🎓 Academic Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
+<script>
+  function openPopup(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+  function closePopup(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+</script>
+
 <body>
 <header>
   <h1>Seif-Eddine Joul</h1>
@@ -40,19 +50,140 @@
   <h2>🎓 Academic Projects</h2>
   <p>My academic journey has always been hands-on. I focused on projects that combine engineering with real-world problems, especially in robotics and automation.</p>
 </section>
+
 <section class="projects">
   <h2>My Projects</h2>
-  <div class="project-body" style="white-space: pre-wrap; text-align: left; max-width: 800px; margin: 0 auto;">
-🧠 Final Year Project
-- Built a LiDAR-camera sensor fusion system for depth estimation
+  <div class="project-body" style="max-width: 800px; margin: 0 auto; text-align: left;">
 
-🏭 Internship – Hitronik
-- Circuit design, CNC calibration, embedded integration (Arduino/Raspberry Pi)
+    <div class="project-section">
 
-🤖 Competitions
-- Built and programmed a 6-legged line-following robot
-</div>
+  <p>🛰️ <strong>Sensor Fusion – LiDAR and Camera Integration in MATLAB</strong><br><br>
+
+    <strong>Summary:</strong><br>
+    Developed a full MATLAB-based simulation for integrating LiDAR point cloud data with camera images to enhance environmental perception and object detection in autonomous systems.<br><br>
+
+    • Collected real-world data using a Helios 16-channel LiDAR and C922 Pro camera, and processed <code>.pcd</code> and <code>.bag</code> files for calibration.<br>
+    • Used MATLAB’s Image Acquisition, LiDAR, and ROS Toolboxes to perform intrinsic/extrinsic calibration and align sensor data via projective transformation.<br>
+    • Applied YOLOv4 object detection to classify vehicles and pedestrians from camera frames and estimate object distance using pixel dimensions and LiDAR depth.<br>
+    • Achieved accurate 3D-to-2D projection with average alignment error under 3.5%.<br>
+    • Proposed future enhancements such as real-time ROS node integration and dynamic streaming.<br><br>
+
+    <strong>What I learned:</strong><br>
+    • Sensor calibration (intrinsic & extrinsic)<br>
+    • MATLAB programming with LiDAR, Image, and ROS Toolboxes<br>
+    • YOLOv4 object detection and bounding box post-processing<br>
+    • 3D–2D point projection and spatial data fusion<br>
+    • Distance estimation from image features<br>
+    • Accuracy validation and visualization overlays  
+  </p> <button class="home-btn" onclick="openPopup('popup1')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+  <p>🧾 <strong>Project: Coin Classification and Sorting Machine</strong><br><br>
+
+    <strong>Summary:</strong><br>
+    Built an Arduino-powered mechanical system for classifying and sorting Malaysian coins using a rotating sensor track, image classification, and a solenoid-based sorter.<br><br>
+
+    • Designed a detection path using IR sensors and a camera module; coins were classified based on physical dimensions and edge reflection patterns.<br>
+    • Developed Python-based logic to distinguish RM0.10, RM0.20, RM0.50, and RM1 coins, achieving 88% classification accuracy over 100 randomized test runs.<br>
+    • Automated coin dispensing via rotating solenoid gates and feedback loop on object validation.<br><br>
+
+    <strong>Skills Gained:</strong><br>
+    • Python scripting for image-based object classification<br>
+    • IR and camera sensor data handling<br>
+    • Mechanical sorting using Arduino-controlled solenoids<br>
+    • Accuracy testing, performance tuning, and error filtering
+  </p> <button class="home-btn" onclick="openPopup('popup2')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+  <p>🚁 <strong>DoE & ANOVA – Drone Delivery Efficiency Simulation</strong><br><br>
+
+    <strong>Summary:</strong><br>
+    Designed and ran a simulation-based experiment to test how increasing drone platform capacity (2, 5, 7, 10 packets) impacts delivery time in a multi-drone logistics system. The experiment used Design of Experiments (DoE) principles and one-way ANOVA for analysis.<br><br>
+
+    • Defined platform capacity as the main independent factor and used mean delivery time (for last 100 packets) as the response variable.<br>
+    • Simulated over 20 delivery scenarios using fixed constants: drones, max charge, charging speed, view range, terrain, and platforms.<br>
+    • Applied one-way ANOVA on the results; calculated Fo = 144.8 vs F(crit) = 3.23. The null hypothesis was rejected, confirming the platform size has a statistically significant impact.<br>
+    • Observed that higher platform capacities consistently led to longer delivery times (e.g., mean time increased by 2 times from capacity 2 to capacity 10).<br>
+    • Fitted a 3rd order polynomial trend line to predict delivery time based on platform capacity.<br><br>
+
+    <strong>Skills Gained:</strong><br>
+    • One-way ANOVA testing and significance analysis<br>
+    • Design of Experiments (multi-level factor setup)<br>
+    • Polynomial regression and predictive analysis<br>
+    • Data visualization and trend line modeling 
+  </p> <button class="home-btn" onclick="openPopup('popup3')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+  <p>🌊 <strong>Amphibious Vehicle with Regenertive Breaking</strong><br><br>
+
+    <strong>Summary:</strong><br>
+    Designed and built a terrain-adaptive robot that operates on both land and water. The system uses Arduino for motor control and ultrasonic sensors for real-time obstacle avoidance. It features dual drive motors, a waterproof housing, and a pre-mapped autonomous navigation mode.<br><br>
+
+    • Integrated DC motors and ultrasonic sensors to detect objects and adjust path in real-time.<br>
+    • Designed custom waterproof body using PVC materials and foam wheel enhancements.<br>
+    • Developed a gear-and-rack braking mechanism to achieve reliable stop functionality.<br>
+    • Designed and 3D-printed the custom parts, such as the waterproof vehicle body and frame .<br>
+    • Delivered dual-mode control: autonomous navigation via sensor logic and manual override using remote input.<br><br>
+
+    <strong>Skills Gained:</strong><br>
+    • Making complex and accurate SolidWorks Models<br>
+    • Terrain-adaptive robotic design<br>
+    • Obstacle detection and real-time navigation<br>
+    • Sensor feedback logic and wiring<br>
+    • Basic waterproofing techniques for electronics
+  </p> <button class="home-btn" onclick="openPopup('popup4')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+  <p>🍇 <strong>Fruit Harvesting Robotic Arm</strong><br><br>
+
+    <strong>Summary:</strong><br>
+    Designed a 4DOF robotic arm for fruit harvesting using forward/inverse kinematics, LabVIEW programming, and trajectory planning with MATLAB. The robot was modeled in SolidWorks and simulated for real-time movement accuracy.<br><br>
+
+    • Programmed pick-and-place operations in joint space using quintic polynomial trajectory planning.<br>
+    • Used Denavit-Hartenberg parameters to derive transformation matrices for forward and inverse kinematics.<br>
+    • Controlled MG996R servo motors with NI myRIO and LabVIEW for real-time actuation.<br>
+    • Designed and 3D-printed the robotic arm using PLA, tested in real-life "fruit harvesting" scenarios with custom gripper.<br><br>
+
+    <strong>Skills Gained:</strong><br>
+    • Forward and inverse kinematic modeling<br>
+    • Joint-space trajectory planning (quintic polynomial)<br>
+    • MATLAB Robotics Toolbox simulation<br>
+    • LabVIEW programming with NI myRIO<br>
+    • SolidWorks CAD design and 3D printing
+  </p> <button class="home-btn" onclick="openPopup('popup5')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+ <p>🧲 <strong>Vacuum Pick-and-Place Handling Station</strong><br><br>
+
+    <strong>Summary:</strong><br>
+    Developed a fully automated vacuum-based pick-and-place station using a PLC controller, pneumatic actuators, and ladder diagram logic to simulate component handling in a manufacturing line.<br><br>
+
+    • Built the system using a twin rod and rodless pneumatic cylinder plus a vacuum suction cup for material transfer.<br>
+    • Programmed sequence logic in CX-Programmer using interlocks, relays, and timers.<br>
+    • Troubleshot real hardware problems including air leakage, suction failure, and misaligned sensors.<br>
+    • Achieved full cycle automation with repeatable precision handling and safety interlocks for operator protection.<br><br>
+
+    <strong>Skills Gained:</strong><br>
+    • PLC programming with CX-Programmer<br>
+    • Ladder logic: timers, interlocks, relays<br>
+    • Pneumatic system integration<br>
+    • Vacuum suction system design<br>
+    • Automation troubleshooting and testing
+  </p> <button class="home-btn" onclick="openPopup('popup6')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+ <!--        <p><strong>Project 7:</strong> project summary.</p>
+      <button class="home-btn" onclick="openPopup('popup7')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+            <p><strong>Project 8:</strong> project summary.</p>
+      <button class="home-btn" onclick="openPopup('popup8')">🖼️ Show Images</button>
+      <hr class="project-divider" />                 -->
+
+    </div>
+  </div>
 </section>
+
 <section class="contact">
   <h2>Contact Me</h2>
   <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
@@ -62,5 +193,63 @@
 <footer>
   &copy; 2025 Seif-Eddine Joul | All rights reserved.
 </footer>
+
+<!-- Popups -->
+<div id="popup1" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup1')">← Back</button>
+    <p>[Insert images or gallery for Project 1]</p>
+  </div>
+</div>
+
+<div id="popup2" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup2')">← Back</button>
+    <p>[Insert images or gallery for Project 2]</p>
+  </div>
+</div>
+
+<div id="popup3" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup3')">← Back</button>
+    <p>[Insert images or gallery for Project 3]</p>
+  </div>
+</div>
+
+<div id="popup4" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup4')">← Back</button>
+    <p>[Insert images or gallery for Project 4]</p>
+  </div>
+</div>
+
+<div id="popup5" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup5')">← Back</button>
+    <p>[Insert images or gallery for Project 5]</p>
+  </div>
+</div>
+
+<div id="popup6" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup6')">← Back</button>
+    <p>[Insert images or gallery for Project 6]</p>
+  </div>
+</div>
+
+<div id="popup7" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup7')">← Back</button>
+    <p>[Insert images or gallery for Project 7]</p>
+  </div>
+</div>
+
+<div id="popup8" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup8')">← Back</button>
+    <p>[Insert images or gallery for Project 8]</p>
+  </div>
+</div>
+
 </body>
 </html>
