@@ -6,6 +6,17 @@
   <title>🧠 Freelance Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
+
+<script>
+  function openPopup(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+  function closePopup(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+</script>
+
 <body>
 <header>
   <h1>Seif-Eddine Joul</h1>
@@ -40,21 +51,52 @@
   <h2>🧠 Freelance Projects</h2>
   <p>Freelancing taught me how to think on my feet, solve diverse problems, and communicate clearly. I worked across different fields — academic, technical, and creative — and delivered real results with limited resources.</p>
 </section>
+
+
 <section class="projects">
-  <h2>My Projects</h2>
-  <div class="project-body" style="white-space: pre-wrap; text-align: left; max-width: 800px; margin: 0 auto;">
-✍️ Academic Support
-- Helped students write and structure academic reports
-- Provided IELTS and Duolingo exam prep
+  <h2>My Efforts</h2>
+  <div class="project-body" style="max-width: 800px; margin: 0 auto; text-align: left;">
 
-🛠️ Technical DIY & Repairs
-- Soldered circuits and repaired appliances
-- Created a vibration stabilizer for a washing machine
+    <div class="project-section">
 
-🌐 Online Freelancing
-- Delivered projects via Khamsat and Mostaql
-</div>
+    <p>✍️ <strong> Academic Support & Tutoring</strong><br><br>
+    <strong>Summary:</strong><br>
+    I provided freelance academic assistance, primarily in report writing, grammar correction, vocabulary enhancement, paraphrasing, and content summarization. Many of my peers, especially non-native speakers, relied on my support for their coursework due to my strong English skills. In addition to report editing, I created personalized study guides and summarized lecture content to help students learn efficiently. I also offered targeted tutoring for Linguaskill and Duolingo certification exams, creating demo tests and English practice sheets. Most of the students I assisted passed with excellent results, and I often received compensation for my work.
+  </p> <button class="home-btn" onclick="openPopup('popup1')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+     <p>🛠️ <strong> Electronics & Appliance Repair/Restoration</strong><br><br>
+    <strong>Summary:</strong><br>
+    I offered technical repair services for friends, family, and hostel mates. My work included diagnosing, soldering, and fixing various household electrical appliances. Notable repairs include a leaking portable AC with a reversed fan and faulty control panel, a highly vibrating washing machine that I stabilized by customizing shock absorber supports, and a refrigerator with uneven cooling that I recalibrated. These self-taught DIY projects allowed me to apply hands-on problem-solving and mechanical reasoning while offering a cost-saving service to my network.
+  </p> <button class="home-btn" onclick="openPopup('popup2')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+<!--   <p></p><button class="home-btn" onclick="openPopup('popup3')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+  <p> </p> <button class="home-btn" onclick="openPopup('popup4')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+   <p>
+  </p> <button class="home-btn" onclick="openPopup('popup5')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+ <p>
+  </p> <button class="home-btn" onclick="openPopup('popup6')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+       <p></p>
+      <button class="home-btn" onclick="openPopup('popup7')">🖼️ Show Images</button>
+      <hr class="project-divider" />
+
+            <p></p>
+      <button class="home-btn" onclick="openPopup('popup8')">🖼️ Show Images</button>
+      <hr class="project-divider" />                 -->
+
+    </div>
+  </div>
 </section>
+
 <section class="contact">
   <h2>Contact Me</h2>
   <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
@@ -64,5 +106,63 @@
 <footer>
   &copy; 2025 Seif-Eddine Joul | All rights reserved.
 </footer>
+
+<!-- Popups -->
+<div id="popup1" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup1')">← Back</button>
+    <p>[Insert images or gallery for Project 1]</p>
+  </div>
+</div>
+
+<div id="popup2" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup2')">← Back</button>
+    <p>[Insert images or gallery for Project 2]</p>
+  </div>
+</div>
+
+<div id="popup3" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup3')">← Back</button>
+    <p>[Insert images or gallery for Project 3]</p>
+  </div>
+</div>
+
+<div id="popup4" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup4')">← Back</button>
+    <p>[Insert images or gallery for Project 4]</p>
+  </div>
+</div>
+
+<div id="popup5" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup5')">← Back</button>
+    <p>[Insert images or gallery for Project 5]</p>
+  </div>
+</div>
+
+<div id="popup6" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup6')">← Back</button>
+    <p>[Insert images or gallery for Project 6]</p>
+  </div>
+</div>
+
+<div id="popup7" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup7')">← Back</button>
+    <p>[Insert images or gallery for Project 7]</p>
+  </div>
+</div>
+
+<div id="popup8" class="popup">
+  <div class="popup-content">
+    <button class="home-btn" onclick="closePopup('popup8')">← Back</button>
+    <p>[Insert images or gallery for Project 8]</p>
+  </div>
+</div>
+
 </body>
 </html>
