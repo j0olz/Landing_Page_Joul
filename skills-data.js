@@ -3,28 +3,90 @@
 
 const skillsDatabase = {
   // Technical Skills
-  "Robotics": [],
-  "Sensor Fusion": [],
-  "MATLAB": [],
-  "Arduino": [],
-  "PLC Programming": [],
+  "AutoCAD": [],
   "SolidWorks": [],
-  "Python": [],
-  "LabVIEW": [],
-  "YOLOv4": [],
-  "LiDAR": [],
+  "MATLAB & Simulink": [],
+  "NI LabVIEW": [],
+  "OrCAD PSpice": [],
+  "Microcontrollers": [],
+  "OMRON CX-ONE": [],
+  "PCB Design": [],
+  "Power Distribution": [],
+  "Motor Control": [],
+  "Sensors and Actuators": [],
+  "Instrumentation": [],
+  "Pneumatic Systems": [],
   "3D Printing": [],
-  "Circuit Design": [],
+  "Arduino": [],
+  "Raspberry Pi": [],
+  "CNC Machine Operation": [],
+  "PLC Programming": [],
+  
+  // Programming & Software
+  "C++": [],
+  "Python": [],
+  "Visual Studio": [],
+  "Microsoft Office (ICDL)": [],
+  "Microsoft Azure AI": [],
+  "AI Prompting": [],
+  "OpenCV": [],
+  "Computer Vision": [],
+  "YOLOv4": [],
+  
+  // Data, Quality & Research
+  "Minitab": [],
+  "FMEA": [],
+  "SPC": [],
+  "Six Sigma": [],
+  "Root Cause Analysis (5 Whys)": [],
+  "Pareto Analysis": [],
+  "Reliability Testing": [],
+  "Continuous Improvement": [],
+  "Statistical Analysis": [],
+  "Data Analysis": [],
+  "ANOVA": [],
+  "Design of Experiments": [],
+  
+  // Project & Management
+  "Agile Project Management": [],
+  "Time Management": [],
+  "Change Management": [],
+  "Risk Management": [],
+  "Team Coordination": [],
+  "Budgeting": [],
+  "Inventory Keeping": [],
+  "Event Planning": [],
   
   // Soft Skills
   "Leadership": [],
-  "Event Planning": [],
-  "Team Management": [],
-  "Budget Management": [],
+  "Problem Solving": [],
+  "Critical Thinking": [],
+  "Adaptability": [],
+  "Analytical Mindset": [],
+  "Multicultural Communication": [],
   "Public Speaking": [],
-  "Communication": [],
+  "Quick-thinking": [],
+  "Customer Service": [],
   
-  // Add more skills as needed
+  // Hands-On & Practical
+  "Soldering": [],
+  "Mechanical Coupling/Assembly": [],
+  "Electrical Wiring": [],
+  "Cable Management": [],
+  "Switchgear/Main Panel": [],
+  "Power/Hand Tools": [],
+  "Cable Junction/Termination": [],
+  "Circuit Design": [],
+  "Troubleshooting": [],
+  "Metalwork": [],
+  "Image Processing": [],
+  "Kinematics": [],
+  "Quality Control": [],
+  
+  // Languages
+  "English (C1 – IELTS 7)": [],
+  "Arabic (Native)": [],
+  "French (Elementary)": []
 };
 
 // Function to scan all project pages and build relationships

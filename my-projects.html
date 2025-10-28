@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📂 My Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+ <a href="index.html" class="home-button" aria-label="Go to home">🏠</a> 
+  
+  <h1>Seif-Eddine Joul</h1>
+  <p>Versatile and Adaptable Engineer | Quality and Safety focused | Team player and solo achiever</p>
+  <p>
+    <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> | 
+    <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
+  </p>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <span class="icon">🌙</span>
+  </button>
+</header>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const icon = toggle.querySelector('.icon');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      icon.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      icon.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    }
+  });
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    icon.textContent = '☀️';
+  }
+</script>
+
+<button onclick="window.history.back()" class="back-btn">← Back</button>
+
+<section class="who">
+  <h2>📂 My Projects</h2>
+  <p>A curated collection of projects spanning academic research, part-time work, and personal endeavors. Each project showcases different skills and challenges I've tackled throughout my journey.</p>
+</section>
+
+<section class="vcv">
+  <h2>Featured Projects</h2>
+  
+  <div class="project-cards-grid">
+    
+    <!-- Project 1 - LiDAR Sensor Fusion -->
+    <div class="project-card" data-project="LiDAR-Camera Sensor Fusion" data-skills="MATLAB, Computer Vision, YOLOv4, Python, Sensors and Actuators, Data Analysis">
+      <span class="category-tag academic">Academic</span>
+      <h3>LiDAR-Camera Sensor Fusion System</h3>
+      <p>Developed a MATLAB-based sensor fusion pipeline combining LiDAR point clouds with camera image data using extrinsic calibration and projective transformation. Integrated YOLOv4 object detection and achieved sub-pixel alignment with average reprojection error below 0.03 px. Fusion approach improved obstacle detection accuracy and depth estimation precision by approximately 35% compared to standalone systems.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#MATLAB" class="skill-tag-mini">MATLAB & Simulink</a>
+        <a href="my-skills.html#Computer-Vision" class="skill-tag-mini">Computer Vision</a>
+        <a href="my-skills.html#Python" class="skill-tag-mini">Python</a>
+        <a href="my-skills.html#Sensors" class="skill-tag-mini">Sensors and Actuators</a>
+      </div>
+    </div>
+
+    <!-- Project 2 - 4-DOF Robotic Arm -->
+    <div class="project-card" data-project="4-DOF Robotic Arm" data-skills="SolidWorks, Arduino, NI LabVIEW, MATLAB, Kinematics, 3D Printing, Motor Control">
+      <span class="category-tag academic">Academic</span>
+      <h3>4-DOF Robotic Arm – Simulation, Fabrication and Control</h3>
+      <p>Designed and implemented a 4-degree-of-freedom robotic arm with servo-based actuation for dynamic pick-and-place operations. Integrated forward and inverse kinematics algorithms for real-time spatial manipulation with Cartesian coordinate input. Constructed custom GUI interface and achieved end-effector placement accuracy within ±2 mm with response latency under 100 ms.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#SolidWorks" class="skill-tag-mini">SolidWorks</a>
+        <a href="my-skills.html#Arduino" class="skill-tag-mini">Arduino</a>
+        <a href="my-skills.html#LabVIEW" class="skill-tag-mini">NI LabVIEW</a>
+        <a href="my-skills.html#3D-Printing" class="skill-tag-mini">3D Printing</a>
+        <a href="my-skills.html#Motor-Control" class="skill-tag-mini">Motor Control</a>
+      </div>
+    </div>
+
+    <!-- Project 3 - Search and Rescue Robot -->
+    <div class="project-card" data-project="Search and Rescue Robot" data-skills="SolidWorks, Arduino, 3D Printing, Sensors and Actuators, C/C++, Motor Control">
+      <span class="category-tag academic">Academic</span>
+      <h3>Search and Rescue Robot, Jensen Walking Mechanism</h3>
+      <p>Designed a modular, 3D-printed legged robot chassis powered by 2 DC motors, achieving a weight reduction of ~200g and easy reassembly for prototyping. Integrated Arduino-based control system with ultrasonic and IR sensors for autonomous obstacle avoidance. Validated robot's reliability through iterative testing, successfully completing 100% of simulated rescue missions under low-light and obstructed conditions.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#SolidWorks" class="skill-tag-mini">SolidWorks</a>
+        <a href="my-skills.html#Arduino" class="skill-tag-mini">Arduino</a>
+        <a href="my-skills.html#3D-Printing" class="skill-tag-mini">3D Printing</a>
+        <a href="my-skills.html#C++" class="skill-tag-mini">C++</a>
+        <a href="my-skills.html#Sensors" class="skill-tag-mini">Sensors and Actuators</a>
+      </div>
+    </div>
+
+    <!-- Project 4 - Regenerative Braking System -->
+    <div class="project-card" data-project="Regenerative Braking System" data-skills="Motor Control, Sensors and Actuators, Arduino, Circuit Design, Power Electronics">
+      <span class="category-tag academic">Academic</span>
+      <h3>Regenerative Braking System for Amphibious Robot</h3>
+      <p>Designed and installed a regenerative braking mechanism in a terrain-adaptive robotic platform, recovering kinetic energy during deceleration cycles. Calibrated energy capture across 31–1532 rpm and integrated LiPo battery recharge logic. Reduced energy loss by up to 25% during field simulation and coordinated sensor-triggered braking actuation with motor control feedback.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#Motor-Control" class="skill-tag-mini">Motor Control</a>
+        <a href="my-skills.html#Arduino" class="skill-tag-mini">Arduino</a>
+        <a href="my-skills.html#Circuit-Design" class="skill-tag-mini">Circuit Design</a>
+        <a href="my-skills.html#Sensors" class="skill-tag-mini">Sensors and Actuators</a>
+      </div>
+    </div>
+
+    <!-- Project 5 - Vacuum Pick-and-Place -->
+    <div class="project-card" data-project="Vacuum Pick-and-Place Station" data-skills="PLC Programming, Pneumatic Systems, OMRON CX-ONE, Troubleshooting, Instrumentation">
+      <span class="category-tag academic">Academic</span>
+      <h3>Vacuum Pick-and-Place Handling Station</h3>
+      <p>Designed and commissioned an automated PLC-controlled pick-and-place system with custom ladder logic, achieving a repeatable component transfer rate of <5 seconds per cycle and maintaining positioning accuracy within 0.5 mm. Performed troubleshooting to diagnose and resolve recurring pneumatic failures, increasing system reliability by ~70% and ensuring near-zero error rate during test runs.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#PLC-Programming" class="skill-tag-mini">PLC Programming</a>
+        <a href="my-skills.html#Pneumatic-Systems" class="skill-tag-mini">Pneumatic Systems</a>
+        <a href="my-skills.html#OMRON-CX-ONE" class="skill-tag-mini">OMRON CX-ONE</a>
+        <a href="my-skills.html#Troubleshooting" class="skill-tag-mini">Troubleshooting</a>
+      </div>
+    </div>
+
+    <!-- Project 6 - Coin Measurement System -->
+    <div class="project-card" data-project="Coin Measurement System" data-skills="Python, OpenCV, Computer Vision, Image Processing">
+      <span class="category-tag academic">Academic</span>
+      <h3>Coin Measurement and Validation System</h3>
+      <p>Developed a Python OpenCV system to identify, classify, and measure currency coins using edge detection, contour analysis, and object dimension calibration from webcam input. Achieved classification accuracy of ~95% across 6 coin types and measurement error <1 mm using pixel-to-mm scaling via reference object calibration. Integrated live result display with GUI.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#Python" class="skill-tag-mini">Python</a>
+        <a href="my-skills.html#OpenCV" class="skill-tag-mini">OpenCV</a>
+        <a href="my-skills.html#Computer-Vision" class="skill-tag-mini">Computer Vision</a>
+      </div>
+    </div>
+
+    <!-- Project 7 - Automatic Plant Care System -->
+    <div class="project-card" data-project="Automatic Plant Care System" data-skills="Arduino, Sensors and Actuators, C/C++, Circuit Design, Instrumentation">
+      <span class="category-tag academic">Academic</span>
+      <h3>Automatic Plant Care System</h3>
+      <p>Engineered an Arduino-controlled autonomous irrigation unit integrating soil moisture sensors, ultrasonic water-level monitoring, and a DC pump system with overflow prevention. Designed and fabricated a compact mechanical housing with cable routing, ensuring leak-free operation. Implemented real-time condition feedback using an LCD interface and warning LED indicators, achieving over 90% water efficiency.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#Arduino" class="skill-tag-mini">Arduino</a>
+        <a href="my-skills.html#Sensors" class="skill-tag-mini">Sensors and Actuators</a>
+        <a href="my-skills.html#C++" class="skill-tag-mini">C++</a>
+        <a href="my-skills.html#Circuit-Design" class="skill-tag-mini">Circuit Design</a>
+      </div>
+    </div>
+
+    <!-- Project 8 - Drone Delivery Optimization -->
+    <div class="project-card" data-project="Drone Delivery Optimization" data-skills="Minitab, Statistical Analysis, ANOVA, Design of Experiments, Data Analysis">
+      <span class="category-tag academic">Academic</span>
+      <h3>Drone Delivery Optimization via DoE & ANOVA</h3>
+      <p>Designed and conducted simulation-based DoE evaluating drone platform capacity impact on delivery time, analyzing 5 configurations with 20+ simulation runs each. Applied one-way ANOVA to confirm statistically significant effect of platform size on delivery efficiency. Observed 2× increase in delivery time from platform size 2 to 10, used regression modeling to fit a 3rd-order polynomial curve for performance prediction.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#Minitab" class="skill-tag-mini">Minitab</a>
+        <a href="my-skills.html#Statistical-Analysis" class="skill-tag-mini">Statistical Analysis</a>
+        <a href="my-skills.html#Data-Analysis" class="skill-tag-mini">Data Analysis</a>
+      </div>
+    </div>
+
+    <!-- Project 9 - Adhesive Hook Reliability -->
+    <div class="project-card" data-project="Adhesive Hook Reliability" data-skills="Reliability Testing, Statistical Analysis, Minitab, Quality Control, Root Cause Analysis">
+      <span class="category-tag academic">Academic</span>
+      <h3>Adhesive Hook Reliability Project</h3>
+      <p>Demonstrated reliability prediction techniques applicable to consumer and industrial product validation. Analyzed failure modes using Weibull distribution, demonstrating >90% confidence in expected performance lifetime. Conducted accelerated life testing using stress analysis (temperature and load cycles) to predict long-term failure patterns.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#Reliability-Testing" class="skill-tag-mini">Reliability Testing</a>
+        <a href="my-skills.html#Statistical-Analysis" class="skill-tag-mini">Statistical Analysis</a>
+        <a href="my-skills.html#Minitab" class="skill-tag-mini">Minitab</a>
+      </div>
+    </div>
+
+    <!-- Project 10 - International Food Fiesta -->
+    <!-- <div class="project-card" data-project="International Food Fiesta 2024" data-skills="Leadership, Event Planning, Budgeting, Team Coordination, Public Speaking">
+      <span class="category-tag personal">Personal</span>
+      <h3>International Food Fiesta 2024</h3>
+      <p>Led the entire organizing effort for a multicultural celebration with 300+ attendees as Deputy President of USMi. Managed logistics, booths, media coordination, and a budget exceeding RM 20,000. Event became one of USM's flagship experiences for the year, showcasing cross-cultural collaboration and community building.</p>
+      
+      <div class="project-card-skills">
+        <strong>Skills:</strong>
+        <a href="my-skills.html#Leadership" class="skill-tag-mini">Leadership</a>
+        <a href="my-skills.html#Event-Planning" class="skill-tag-mini">Event Planning</a>
+        <a href="my-skills.html#Budgeting" class="skill-tag-mini">Budgeting</a>
+        <a href="my-skills.html#Team-Coordination" class="skill-tag-mini">Team Coordination</a>
+      </div>
+    </div> -->
+
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
+  <p>Phone: +212 6 3129 3071 <img src="wts.png" alt="WhatsApp" class="icon"> </p>
+  <p>Phone: +971 52 6000 849 <img src="wts.png" alt="WhatsApp" class="icon"> </p>
+  <a style = color:violet; href="CV_SEIF_JOUL.pdf" class="cv-btn" download>📄 Download My Full CV</a>
+</section>
+
+<footer>
+  &copy; 2025 Seif-Eddine Joul | All rights reserved.
+</footer>
+
+<!-- Skills tracking registration -->
+<script src="skills-data.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const projects = document.querySelectorAll('[data-project]');
+    projects.forEach(project => {
+      const projectName = project.getAttribute('data-project');
+      const skills = project.getAttribute('data-skills');
+      if (projectName && skills) {
+        registerProjectSkills(projectName, skills);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
