@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌟 My Personal Life</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <a href="index.html" class="home-button" aria-label="Go to home">🏠</a> 
+
+  <h1>Seif-Eddine Joul</h1>
+  <p>Versatile and Adaptable Engineer | Quality and Safety focused | Team player and solo achiever </p>
+  <p>
+    <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> | 
+    <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
+  </p>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <span class="icon">🌙</span>
+  </button>
+</header>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const icon = toggle.querySelector('.icon');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      icon.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      icon.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    }
+  });
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark');
+    icon.textContent = '☀️';
+  }
+</script>
+
+<button onclick="window.history.back()" class="back-btn">← Back</button>
+
+<section class="who">
+  <h2>🌟 My Personal Life</h2>
+  <p>Beyond the resume and technical achievements, here's a glimpse into who I am, what drives me, and how I spend my time outside of work and academics.</p>
+</section>
+
+<section class="vcv">
+  <h2>Life Beyond Work</h2>
+  
+  <div class="personal-grid">
+    
+    <!-- Card 1: Background & Origin -->
+    <div class="personal-card">
+      <div class="card-icon">🌍</div>
+      <h3>Background & Roots</h3>
+      <p>Born and raised in Morocco, I grew up in a multicultural environment that shaped my adaptability and global perspective. Moving to Malaysia for my studies opened my eyes to new cultures, cuisines, and ways of thinking. This cross-cultural experience taught me the value of diversity and the importance of staying curious about the world around me.</p>
+    </div>
+
+    <!-- Card 2: Martial Arts -->
+    <div class="personal-card">
+      <div class="card-icon">🥊</div>
+      <h3>Martial Arts Journey</h3>
+      <p>Muay Thai has been more than just a sport for me—it's a discipline that shaped my character. Competing at national and international levels, including representing Morocco at the IFMA Youth World Championship, taught me resilience, focus, and the importance of consistent effort. The ring is where I learned that setbacks are just setups for comebacks.</p>
+    </div>
+
+    <!-- Card 3: Continuous Learning -->
+    <div class="personal-card">
+      <div class="card-icon">📚</div>
+      <h3>Always a Student</h3>
+      <p>I believe learning never stops. Whether it's picking up a new programming language, exploring design principles, or reading about leadership strategies, I'm constantly feeding my curiosity. I enjoy online courses, technical documentation, and hands-on experimentation. My philosophy: every day is an opportunity to know something I didn't know yesterday.</p>
+    </div>
+
+    <!-- Card 4: Problem Solving Mindset -->
+    <div class="personal-card">
+      <div class="card-icon">🧩</div>
+      <h3>Problem Solver at Heart</h3>
+      <p>I find genuine joy in fixing things—whether it's a broken appliance, a buggy code, or an inefficient process. Friends and family often call me when something's not working right, and I take pride in diagnosing and solving issues others might overlook. For me, every problem is just a puzzle waiting to be solved.</p>
+    </div>
+
+    <!-- Card 5: Community & Leadership -->
+    <div class="personal-card">
+      <div class="card-icon">🤝</div>
+      <h3>Community Builder</h3>
+      <p>I've always believed in the power of bringing people together. From organizing large-scale cultural events to coordinating international student exchanges, I thrive when I'm helping others connect and grow. Leadership, to me, is about creating spaces where everyone feels valued and heard—and I try to embody that in everything I do.</p>
+    </div>
+
+    <!-- Card 6: Hobbies & Interests -->
+    <div class="personal-card">
+      <div class="card-icon">🎯</div>
+      <h3>Hobbies & Interests</h3>
+      <p>Outside of work and academics, I enjoy swimming, playing futsal with friends, and exploring new cuisines. I'm also fascinated by DIY projects—building, tinkering, and creating things from scratch. Whether it's a weekend electronics project or trying to perfect a recipe, I'm always working on something that challenges me in new ways.</p>
+    </div>
+
+    <!-- Card 7: Values & Philosophy -->
+    <div class="personal-card">
+      <div class="card-icon">💡</div>
+      <h3>Core Values</h3>
+      <p>Integrity, adaptability, and empathy guide my decisions. I value honesty in communication, flexibility in the face of change, and understanding in my interactions with others. I believe success isn't just about what you achieve, but how you treat people along the way. And I try to live by the principle: leave every place better than you found it.</p>
+    </div>
+
+    <!-- Card 8: Volunteering -->
+    <div class="personal-card">
+      <div class="card-icon">🚀</div> 
+      <h3>Volunteering</h3>
+      <p>i volunteer</p>
+    </div>
+
+     <!-- Card 9: Future Aspirations -->
+    <div class="personal-card">
+      <div class="card-icon">🚀</div>
+      <h3>Looking Ahead</h3>
+      <p>I'm excited about the future—both professionally and personally. I want to continue growing as an engineer, contribute to meaningful projects, and eventually mentor the next generation of problem-solvers. My goal is to build a career that combines technical excellence with positive impact, and to keep learning, growing, and challenging myself every step of the way.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
+  <p>Phone: +212 6 3129 3071 <img src="wts.png" alt="WhatsApp" class="icon"> </p>
+  <p>Phone: +971 52 6000 849 <img src="wts.png" alt="WhatsApp" class="icon"> </p>
+  <a style = color:violet; href="CV_SEIF_JOUL.pdf" class="cv-btn" download>📄 Download My Full CV</a>
+</section>
+
+<footer>
+  &copy; 2025 Seif-Eddine Joul | All rights reserved.
+</footer>
+
+</body>
+</html>

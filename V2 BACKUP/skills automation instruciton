@@ -1,0 +1,168 @@
+# 🎯 Automated Skills Tracking System - Implementation Guide
+
+## Overview
+This system automatically links skills to projects across your entire portfolio website.
+
+---
+
+## 📁 Files You Need
+
+### 1. **skills-data.js** (New file - root directory)
+- Central database for skills tracking
+- Handles localStorage operations
+- Auto-builds skill-to-project relationships
+
+### 2. **Updated style.css** (Add the CSS code provided)
+- Skill tag styles
+- Tooltip styles
+- Hover effects
+
+### 3. **my-skills.html** (Already updated)
+- Displays all skills with hover tooltips
+- Shows which projects use each skill
+
+---
+
+## 🔧 How to Add Skills to Your Project Pages
+
+### Step 1: Add the script reference
+In the `<head>` of each project page:
+```html
+<script src="skills-data.js"></script>
+```
+
+### Step 2: Tag each project
+Add `data-project` and `data-skills` attributes:
+```html
+<div class="project-section" 
+     data-project="Sensor Fusion Project" 
+     data-skills="MATLAB, LiDAR, YOLOv4, Python">
+  <!-- Your project content -->
+</div>
+```
+
+### Step 3: Add visual skill links (optional but recommended)
+At the end of each project description:
+```html
+<p class="project-skills">
+  <strong>Skills Used:</strong> 
+  <a href="my-skills.html#MATLAB" class="skill-link">MATLAB</a>, 
+  <a href="my-skills.html#LiDAR" class="skill-link">LiDAR</a>
+</p>
+```
+
+### Step 4: Add registration script
+At the bottom of each project page (before `</body>`):
+```html
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const projects = document.querySelectorAll('[data-project]');
+    projects.forEach(project => {
+      const projectName = project.getAttribute('data-project');
+      const skills = project.getAttribute('data-skills');
+      if (projectName && skills) {
+        registerProjectSkills(projectName, skills);
+      }
+    });
+  });
+</script>
+```
+
+---
+
+## 🎨 What Happens Automatically
+
+1. **When user visits a project page:**
+   - Script reads `data-skills` attributes
+   - Stores skill-to-project mappings in localStorage
+   - Builds the relationship database
+
+2. **When user hovers over a skill:**
+   - Tooltip appears showing all projects using that skill
+   - Example: "Used in: • Sensor Fusion Project • Robotic Arm"
+
+3. **When user clicks a skill link:**
+   - Jumps to skills page
+   - Scrolls to that specific skill (if anchor is set)
+
+---
+
+## 📋 Example Implementation
+
+### For academic.html:
+```html
+<div class="project-section" 
+     data-project="LiDAR Sensor Fusion" 
+     data-skills="MATLAB, LiDAR, YOLOv4, ROS, Image Processing">
+  
+  <p>🛰️ <strong>Sensor Fusion Project</strong></p>
+  <p>Project description here...</p>
+  
+  <p class="project-skills">
+    <strong>Skills Used:</strong>
+    <a href="my-skills.html#MATLAB">MATLAB</a>,
+    <a href="my-skills.html#LiDAR">LiDAR</a>,
+    <a href="my-skills.html#YOLOv4">YOLOv4</a>
+  </p>
+</div>
+```
+
+### For extracurricular.html:
+```html
+<div class="project-section" 
+     data-project="International Food Fiesta" 
+     data-skills="Leadership, Event Planning, Budget Management, Team Management">
+  
+  <p>🌍 <strong>International Food Fiesta</strong></p>
+  <p>Event description here...</p>
+  
+  <p class="project-skills">
+    <strong>Skills Used:</strong>
+    <a href="my-skills.html#Leadership">Leadership</a>,
+    <a href="my-skills.html#Event-Planning">Event Planning</a>
+  </p>
+</div>
+```
+
+---
+
+## ✅ Benefits
+
+✨ **Automatic**: Once set up, relationships update automatically
+🔗 **Bidirectional**: Click skill links from projects, see projects from skills
+🎯 **Centralized**: All data managed in one place
+📱 **Persistent**: Uses localStorage so data persists across sessions
+🎨 **Visual**: Hover tooltips provide instant feedback
+
+---
+
+## 🚀 Next Steps
+
+1. Copy `skills-data.js` to your root directory
+2. Add the CSS code to your main `style.css`
+3. Update each project page with `data-project` and `data-skills` attributes
+4. Add the registration script to each project page
+5. Test by hovering over skills on the skills page!
+
+---
+
+## 💡 Tips
+
+- **Consistent naming**: Use exact same skill names across all pages
+- **Comma-separated**: Always separate skills with commas in `data-skills`
+- **No typos**: "MATLAB" vs "Matlab" will create two separate entries
+- **Keep it updated**: When adding new projects, remember to tag them!
+
+---
+
+## 🐛 Troubleshooting
+
+**Tooltip shows "No projects linked yet"?**
+- Make sure you've visited the project pages at least once
+- Check that `data-skills` attributes are present
+- Verify skill names match exactly
+
+**Skills not appearing?**
+- Check browser console for JavaScript errors
+- Ensure `skills-data.js` is in the root directory
+- Verify the registration script is running (check console.log)
