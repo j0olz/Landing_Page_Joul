@@ -89,19 +89,7 @@ const skillsDatabase = {
   "French (Elementary)": []
 };
 
-// Function to scan all project pages and build relationships
-function buildSkillRelationships() {
-  // This will be called when the skills page loads
-  // It reads from localStorage which is populated by project pages
-  
-  const storedData = localStorage.getItem('skillsMapping');
-  if (storedData) {
-    return JSON.parse(storedData);
-  }
-  return skillsDatabase;
-}
-
-// Function to register skills from a project page
+// Function to register skills from a project/experience
 function registerProjectSkills(projectName, skillsList) {
   // Get existing mapping
   let mapping = JSON.parse(localStorage.getItem('skillsMapping') || '{}');
@@ -128,6 +116,88 @@ function registerProjectSkills(projectName, skillsList) {
   localStorage.setItem('skillsMapping', JSON.stringify(mapping));
 }
 
+// Master initialization function - runs once to populate all relationships
+function initializeAllSkillMappings() {
+  // Check if already initialized
+  if (localStorage.getItem('skillsInitialized') === 'true') {
+    return;
+  }
+  
+  console.log('Initializing all skill mappings...');
+  
+  // Clear any existing data
+  localStorage.removeItem('skillsMapping');
+  
+  // ============================================
+  // REGISTER ALL PROJECTS
+  // ============================================
+  
+  registerProjectSkills("LiDAR-Camera Sensor Fusion", "MATLAB & Simulink, Computer Vision, Python, Sensors and Actuators, Data Analysis, Image Processing, Critical Thinking");
+  
+  registerProjectSkills("4-DOF Robotic Arm", "SolidWorks, Arduino, NI LabVIEW, MATLAB & Simulink, 3D Printing, Motor Control, Kinematics, C++, Problem Solving");
+  
+  registerProjectSkills("Search and Rescue Robot", "SolidWorks, Arduino, 3D Printing, Sensors and Actuators, C++, Motor Control, Problem Solving, Critical Thinking");
+  
+  registerProjectSkills("Regenerative Braking System", "Motor Control, Sensors and Actuators, Arduino, Circuit Design, Power Distribution, C++, Analytical Mindset");
+  
+  registerProjectSkills("Vacuum Pick-and-Place Station", "PLC Programming, Pneumatic Systems, OMRON CX-ONE, Troubleshooting, Instrumentation, Problem Solving, Critical Thinking");
+  
+  registerProjectSkills("Coin Measurement System", "Python, OpenCV, Computer Vision, Image Processing, Data Analysis, Analytical Mindset");
+  
+  registerProjectSkills("Automatic Plant Care System", "Arduino, Sensors and Actuators, C++, Circuit Design, Instrumentation, Problem Solving, 3D Printing");
+  
+  registerProjectSkills("Drone Delivery Optimization", "Minitab, Statistical Analysis, Data Analysis, ANOVA, Design of Experiments, Analytical Mindset, Critical Thinking");
+  
+  registerProjectSkills("Adhesive Hook Reliability", "Reliability Testing, Statistical Analysis, Minitab, Quality Control, Root Cause Analysis (5 Whys), Analytical Mindset, Critical Thinking");
+  
+  registerProjectSkills("International Food Fiesta 2024", "Leadership, Event Planning, Budgeting, Team Coordination, Public Speaking, Multicultural Communication, Time Management");
+  
+  // ============================================
+  // REGISTER PROFESSIONAL EXPERIENCES
+  // ============================================
+  
+  registerProjectSkills("Field Technician - General Contractors", "Electrical Wiring, Cable Management, Power Distribution, Problem Solving, Customer Service, Switchgear/Main Panel, Cable Junction/Termination, Power/Hand Tools, Troubleshooting, Critical Thinking, Adaptability");
+  
+  registerProjectSkills("Electromechanical Engineer - Hitronik", "CNC Machine Operation, PCB Design, Soldering, Arduino, Circuit Design, Troubleshooting, Microcontrollers, Power Distribution, Mechanical Coupling/Assembly, Problem Solving, Critical Thinking");
+  
+  registerProjectSkills("USMi Deputy President", "Leadership, Event Planning, Team Coordination, Budgeting, Public Speaking, Multicultural Communication, Time Management, Adaptability, Problem Solving");
+  
+  registerProjectSkills("Evening Shift Supervisor - Beauhope Café", "Leadership, Time Management, Inventory Keeping, Budgeting, Customer Service, Quick-thinking, Team Coordination, Problem Solving, Adaptability, Electrical Wiring, Troubleshooting");
+  
+  // ============================================
+  // REGISTER PERSONAL LIFE ACTIVITIES
+  // ============================================
+  
+  registerProjectSkills("Background & Roots (Multicultural Living)", "Multicultural Communication, Adaptability, Critical Thinking");
+  
+  registerProjectSkills("Muay Thai Championship Journey", "Problem Solving, Adaptability, Critical Thinking, Time Management, Continuous Improvement");
+  
+  registerProjectSkills("Continuous Learning Philosophy", "Continuous Improvement, Critical Thinking, Adaptability, Analytical Mindset, Problem Solving");
+  
+  registerProjectSkills("Problem Solving Mindset", "Problem Solving, Critical Thinking, Troubleshooting, Analytical Mindset, Adaptability");
+  
+  registerProjectSkills("Community Builder & Leadership", "Leadership, Team Coordination, Public Speaking, Event Planning, Multicultural Communication, Adaptability");
+  
+  registerProjectSkills("DIY Projects & Hobbies", "3D Printing, Arduino, Circuit Design, Soldering, Problem Solving, Critical Thinking, Troubleshooting");
+  
+  registerProjectSkills("Core Values & Philosophy", "Leadership, Critical Thinking, Adaptability, Multicultural Communication, Problem Solving");
+  
+  registerProjectSkills("Future Aspirations & Growth", "Leadership, Problem Solving, Continuous Improvement, Critical Thinking, Adaptability");
+  
+  // Mark as initialized
+  localStorage.setItem('skillsInitialized', 'true');
+  console.log('All skill mappings initialized successfully!');
+}
+
+// Function to scan all project pages and build relationships
+function buildSkillRelationships() {
+  const storedData = localStorage.getItem('skillsMapping');
+  if (storedData) {
+    return JSON.parse(storedData);
+  }
+  return skillsDatabase;
+}
+
 // Function to get projects for a specific skill
 function getProjectsForSkill(skillName) {
   const mapping = buildSkillRelationships();
@@ -143,12 +213,32 @@ function createSkillTooltip(skillName, projects) {
   return `Used in:\n${projects.map(p => `• ${p}`).join('\n')}`;
 }
 
+// Function to reset all mappings (for development/testing)
+function resetSkillMappings() {
+  localStorage.removeItem('skillsMapping');
+  localStorage.removeItem('skillsInitialized');
+  console.log('Skill mappings reset. Refresh the page to reinitialize.');
+}
+
+// Auto-initialize on script load
+if (typeof window !== 'undefined') {
+  // Check for reset parameter in URL
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('reset') === 'true') {
+    resetSkillMappings();
+  }
+  
+  // Initialize all mappings
+  initializeAllSkillMappings();
+}
+
 // Export for use in pages
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     buildSkillRelationships,
     registerProjectSkills,
     getProjectsForSkill,
-    createSkillTooltip
+    createSkillTooltip,
+    resetSkillMappings
   };
 }
