@@ -1131,3 +1131,236 @@ body.dark .personal-card p {
 @media (max-width: 600px) {
   .project-card, .personal-card { padding: 1.1rem; }
 }
+
+
+/* ============================================
+   V4 UPDATES (Header photo, QR footer, sticky pills, floating buttons)
+   ============================================ */
+
+/* Floating button base */
+.float-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: #283338;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.float-btn:hover {
+  background: #0080a0;
+  transform: translateY(-2px);
+}
+
+/* Specific placements */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: auto;
+  background: #283338;
+}
+
+.home-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  left: auto;
+  background: #283338;
+}
+
+.to-top {
+  position: fixed;
+  left: 1rem;
+  bottom: 5.5rem;
+}
+
+.to-contact {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+/* Header layout with profile photo */
+.header-bar {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-spacer {
+  width: 140px; /* balances the image width to keep text centered */
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header-photo-wrap {
+  width: 190px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-pic {
+  position: relative;
+  top: 5px;
+  right: 670px;
+  width: 190px;
+  height: 190px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.7);
+}
+
+/* Sticky pill navigation */
+.page-nav {
+  background: #5a8fb3;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+body.dark .page-nav {
+  background: #222;
+}
+
+.page-pill {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.18);
+  color: #ffffff;
+  font-family: arial;
+  font-size: 0.95rem;
+}
+
+.page-pill:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+/* Contact section with QR + aligned layout */
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+  left: 30px; 
+}
+
+.contact-download {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-qr {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 220px;
+}
+
+.qr-code {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  right: 30px;
+  object-fit: contain;
+  background: rgba(255,255,255,0.25);
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.qr-caption {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.92);
+  text-align: right;
+}
+
+body.dark .qr-caption {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Light theme: make contact links and CV button text match the header blue */
+body:not(.dark) .contact a {
+  color: #5a8fb3;
+}
+
+body:not(.dark) .cv-btn {
+  color: #5a8fb3;
+}
+
+/* Keep CV button readable in dark mode */
+body.dark .cv-btn {
+  color: #ffffff;
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 700px) {
+  header, footer {
+    padding: 1.2rem 1rem;
+  }
+
+  .header-spacer {
+    width: 90px;
+  }
+
+  .profile-pic {
+    width: 96px;
+    height: 96px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info, .contact-qr, .contact-download {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-qr {
+    align-items: center;
+  }
+
+  .qr-caption {
+    text-align: center;
+  }
+
+  .qr-code {
+    width: 100px;
+    height: 100px;
+  }
+}

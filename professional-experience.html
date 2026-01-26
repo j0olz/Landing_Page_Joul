@@ -3,22 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>💼 Professional Experience</title>
+  <title>Professional Experience</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <header>
-  <a href="index.html" class="home-button" aria-label="Go to home">🏠</a> 
+  <a href="index.html" class="home-button float-btn" aria-label="Go to home">🏠</a>
 
-  <h1>Saif-Eddine  Joul</h1>
-  <p>Versatile and Adaptable Engineer | Quality and Safety focused | Team player and solo achiever</p>
-  <p>
-    <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> | 
-    <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
-  </p>
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+  <button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
     <span class="icon">🌙</span>
   </button>
+
+  <div class="header-bar">
+    <div class="header-spacer"></div>
+
+    <div class="header-text">
+      <h1>Seif-Eddine  Joul</h1>
+      <p>Mechatronics systems engineer</p>
+      <p>
+        <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
+        <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
+      </p>
+    </div>
+
+    <div class="header-photo-wrap">
+ 
+      <img src="face.png" alt="Profile photo" class="profile-pic">
+    </div>
+  </div>
 </header>
 
 <script>
@@ -40,10 +52,42 @@
   }
 </script>
 
-<button onclick="window.history.back()" class="back-btn">← Back</button>
+<nav class="page-nav">
+    <a href="my-skills.html" class="page-pill">My Skills</a>
+    <a href="my-projects.html" class="page-pill">My Projects</a>
+    <a href="my-certifications.html" class="page-pill">My Certifications</a>
+    <a href="personal-life.html" class="page-pill">My Personal Life</a>
+    <a href="education.html" class="page-pill">Education</a>
+</nav>
+
+<!-- Floating buttons -->
+<button class="float-btn to-top" type="button" aria-label="Back to top">↑</button>
+<button class="float-btn to-contact" type="button" aria-label="Go to contact">📞</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toTop = document.querySelector('.to-top');
+    const toContact = document.querySelector('.to-contact');
+    const contactSection = document.getElementById('contact');
+
+    if (toTop) {
+      toTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (toContact && contactSection) {
+      toContact.addEventListener('click', () => {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+    }
+  });
+</script>
+
+
 
 <section class="who">
-  <h2>💼 Professional Experience</h2>
+  <h2>Professional Experience</h2>
   <p>A comprehensive timeline of my professional journey, showcasing roles, responsibilities, and achievements across various domains.</p>
 </section>
 
@@ -236,16 +280,30 @@
   </div>
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
- <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
-  <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
-  <a style = color:violet; href="SEIF JOUL RESUME.pdf" class="cv-btn" download>📄 Download My Full CV</a>
+
+  <div class="contact-row">
+    <div class="contact-info">
+      <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
+      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
+      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
+    </div>
+
+    <div class="contact-download">
+      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>📄 Download My Full CV</a>
+    </div>
+
+    <div class="contact-qr">
+ 
+      <img src="QR.png" alt="QR code" class="qr-code">
+      <div class="qr-caption">Scan this code to access this site on mobile</div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  &copy; 2025 Saif-Eddine  Joul | All rights reserved.
+  &copy; 2025 Seif-Eddine  Joul | All rights reserved.
 </footer>
 
 </body>
