@@ -28,6 +28,12 @@ body.dark a {
   text-decoration: none;
 }
 
+body a {
+  color: #0080a0;
+  text-decoration: none;
+}
+
+body header a {color: #044858;}
 
 /* ============================================
    HEADER & FOOTER
@@ -1335,13 +1341,13 @@ body.dark .qr-caption {
 }
 
 /* Light theme: make contact links and CV button text match the header blue */
-body:not(.dark) .contact a {
-  color: #5a8fb3;
-}
 
-body:not(.dark) .cv-btn {
+/* body:not(.dark) .cv-btn {
   color: #5a8fb3;
 }
+body:not(.dark) .contact a {
+  color: white;
+} */
 
 /* Keep CV button readable in dark mode */
 body.dark .cv-btn {
