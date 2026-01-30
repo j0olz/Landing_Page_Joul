@@ -1246,17 +1246,40 @@ body.dark .page-nav {
 .page-pill {
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.55);
   background: rgba(255,255,255,0.18);
   color: #ffffff;
   font-family: arial;
   font-size: 0.95rem;
+      transition: all 0.3s ease;
 }
 
-.page-pill:hover {
-  background: rgba(255,255,255,0.28);
+body.dark .page-pill { color: #ffffff;}
+
+.page-pill:hover {   
+  background: #0080a0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,128,160,0.3);
+  border: #0080a0;
+    transition: all 0.3s ease;
 }
 
+body.dark .page-pill-active { 
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,128,160,0.3);
+    transform: translateY(-2px); 
+}
+
+.page-pill-active {
+    padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #0080a0;
+  background: #0080a0;
+  color: #ffffff;
+  font-family: arial;
+  font-size: 0.95rem;
+  pointer-events: none;
+  cursor: default;
+}
 /* Contact section with QR + aligned layout */
 .contact-row {
   display: flex;
