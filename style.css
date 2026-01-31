@@ -15,7 +15,7 @@ body {
 
 body.dark {
   background: #121212;
-  color: #f4f4f4;
+  color: #ddd;
 }
 
 a {
@@ -49,7 +49,7 @@ header, footer {
 body.dark header,
 body.dark footer {
   background: #222;
-  color: #f0f0f0;
+  color: #ddd;
 }
 
 /* Theme Toggle Button (top-right) */
@@ -88,7 +88,7 @@ body.dark footer {
    MAIN CONTENT SECTIONS
    ============================================ */
 
-.vcv, .contact {
+.vcv, .contact {   /* middle section that contains the cards, not the title of the page. + contact and connect */
   background: whitesmoke;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -98,7 +98,7 @@ body.dark footer {
     box-shadow: 0 4px 6px rgba(0, 128, 160, 0.692);
 }
 .who {
-  background: whitesmoke;
+  background: whitesmoke;  /* first card that contains the pages title*/
   text-align: left;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -719,8 +719,8 @@ body.dark .timeline-content:hover {
   margin: 0.3rem 0;
 }
 
-body.dark .company {
-  color: #f4f4f4;
+body.dark .company {  /*font color*/
+  color: #ddd;
 }
 
 .location {
@@ -746,7 +746,7 @@ body.dark .location {
 }
 
 body.dark .date-range {
-  color: #f4f4f4;
+  color: #ddd;
 }
 
 .duration {
@@ -1171,16 +1171,16 @@ body.dark .personal-card p {
 .theme-toggle {
   position: fixed;
   top: 1rem;
-  left: 1rem;
-  right: auto;
+  right: 1rem;
+  /* right: auto; */
   background: #283338;
 }
 
 .home-button {
   position: fixed;
   top: 1rem;
-  right: 1rem;
-  left: auto;
+  left: 1rem;
+  /* left: auto; */
   background: #283338;
 }
 
