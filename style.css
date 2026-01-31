@@ -88,7 +88,7 @@ body.dark footer {
    MAIN CONTENT SECTIONS
    ============================================ */
 
-.vcv, .contact {   /* middle section that contains the cards, not the title of the page. + contact and connect */
+.content-section, .contact {   /* middle section that contains the cards, not the title of the page. + contact and connect */
   background: whitesmoke;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -97,7 +97,7 @@ body.dark footer {
   max-width: 1000px;
     box-shadow: 0 4px 6px rgba(0, 128, 160, 0.692);
 }
-.who {
+.page-title-section {
   background: whitesmoke;  /* first card that contains the pages title*/
   text-align: left;
   margin: 2rem auto;
@@ -109,14 +109,14 @@ body.dark footer {
   box-shadow: 0 4px 6px rgba(0, 128, 160, 0.692);
 
 }
-/* .who:hover { 
+/* .page-title-section:hover { 
   transform: translateY(-8px);
   transition: transform 0.5s ease;
   box-shadow: 0 4px 8px rgba(0, 128, 160, 0.692);
 } */
 
-body.dark .who,
-body.dark .vcv,
+body.dark .page-title-section,
+body.dark .content-section,
 body.dark .contact {
   background: #1e1e1e;
   border-left: 6px solid #444;
