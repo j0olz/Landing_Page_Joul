@@ -99,6 +99,19 @@ body.dark footer {
 }
 .page-title-section {
   background: whitesmoke;  /* first card that contains the pages title*/
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-left: 6px solid #283338;
+  border-right: 6px solid #283338;
+  max-width: 1000px;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 6px rgba(0, 128, 160, 0.692);
+
+}
+
+.index-who {
+  background: whitesmoke;  /* first card that contains the pages title*/
   text-align: left;
   margin: 2rem auto;
   padding: 1.5rem;
@@ -115,7 +128,8 @@ body.dark footer {
   box-shadow: 0 4px 8px rgba(0, 128, 160, 0.692);
 } */
 
-body.dark .page-title-section,
+body.dark .page-title-section, 
+ body.dark .index-who,
 body.dark .content-section,
 body.dark .contact {
   background: #1e1e1e;
@@ -337,7 +351,7 @@ body.dark .resume-card:hover h3 {
   padding: 0 1rem;
 }
 
-.project-card {
+.project-card {     /* CARD */
  background: white;
   padding: 1.8rem;
   border-radius: 10px;
@@ -426,7 +440,7 @@ body.dark .category-tag.extracurricular {
 
 /* Project Card Content */
 .project-card h3 {
-  color: #0080a0;
+  color: #5a8fb3;
   margin: 0.5rem 0 1rem 0;
   font-size: 1.3rem;
   line-height: 1.4;
@@ -476,9 +490,9 @@ body.dark .project-card-skills strong {
   padding: 0 1rem;
 }
 
-.skill-category {
+.skill-category {                           /*CARD */
   /* background: #E5F3FD; */
-   background: #d0f9fc56;
+   background: white;
   margin: 2rem 0;
   padding: 2rem;
   border-radius: 10px;
@@ -492,7 +506,7 @@ body.dark .skill-category {
 }
 
 .skill-category h3 {
-  color: #0080a0;
+  color: #5a8fb3;
   margin: 0 0 1.5rem 0;
   font-size: 1.5rem;
   display: flex;
@@ -817,6 +831,7 @@ body.dark .timeline-skills strong {
 
 body.dark .skill-tag-mini {
   background: #2a2a2a;
+  color: white;
 }
 
 body.dark .skill-tag-mini:hover {
@@ -871,7 +886,7 @@ body.dark .personal-card:hover {
 }
 
 .personal-card h3 {
-  color: #0080a0;
+  color: #5a8fb3;
   margin: 1rem 0;
   font-size: 1.4rem;
 }
@@ -1391,5 +1406,132 @@ body.dark .cv-btn {
   .qr-code {
     width: 100px;
     height: 100px;
+  }
+}
+
+/* ============================================
+   EDUCATION PAGE - CARD LAYOUT UPDATE
+   ============================================ */
+
+.education-details {
+  text-align: left;
+}
+
+.edu-top-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.edu-top-title {
+  font-weight: 700;
+  color: #0080a0;
+  font-size: 1.15rem;
+}
+
+.edu-top-date {
+  color: #666;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+body.dark .edu-top-date {
+  color: #aaa;
+}
+
+.edu-degree-name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0.2rem 0 0.7rem 0;
+}
+
+.edu-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+body.dark .edu-meta-row {
+  color: #ddd;
+}
+
+.edu-block {
+  margin: 0.8rem 0;
+}
+
+.edu-split {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+.edu-achievements {
+  flex: 2;
+}
+
+.edu-rank {
+  flex: 1;
+  min-width: 180px;
+}
+
+.edu-vline {
+  width: 1px;
+  background: #ccc;
+  align-self: stretch;
+}
+
+body.dark .edu-vline {
+  background: #444;
+}
+
+.edu-rank-value {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #0080a0;
+  margin: 0.2rem 0;
+}
+
+.edu-rank-note {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+body.dark .edu-rank-note {
+  color: #aaa;
+}
+
+@media (max-width: 700px) {
+  .edu-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edu-top-date {
+    white-space: normal;
+  }
+
+  .edu-meta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .edu-split {
+    flex-direction: column;
+  }
+
+  .edu-vline {
+    display: none;
+  }
+
+  .edu-rank {
+    min-width: auto;
   }
 }

@@ -18,7 +18,7 @@
     <div class="header-spacer"></div>
 
     <div class="header-text">
-      <h1>Seif-Eddine  Joul</h1>
+      <h1>Seif-Eddine Joul</h1>
       <p>Mechatronics systems engineer</p>
       <p>
         <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
@@ -27,7 +27,6 @@
     </div>
 
     <div class="header-photo-wrap">
- 
       <img src="face.png" alt="Profile photo" class="profile-pic">
     </div>
   </div>
@@ -36,6 +35,7 @@
 <script>
   const toggle = document.getElementById('theme-toggle');
   const icon = toggle.querySelector('.icon');
+
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     if (document.body.classList.contains('dark')) {
@@ -46,6 +46,7 @@
       localStorage.setItem('theme', 'light');
     }
   });
+
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
     icon.textContent = '☀️';
@@ -53,12 +54,12 @@
 </script>
 
 <nav class="page-nav">
-    <a href="my-skills.html" class="page-pill">My Skills</a>
-    <a href="my-projects.html" class="page-pill">My Projects</a>
-    <a href="my-certifications.html" class="page-pill">My Certifications</a>
-    <a href="personal-life.html" class="page-pill">My Personal Life</a>
-    <a href="education.html" class="page-pill-active">Education</a>
-    <a href="professional-experience.html" class="page-pill">Professional Experience</a>
+  <a href="my-skills.html" class="page-pill">My Skills</a>
+  <a href="my-projects.html" class="page-pill">My Projects</a>
+  <a href="my-certifications.html" class="page-pill">My Certifications</a>
+  <a href="personal-life.html" class="page-pill">My Personal Life</a>
+  <a href="education.html" class="page-pill-active">Education</a>
+  <a href="professional-experience.html" class="page-pill">Professional Experience</a>
 </nav>
 
 <!-- Floating buttons -->
@@ -85,26 +86,28 @@
   });
 </script>
 
-<section class="who">
-  <h2>Education</h2>
-  <p>My academic journey and educational background that laid the foundation for my engineering career.</p>
-</section>
-
-<section class="vcv">
+<section class="content-section">
   <h2>Academic Background</h2>
-  
+
   <div class="skills-container">
-    
+
     <div class="skill-category">
-      <h3>Bachelor's Degree</h3>
       <div class="education-details">
-        <h4>Universiti Sains Malaysia (USM)</h4>
-        <p class="education-location">📍 Penang, Malaysia</p>
-        <p class="education-date">February 2020 - November 2024</p>
-        <p class="education-degree"><strong>Bachelor of Engineering in Mechatronics Engineering (Hons)</strong></p>
-        
-        <div class="education-highlights">
-          <p><strong>Notable Courses:</strong></p>
+
+        <div class="edu-top-row">
+          <div class="edu-top-title">Bachelor's Degree</div>
+          <div class="edu-top-date">February 2020 - November 2024</div>
+        </div>
+
+        <div class="edu-degree-name">Bachelor of Engineering in Mechatronics Engineering (Hons)</div>
+
+        <div class="edu-meta-row">
+          <div class="edu-school">Universiti Sains Malaysia (USM)</div>
+          <div class="edu-location">📍 Penang, Malaysia</div>
+        </div>
+
+        <div class="edu-block">
+          <p><strong>Relevant Courses:</strong></p>
           <div class="skill-tags">
             <span class="skill-tag">Robotics and Automation</span>
             <span class="skill-tag">Instrumentation</span>
@@ -115,44 +118,67 @@
             <span class="skill-tag">Manufacturing Processes</span>
             <span class="skill-tag">Quality Engineering</span>
           </div>
-          
-          <p style="margin-top: 1.5rem;"><strong>Achievements:</strong></p>
-          <ul style="text-align: left; margin-left: 1.5rem; line-height: 1.8;">
-            <li>Board of Engineers Malaysia Registration</li>
-            <li>Dean's List Conferment</li>
-            <li>Completed with Honors distinction</li>
-          </ul>
         </div>
+
+        <div class="edu-split">
+          <div class="edu-achievements">
+            <p><strong>Achievements:</strong></p>
+            <ul>
+              <li>Board of Engineers Malaysia Registration</li>
+              <li>Dean's List Conferment</li>
+              <li>Completed with Honors distinction</li>
+            </ul>
+          </div>
+
+          <div class="edu-vline" aria-hidden="true"></div>
+
+          <div class="edu-rank">
+            <p><strong>Global Rank:</strong></p>
+            <div class="edu-rank-value">#137</div>
+            <div class="edu-rank-note">Based on: QS World University Rankings 2025</div>
+          </div>
+        </div>
+
       </div>
     </div>
-    
+
     <div class="skill-category">
-      <h3>High School Diploma</h3>
       <div class="education-details">
-        <h4>Al Nahda National School</h4>
-        <p class="education-location">📍 Abu Dhabi, UAE</p>
-        <p class="education-date">January 2016 - June 2019</p>
-        <p class="education-degree"><strong>American Curriculum High School Diploma</strong></p>
-        
-        <div class="education-highlights">
+
+        <div class="edu-top-row">
+          <div class="edu-top-title">High School Diploma</div>
+          <div class="edu-top-date">January 2016 - June 2019</div>
+        </div>
+
+        <div class="edu-degree-name">American Curriculum High School Diploma</div>
+
+        <div class="edu-meta-row">
+          <div class="edu-school">Al Nahda National School</div>
+          <div class="edu-location">📍 Abu Dhabi, UAE</div>
+        </div>
+
+        <div class="edu-block">
           <p><strong>Focus Areas:</strong></p>
           <div class="skill-tags">
             <span class="skill-tag">Science Track</span>
             <span class="skill-tag">Business Studies</span>
             <span class="skill-tag">Sociology</span>
           </div>
-          
-          <p style="margin-top: 1.5rem;"><strong>Achievements:</strong></p>
-          <ul style="text-align: left; margin-left: 1.5rem; line-height: 1.8;">
+        </div>
+
+        <div class="edu-block">
+          <p><strong>Achievements:</strong></p>
+          <ul>
             <li>SAT Math Score: 600/800</li>
             <li>IELTS Score: 7 (C1 Level)</li>
             <li>PISA Achievement Recognition</li>
             <li>SMART Program Participant</li>
           </ul>
         </div>
+
       </div>
     </div>
-    
+
   </div>
 </section>
 
@@ -171,7 +197,6 @@
     </div>
 
     <div class="contact-qr">
- 
       <img src="QR.png" alt="QR code" class="qr-code">
       <div class="qr-caption">Scan this code to access this site on mobile</div>
     </div>
