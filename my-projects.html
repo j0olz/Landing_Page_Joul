@@ -17,18 +17,22 @@
 </head>
 <body>
 <header>
-  <a href="index.html" class="home-button float-btn" aria-label="Go to home">🏠</a>
+  <a href="index.html" class="home-button float-btn" aria-label="Go to home">
+  <img src="icons/home.png" alt="Home" class="icon">
+</a>
 
-  <button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
-    <span class="icon">🌙</span>
-  </button>
+
+<button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
+  <img src="icons/moon.png" alt="Toggle theme" class="icon">
+</button>
+
 
   <div class="header-bar">
     <div class="header-spacer"></div>
 
     <div class="header-text">
       <h1>Seif-Eddine  Joul</h1>
-      <p>Mechatronics systems engineer</p>
+      <p>Versatile and Ambitious Engineer, Quality and Safety focused, Team player and solo achiever</p>
       <p>
         <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
         <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
@@ -37,7 +41,7 @@
 
     <div class="header-photo-wrap">
  
-      <img src="face.png" alt="Profile photo" class="profile-pic">
+      <img src="icons/face.png" alt="Profile photo" class="profile-pic">
     </div>
   </div>
 </header>
@@ -48,16 +52,16 @@
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     if (document.body.classList.contains('dark')) {
-      icon.textContent = '☀️';
+      icon.src = 'icons/sun.png';
       localStorage.setItem('theme', 'dark');
     } else {
-      icon.textContent = '🌙';
+      icon.src = 'icons/moon.png';
       localStorage.setItem('theme', 'light');
     }
   });
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
-    icon.textContent = '☀️';
+    icon.src = 'icons/sun.png';
   }
 </script>
 
@@ -70,9 +74,12 @@
     <a href="professional-experience.html" class="page-pill">Professional Experience</a>
 </nav>
 
-<!-- Floating buttons -->
+<!-- Navigation buttons -->
 <button class="float-btn to-top" type="button" aria-label="Back to top">↑</button>
-<button class="float-btn to-contact" type="button" aria-label="Go to contact">📞</button>
+<button class="float-btn to-contact" type="button" aria-label="Go to contact">
+  <img src="icons/contact.png" alt="Contact" class="icon">
+</button>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -102,7 +109,7 @@
 </section> -->
 
 <section class="content-section">
-  <h2>Featured Projects</h2>
+  <!-- <h2>Featured Projects</h2> -->
   
   <div class="project-cards-grid">
     
@@ -113,7 +120,7 @@
       <p>Developed a MATLAB-based sensor fusion pipeline combining LiDAR point clouds with camera image data using extrinsic calibration and projective transformation. Integrated YOLOv4 object detection and achieved sub-pixel alignment with average reprojection error below 0.03 px. Fusion approach improved obstacle detection accuracy and depth estimation precision by approximately 35% compared to standalone systems.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#MATLAB" class="skill-tag-mini">MATLAB & Simulink</a>
         <a href="my-skills.html#Computer-Vision" class="skill-tag-mini">Computer Vision</a>
         <a href="my-skills.html#Python" class="skill-tag-mini">Python</a>
@@ -128,7 +135,7 @@
       <p>Designed and implemented a 4-degree-of-freedom robotic arm with servo-based actuation for dynamic pick-and-place operations. Integrated forward and inverse kinematics algorithms for real-time spatial manipulation with Cartesian coordinate input. Constructed custom GUI interface and achieved end-effector placement accuracy within ±2 mm with response latency under 100 ms.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#SolidWorks" class="skill-tag-mini">SolidWorks</a>
         <a href="my-skills.html#Arduino" class="skill-tag-mini">Arduino</a>
         <a href="my-skills.html#LabVIEW" class="skill-tag-mini">NI LabVIEW</a>
@@ -144,7 +151,7 @@
       <p>Designed a modular, 3D-printed legged robot chassis powered by 2 DC motors, achieving a weight reduction of ~200g and easy reassembly for prototyping. Integrated Arduino-based control system with ultrasonic and IR sensors for autonomous obstacle avoidance. Validated robot's reliability through iterative testing, successfully completing 100% of simulated rescue missions under low-light and obstructed conditions.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#SolidWorks" class="skill-tag-mini">SolidWorks</a>
         <a href="my-skills.html#Arduino" class="skill-tag-mini">Arduino</a>
         <a href="my-skills.html#3D-Printing" class="skill-tag-mini">3D Printing</a>
@@ -160,7 +167,7 @@
       <p>Designed and installed a regenerative braking mechanism in a terrain-adaptive robotic platform, recovering kinetic energy during deceleration cycles. Calibrated energy capture across 31–1532 rpm and integrated LiPo battery recharge logic. Reduced energy loss by up to 25% during field simulation and coordinated sensor-triggered braking actuation with motor control feedback.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#Motor-Control" class="skill-tag-mini">Motor Control</a>
         <a href="my-skills.html#Arduino" class="skill-tag-mini">Arduino</a>
         <a href="my-skills.html#Circuit-Design" class="skill-tag-mini">Circuit Design</a>
@@ -175,7 +182,7 @@
       <p>Designed and commissioned an automated PLC-controlled pick-and-place system with custom ladder logic, achieving a repeatable component transfer rate of <5 seconds per cycle and maintaining positioning accuracy within 0.5 mm. Performed troubleshooting to diagnose and resolve recurring pneumatic failures, increasing system reliability by ~70% and ensuring near-zero error rate during test runs.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#PLC-Programming" class="skill-tag-mini">PLC Programming</a>
         <a href="my-skills.html#Pneumatic-Systems" class="skill-tag-mini">Pneumatic Systems</a>
         <a href="my-skills.html#OMRON-CX-ONE" class="skill-tag-mini">OMRON CX-ONE</a>
@@ -190,7 +197,7 @@
       <p>Developed a Python OpenCV system to identify, classify, and measure currency coins using edge detection, contour analysis, and object dimension calibration from webcam input. Achieved classification accuracy of ~95% across 6 coin types and measurement error <1 mm using pixel-to-mm scaling via reference object calibration. Integrated live result display with GUI.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#Python" class="skill-tag-mini">Python</a>
         <a href="my-skills.html#OpenCV" class="skill-tag-mini">OpenCV</a>
         <a href="my-skills.html#Computer-Vision" class="skill-tag-mini">Computer Vision</a>
@@ -204,7 +211,7 @@
       <p>Engineered an Arduino-controlled autonomous irrigation unit integrating soil moisture sensors, ultrasonic water-level monitoring, and a DC pump system with overflow prevention. Designed and fabricated a compact mechanical housing with cable routing, ensuring leak-free operation. Implemented real-time condition feedback using an LCD interface and warning LED indicators, achieving over 90% water efficiency.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#Arduino" class="skill-tag-mini">Arduino</a>
         <a href="my-skills.html#Sensors" class="skill-tag-mini">Sensors and Actuators</a>
         <a href="my-skills.html#C++" class="skill-tag-mini">C++</a>
@@ -219,7 +226,7 @@
   <p>Co-led the restoration of a non-operational CNC lathe by diagnosing electrical control faults, replacing worn mechanical components, and recalibrating motion parameters. Returned the machine to full operational status within one week, restoring workshop productivity.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#Electromechanics" class="skill-tag-mini">Electromechanics</a>
     <a href="my-skills.html#Electrical-Troubleshooting" class="skill-tag-mini">Electrical Troubleshooting</a>
     <a href="my-skills.html#Maintenance" class="skill-tag-mini">Maintenance</a>
@@ -233,7 +240,7 @@
   <p>Designed and commissioned an off-grid solar LED signage system with custom PCB integration and rooftop solar installation. Performed load calculations and component selection to ensure continuous 24/7 operation without grid dependency.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#Solar-Systems" class="skill-tag-mini">Solar Systems</a>
     <a href="my-skills.html#Electrical-Design" class="skill-tag-mini">Electrical Design</a>
     <a href="my-skills.html#Energy-Efficiency" class="skill-tag-mini">Energy Efficiency</a>
@@ -247,7 +254,7 @@
   <p>Built an automated solar-powered irrigation pump using custom circuitry, mechanical coupling, and repurposed components. Implemented controlled valve actuation to regulate water flow efficiently, improving sustainability and energy autonomy.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#Automation" class="skill-tag-mini">Automation</a>
     <a href="my-skills.html#Mechanical-Design" class="skill-tag-mini">Mechanical Design</a>
     <a href="my-skills.html#Solar-Systems" class="skill-tag-mini">Solar Systems</a>
@@ -261,7 +268,7 @@
   <p>Executed residential electrical upgrades including circuit extensions, outlet additions, junction box creation, and lighting installations. Ensured proper grounding, load calculations, and compliance with safety and wiring standards.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#Electrical-Wiring" class="skill-tag-mini">Electrical Wiring</a>
     <a href="my-skills.html#Load-Calculation" class="skill-tag-mini">Load Calculation</a>
     <a href="my-skills.html#Electrical-Safety" class="skill-tag-mini">Electrical Safety</a>
@@ -275,7 +282,7 @@
   <p>Designed and installed complete CCTV and DVR surveillance systems with centralized power supply and concealed cabling. Ensured reliable 24/7 operation while avoiding overload of existing electrical circuits.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#CCTV" class="skill-tag-mini">CCTV Systems</a>
     <a href="my-skills.html#Networking" class="skill-tag-mini">Networking</a>
     <a href="my-skills.html#Power-Distribution" class="skill-tag-mini">Power Distribution</a>
@@ -289,7 +296,7 @@
   <p>Managed evening operations including staff coordination, inventory tracking, cash handling, and service quality control. Maintained smooth workflows in a fast-paced, customer-facing environment.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#Operations" class="skill-tag-mini">Operations</a>
     <a href="my-skills.html#Team-Coordination" class="skill-tag-mini">Team Coordination</a>
     <a href="my-skills.html#Customer-Service" class="skill-tag-mini">Customer Service</a>
@@ -303,7 +310,7 @@
   <p>Organized and executed a university-wide Explorace challenge involving complex logistics, multi-location coordination, and real-time problem solving. Worked with cross-functional teams to manage participants, checkpoints, safety, and smooth event flow under time and resource constraints.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#Operations" class="skill-tag-mini">Operations Planning</a>
     <a href="my-skills.html#Logistics" class="skill-tag-mini">Logistics Coordination</a>
     <a href="my-skills.html#Teamwork" class="skill-tag-mini">Team Coordination</a>
@@ -318,7 +325,7 @@
   <p>Provided academic writing and language support to high school and university students, including report structuring, proofreading, summarization, and study material preparation. Also supported candidates preparing for English certification exams (Linguaskill, Duolingo) through targeted tutoring and practice resources, achieving consistently successful results.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#Academic-Writing" class="skill-tag-mini">Academic Writing</a>
     <a href="my-skills.html#English" class="skill-tag-mini">English (C1)</a>
     <a href="my-skills.html#Tutoring" class="skill-tag-mini">Tutoring</a>
@@ -333,7 +340,7 @@
   <p>Developed a 4-DOF fruit-harvesting robotic arm concept and simulation, using DH-based kinematic modeling and MATLAB analysis. Contributed to trajectory planning (joint position/velocity/acceleration), NI myRIO + LabVIEW hardware integration, and system documentation as part of a multi-member robotics project.</p>
   
   <div class="project-card-skills">
-    <strong>Skills:</strong>
+    <strong>Using:</strong>
     <a href="my-skills.html#MATLAB" class="skill-tag-mini">MATLAB</a>
     <a href="my-skills.html#Robotics" class="skill-tag-mini">Robotics</a>
     <a href="my-skills.html#LabVIEW" class="skill-tag-mini">NI LabVIEW</a>
@@ -349,7 +356,7 @@
       <p>Designed and conducted simulation-based DoE evaluating drone platform capacity impact on delivery time, analyzing 5 configurations with 20+ simulation runs each. Applied one-way ANOVA to confirm statistically significant effect of platform size on delivery efficiency. Observed 2× increase in delivery time from platform size 2 to 10, used regression modeling to fit a 3rd-order polynomial curve for performance prediction.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#Minitab" class="skill-tag-mini">Minitab</a>
         <a href="my-skills.html#Statistical-Analysis" class="skill-tag-mini">Statistical Analysis</a>
         <a href="my-skills.html#Data-Analysis" class="skill-tag-mini">Data Analysis</a>
@@ -363,7 +370,7 @@
       <p>Demonstrated reliability prediction techniques applicable to consumer and industrial product validation. Analyzed failure modes using Weibull distribution, demonstrating >90% confidence in expected performance lifetime. Conducted accelerated life testing using stress analysis (temperature and load cycles) to predict long-term failure patterns.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#Reliability-Testing" class="skill-tag-mini">Reliability Testing</a>
         <a href="my-skills.html#Statistical-Analysis" class="skill-tag-mini">Statistical Analysis</a>
         <a href="my-skills.html#Minitab" class="skill-tag-mini">Minitab</a>
@@ -377,7 +384,7 @@
       <p>Led the entire organizing effort for a multicultural celebration with 300+ attendees as Deputy President of USMi. Managed logistics, booths, media coordination, and a budget exceeding RM 20,000. Event became one of USM's flagship experiences for the year, showcasing cross-cultural collaboration and community building.</p>
       
       <div class="project-card-skills">
-        <strong>Skills:</strong>
+        <strong>Using:</strong>
         <a href="my-skills.html#Leadership" class="skill-tag-mini">Leadership</a>
         <a href="my-skills.html#Event-Planning" class="skill-tag-mini">Event Planning</a>
         <a href="my-skills.html#Budgeting" class="skill-tag-mini">Budgeting</a>
@@ -394,17 +401,18 @@
   <div class="contact-row">
     <div class="contact-info">
       <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
-      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
-      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
+      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
+      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
     </div>
 
     <div class="contact-download">
-      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>📄 Download My Full CV</a>
+      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>   
+        <img src="icons/dwn.png" alt="Toggle theme" class="icon">  Download My Full CV</a>
     </div>
 
     <div class="contact-qr">
  
-      <img src="QR.png" alt="QR code" class="qr-code">
+      <img src="icons/QR.png" alt="QR code" class="qr-code">
       <div class="qr-caption">Scan this code to access this site on mobile</div>
     </div>
   </div>

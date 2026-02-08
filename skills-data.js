@@ -207,7 +207,8 @@ function getProjectsForSkill(skillName) {
 // Function to display tooltip with projects
 function createSkillTooltip(skillName, projects) {
   if (!projects || projects.length === 0) {
-    return 'No projects linked yet';
+    //return 'No projects linked yet';
+    return;
   }
   
   return `Used in:\n${projects.map(p => `• ${p}`).join('\n')}`;

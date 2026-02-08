@@ -20,18 +20,18 @@
 </head>
 <body>
 <header>
-  <!--<a href="index.html" class="home-button float-btn" aria-label="Go to home">🏠</a>-->
 
-  <button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
-    <span class="icon">🌙</span>
-  </button>
+
+<button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
+  <img src="icons/moon.png" alt="Toggle theme" class="icon">
+</button>
 
   <div class="header-bar">
     <div class="header-spacer"></div>
 
     <div class="header-text">
       <h1>Seif-Eddine  Joul</h1>
-      <p>Mechatronics systems engineer</p>
+      <p>Versatile and Ambitious Engineer, Quality and Safety focused, Team player and solo achiever</p>
       <p>
         <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
         <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
@@ -40,7 +40,7 @@
 
     <div class="header-photo-wrap">
  
-      <img src="face.png" alt="Profile photo" class="profile-pic">
+      <img src="icons/face.png" alt="Profile photo" class="profile-pic">
     </div>
   </div>
 </header>
@@ -50,23 +50,27 @@
   const icon = toggle.querySelector('.icon');
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
+
     if (document.body.classList.contains('dark')) {
-      icon.textContent = '☀️';
+      icon.src = 'icons/sun.png';
       localStorage.setItem('theme', 'dark');
     } else {
-      icon.textContent = '🌙';
+      icon.src = 'icons/moon.png';
       localStorage.setItem('theme', 'light');
     }
   });
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
-    icon.textContent = '☀️';
+    icon.src = 'icons/sun.png';
   }
 </script>
 
-<!-- Floating buttons -->
+<!-- Navigation buttons -->
 <button class="float-btn to-top" type="button" aria-label="Back to top">↑</button>
-<button class="float-btn to-contact" type="button" aria-label="Go to contact">📞</button>
+<button class="float-btn to-contact" type="button" aria-label="Go to contact">
+  <img src="icons/contact.png" alt="Contact" class="icon">
+</button>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -99,35 +103,35 @@ I thrive in collaborative quality-focused environments and I’m continuously ex
   <h2>Virtual CV</h2>
   <p style="max-width: 800px; margin: 0 auto 2rem auto;">Navigate through different aspects of my professional and personal journey. Each section provides detailed insights into my experiences, skills, and achievements.</p>
   
-  <div class="resume-cards-grid">
+  <div class="index-cards-grid">
     
-     <a href="professional-experience.html" class="resume-card">
-      <div class="resume-card-icon">💼</div>
-      <h3>Professional Experience</h3>
+     <a href="professional-experience.html" class="index-card">
+      <div class="index-cards-icon"><img src="icons/xp.png" alt="Professional Experience" class="icons"></div>
+      <h3>Career</h3>
     </a>
     
-     <a href="my-skills.html" class="resume-card">
-      <div class="resume-card-icon">🛠️</div>
-      <h3>My Skills</h3>
+     <a href="my-skills.html" class="index-card">
+      <div class="index-cards-icon"><img src="icons/skl.png" alt="My Skills" class="icons"></div>
+      <h3>Skills</h3>
     </a>
     
-    <a href="my-projects.html" class="resume-card">
-      <div class="resume-card-icon">📂</div>
-      <h3>My Projects</h3>
+    <a href="my-projects.html" class="index-card">
+      <div class="index-cards-icon"><img src="icons/pro.png" alt="My Projects" class="icons"></div>
+      <h3>Projects</h3>
     </a>
     
-    <a href="my-certifications.html" class="resume-card">
-      <div class="resume-card-icon">🏆</div>
-      <h3>My Certifications</h3>
+    <a href="my-certifications.html" class="index-card">
+      <div class="index-cards-icon"><img src="icons/cert.png" alt="My Certifications" class="icons"></div>
+      <h3>Certificates</h3>
     </a>
     
-    <a href="personal-life.html" class="resume-card">
-      <div class="resume-card-icon">🌟</div>
-      <h3>My Personal Life</h3>
+    <a href="personal-life.html" class="index-card">
+      <div class="index-cards-icon"><img src="icons/life.png" alt="My Personal Life" class="icons"></div>
+      <h3>Personal Life</h3>
     </a>
     
-     <a href="education.html" class="resume-card">
-      <div class="resume-card-icon">🎓</div>
+     <a href="education.html" class="index-card">
+      <div class="index-cards-icon"><img src="icons/edu.png" alt="Education" class="icons"></div>
       <h3>Education</h3>
     </a> 
    
@@ -141,17 +145,18 @@ I thrive in collaborative quality-focused environments and I’m continuously ex
   <div class="contact-row"> 
     <div class="contact-info">
       <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
-      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
-      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
+      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
+      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
     </div>
 
     <div class="contact-download">
-      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>📄 Download My Full CV</a>
+      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>
+        <img src="icons/dwn.png" alt="Toggle theme" class="icon"> Download My Full CV</a>
     </div>
 
     <div class="contact-qr">
  
-      <img src="QR.png" alt="QR code" class="qr-code">
+      <img src="icons/QR.png" alt="QR code" class="qr-code">
       <div class="qr-caption">Scan this code to access this site on mobile</div>
     </div>
   </div>

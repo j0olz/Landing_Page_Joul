@@ -17,18 +17,22 @@
 </head>
 <body>
 <header>
-  <a href="index.html" class="home-button float-btn" aria-label="Go to home">🏠</a>
+  <a href="index.html" class="home-button float-btn" aria-label="Go to home">
+  <img src="icons/home.png" alt="Home" class="icon">
+</a>
 
-  <button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
-    <span class="icon">🌙</span>
-  </button>
+
+<button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
+  <img src="icons/moon.png" alt="Toggle theme" class="icon">
+</button>
+
 
   <div class="header-bar">
     <div class="header-spacer"></div>
 
     <div class="header-text">
       <h1>Seif-Eddine Joul</h1>
-      <p>Mechatronics systems engineer</p>
+      <p>Versatile and Ambitious Engineer, Quality and Safety focused, Team player and solo achiever</p>
       <p>
         <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
         <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
@@ -36,7 +40,7 @@
     </div>
 
     <div class="header-photo-wrap">
-      <img src="face.png" alt="Profile photo" class="profile-pic">
+      <img src="icons/face.png" alt="Profile photo" class="profile-pic">
     </div>
   </div>
 </header>
@@ -48,17 +52,17 @@
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     if (document.body.classList.contains('dark')) {
-      icon.textContent = '☀️';
+      icon.src = 'icons/sun.png';
       localStorage.setItem('theme', 'dark');
     } else {
-      icon.textContent = '🌙';
+      icon.src = 'icons/moon.png';
       localStorage.setItem('theme', 'light');
     }
   });
 
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
-    icon.textContent = '☀️';
+    icon.src = 'icons/sun.png';
   }
 </script>
 
@@ -71,9 +75,12 @@
   <a href="professional-experience.html" class="page-pill">Professional Experience</a>
 </nav>
 
-<!-- Floating buttons -->
+<!-- Navigation buttons -->
 <button class="float-btn to-top" type="button" aria-label="Back to top">↑</button>
-<button class="float-btn to-contact" type="button" aria-label="Go to contact">📞</button>
+<button class="float-btn to-contact" type="button" aria-label="Go to contact">
+  <img src="icons/contact.png" alt="Contact" class="icon">
+</button>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -197,16 +204,17 @@
   <div class="contact-row">
     <div class="contact-info">
       <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
-      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
-      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="wts.png" alt="WhatsApp" class="icon"> </p>
+      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
+      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
     </div>
 
     <div class="contact-download">
-      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>📄 Download My Full CV</a>
+      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>
+        <img src="icons/dwn.png" alt="Toggle theme" class="icon"> Download My Full CV</a>
     </div>
 
     <div class="contact-qr">
-      <img src="QR.png" alt="QR code" class="qr-code">
+      <img src="icons/QR.png" alt="QR code" class="qr-code">
       <div class="qr-caption">Scan this code to access this site on mobile</div>
     </div>
   </div>

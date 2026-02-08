@@ -52,38 +52,6 @@ body.dark footer {
   color: #ddd;
 }
 
-/* Theme Toggle Button (top-right) */
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.4rem;
-  color: inherit;
-}
-
-/* Home Button (top-left) */
-.home-button {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.4rem;
-  color: inherit;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.home-button:hover {
-  transform: scale(1.2);
-}
-
-/* .theme-toggle {
-  transform: scale(1.2);} */
 /* ============================================
    MAIN CONTENT SECTIONS
    ============================================ */
@@ -141,34 +109,8 @@ body.dark .contact {
    SHARED BUTTON STYLES
    ============================================ */
 
-/* Back Button */
-.back-btn {
-  background: #283338;
-  color: white;
-  border: none;
-  /* padding: 0.6rem 1.2rem; */
-  padding: 1.2rem 1.2rem;
-  border-radius: 250px;
-  font-size: 1rem;
-  cursor: pointer;
-  font-family: arial;
-  margin: 18em auto 1em 1.8em;
-  display: block;
-  width: fit-content;
-  transition: all 0.3s ease;
-  position: fixed;
-}
-
-.back-btn:hover {
-  background: #0080a0;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,128,160,0.3);
-}
-
-/* Legacy Button Links/ UPDATED CV DOWNLOAD */
-
 .cv-btn {
-  background: #283338;
+  background: #5a8fb3;
   color: white;
   border: none;
   padding: 1rem 1.2rem;
@@ -187,7 +129,7 @@ body.dark .contact {
   box-shadow: 0 4px 8px rgba(0,128,160,0.3);
 }
 
-.buttons {
+/* .buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -225,17 +167,24 @@ body.dark .button-link {
 
 body.dark .button-link:hover {
   background-color: #0080a0;
-}
+} */
 
 /* ============================================
    SHARED COMPONENTS
    ============================================ */
 
-.icon {
-  width: 1em;
+.icons {
+  width: 1.6em;
   height: auto;
   vertical-align: middle;
-  margin-right: 0.3em;
+  /* margin-right: 0.3em; */
+}
+
+.icon {
+  width: 1.2em;
+  height: auto;
+  vertical-align: middle;
+  /* margin-right: 0.3em; */
 }
 
 .project-divider {
@@ -270,7 +219,7 @@ body.dark .button-link:hover {
    INDEX PAGE - RESUME CARDS GRID
    ============================================ */
 
- .resume-cards-grid {
+ .index-cards-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -280,7 +229,7 @@ body.dark .button-link:hover {
   padding: 0 1rem; 
 } 
 
-.resume-card {
+.index-card {
   background: white;
   padding: 2.5rem 2rem;
   border-radius: 12px;
@@ -298,43 +247,43 @@ body.dark .button-link:hover {
   min-width: 220px;
 }
 
-.resume-card:hover {
+.index-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 16px rgba(0,128,160,0.3);
   border-top-color: #283338;
 }
 
-body.dark .resume-card {
+body.dark .index-card {
   background: #1e1e1e;
   box-shadow: 0 4px 6px rgba(255,255,255,0.05);
 }
 
-body.dark .resume-card:hover {
+body.dark .index-card:hover {
   box-shadow: 0 8px 16px rgba(255,255,255,0.1);
 }
 
-.resume-card-icon {
+.index-cards-icon {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
 }
 
-.resume-card:hover .resume-card-icon {
+.index-card:hover .index-cards-icon {
   transform: scale(1.15) rotate(5deg);
 }
 
-.resume-card h3 {
+.index-card h3 {
   color: #0080a0;
   margin: 0;
   font-size: 1.3rem;
   transition: color 0.3s ease;
 }
 
-.resume-card:hover h3 {
+.index-card:hover h3 {
   color: #283338;
 }
 
-body.dark .resume-card:hover h3 {
+body.dark .index-card:hover h3 {
   color: #0080a0;
 }
 
@@ -386,56 +335,57 @@ body.dark .project-card:hover {
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  max-width: 90%;
 }
 
 .category-tag.academic {
   background: #f4c430;
-  color: #1a1a1a;
+  color: #2c2c2c;
 }
 
 body.dark .category-tag.academic {
   background: #d4a017;
-  color: #fff;
+  color: #161616;
 }
 
 .category-tag.personal {
   background: #e74c3c;
-  color: white;
+  color: #2c2c2c;
 }
 
 body.dark .category-tag.personal {
   background: #c0392b;
-  color: #fff;
+  color: #161616;
 }
 
 .category-tag.part-time {
   background: #27ae60;
-  color: white;
+  color: #2c2c2c;
 }
 
 body.dark .category-tag.part-time {
   background: #229954;
-  color: #fff;
+  color: #161616;
 }
 
 .category-tag.freelance {
   background: #3498db;
-  color: white;
+  color: #2c2c2c;
 }
 
 body.dark .category-tag.freelance {
   background: #2980b9;
-  color: #fff;
+  color: #161616;
 }
 
 .category-tag.extracurricular {
   background: #9b59b6;
-  color: white;
+  color: #2c2c2c;
 }
 
 body.dark .category-tag.extracurricular {
   background: #8e44ad;
-  color: #fff;
+  color: #161616;
 }
 
 /* Project Card Content */
@@ -811,7 +761,7 @@ body.dark .timeline-skills strong {
   color: #aaa;
 }
 
-/* Skill Tag Mini (used in timeline and project cards) */
+/* Skill Tag Mini (used in experience and project cards) */
 .skill-tag-mini {
   display: inline-block;
   background: #283338;
@@ -918,23 +868,23 @@ body.dark .personal-card p {
 
 /* Index Page - Resume Cards */
 @media (max-width: 900px) {
-  .resume-card {
+  .index-card {
     width: calc(50% - 1rem);
   }
 }
 
 @media (max-width: 600px) {
-  .resume-card {
+  .index-card {
     width: 100%;
     min-height: 80px;
     padding: 2rem 1.5rem;
   }
   
-  .resume-card-icon {
+  .index-cards-icon {
     font-size: 3rem;
   }
   
-  .resume-card h3 {
+  .index-card h3 {
     font-size: 1.2rem;
   }
 }
@@ -1079,51 +1029,6 @@ body.dark .personal-card p {
 
 /* ---------- Mobile / UI fixes ---------- */
 
-/* Keep floating controls above everything */
-.theme-toggle,
-.home-button,
-.back-btn {
-  z-index: 9999; /* highest */
-}
-
-/* Back button: circular arrow, bottom-left, always visible */
-.back-btn {
-  position: fixed;
-  left: 1rem;
-  bottom: 1rem;
-  background: #283338;
-  color: #fff;
-  border: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  font-size: 0;           /* hide original text */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0,128,160,0.3);
-  margin: 0;              /* override earlier margin */
-  padding: 0;             /* override earlier padding */
-}
-.back-btn::before{
-  content: "←";
-  font-size: 20px;
-  line-height: 1;
-}
-.back-btn:hover {
-  background: #0080a0;
-  transform: translateY(-2px);
-}
-
-/* Home and theme buttons: ensure above content on mobile */
-.home-button,
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-}
-.home-button { left: 1rem; }
-.theme-toggle { right: 1rem; }
-
 /* Experience page: widen timeline and loosen cramped feel */
 @media (min-width: 769px) {
   .timeline-container {
@@ -1163,8 +1068,7 @@ body.dark .personal-card p {
   width: 48px;
   height: 48px;
   border-radius: 999px;
-  background: #283338;
-  color: #ffffff;
+   color: #ffffff;
   border: none;
   cursor: pointer;
   display: flex;
@@ -1172,44 +1076,32 @@ body.dark .personal-card p {
   justify-content: center;
   text-decoration: none;
   font-size: 1.2rem;
-  z-index: 1000;
   box-shadow: 0 4px 10px rgba(0,0,0,0.18);
   transition: transform 0.2s ease, background 0.2s ease;
+  background: #0080a0;
+  z-index: 9999;
+  position: fixed;
 }
 
 .float-btn:hover {
-  background: #0080a0;
-  transform: translateY(-2px);
+  background: #01add8;
+  transform: scale(0.9); 
+    box-shadow: 1px 1px 15px #0080a0;
 }
 
-/* Specific placements */
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  /* right: auto; */
-  background: #283338;
-}
+body.dark .float-btn:hover {background: #01add8;}
+body.dark .float-btn {background: #01add8;}
 
-.home-button {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  /* left: auto; */
-  background: #283338;
-}
+.home-button, .theme-toggle {top: 0.25rem;}
 
-.to-top {
-  position: fixed;
+.to-top, .to-contact {
   left: 1rem;
   bottom: 5.5rem;
 }
+.theme-toggle {right: 1rem;}
+.home-button {left: 1rem;}
+.to-contact{bottom: 1rem;}
 
-.to-contact {
-  position: fixed;
-  left: 1rem;
-  bottom: 1rem;
-}
 
 /* Header layout with profile photo */
 .header-bar {
@@ -1238,7 +1130,7 @@ body.dark .personal-card p {
 .profile-pic {
   position: relative;
   top: 5px;
-  right: 670px;
+  right: 890px;
   width: 190px;
   height: 190px;
   border-radius: 999px;
@@ -1355,14 +1247,7 @@ body.dark .qr-caption {
   color: rgba(255,255,255,0.85);
 }
 
-/* Light theme: make contact links and CV button text match the header blue */
 
-/* body:not(.dark) .cv-btn {
-  color: #5a8fb3;
-}
-body:not(.dark) .contact a {
-  color: white;
-} */
 
 /* Keep CV button readable in dark mode */
 body.dark .cv-btn {
