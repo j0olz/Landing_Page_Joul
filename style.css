@@ -733,6 +733,8 @@ body.dark .date-range {
 .timeline-body ul {
   margin: 0.5rem 0 1rem 1.5rem;
   padding: 0;
+  text-align: justify;
+
 }
 
 .timeline-body li {
