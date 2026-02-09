@@ -1078,7 +1078,7 @@ body.dark .personal-card p {
   font-size: 1.2rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.18);
   transition: transform 0.2s ease, background 0.2s ease;
-  background: #0080a0;
+  background: #87a6bb;
   z-index: 9999;
   position: fixed;
 }
@@ -1092,7 +1092,7 @@ body.dark .personal-card p {
 body.dark .float-btn:hover {background: #01add8;}
 body.dark .float-btn {background: #01add8;}
 
-.home-button, .theme-toggle {top: 0.25rem;}
+.home-button, .theme-toggle {top: 0.2rem;}
 
 .to-top, .to-contact {
   left: 1rem;
