@@ -1,241 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C8K6QM5ZGZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C8K6QM5ZGZ');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N5KVXWVH');</script>
-<!-- End Google Tag Manager -->
-  <title>Education</title>
+  <title>Education | Seif Joul</title>
+  <meta property="og:title"       content="Education – Seif-Eddine Joul" />
+  <meta property="og:description" content="BEng Mechatronics (Hons) – USM #137 globally. American Curriculum HS Diploma." />
+  <meta property="og:image"       content="icons/face.png" />
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5KVXWVH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header>
-  <a href="index.html" class="home-button float-btn" aria-label="Go to home">
-  <img src="icons/home.png" alt="Home" class="icon">
-</a>
 
-
-<button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
-  <img src="icons/moon.png" alt="Toggle theme" class="icon">
-</button>
-
-
-  <div class="header-bar">
-    <div class="header-spacer"></div>
-
-    <div class="header-text">
-      <h1>Seif-Eddine Joul</h1>
-      <p>Versatile and Ambitious Engineer, Quality and Safety focused, Team player and solo achiever</p>
-      <p>
-        <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
-        <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
-      </p>
-    </div>
-
-    <div class="header-photo-wrap">
-      <img src="icons/face.png" alt="Profile photo" class="profile-pic">
-    </div>
-  </div>
-</header>
-
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const icon = toggle.querySelector('.icon');
-
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    if (document.body.classList.contains('dark')) {
-      icon.src = 'icons/sun.png';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      icon.src = 'icons/moon.png';
-      localStorage.setItem('theme', 'light');
-    }
-  });
-
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-    icon.src = 'icons/sun.png';
-  }
-</script>
-
-<nav class="page-nav">
-  <a href="my-skills.html" class="page-pill">My Skills</a>
-  <a href="my-projects.html" class="page-pill">My Projects</a>
-  <a href="my-certifications.html" class="page-pill">My Certifications</a>
-  <a href="personal-life.html" class="page-pill">My Personal Life</a>
-  <a href="education.html" class="page-pill-active">Education</a>
-  <a href="professional-experience.html" class="page-pill">Professional Experience</a>
-</nav>
-
-<!-- Navigation buttons -->
-<button class="float-btn to-top" type="button" aria-label="Back to top">↑</button>
-<button class="float-btn to-contact" type="button" aria-label="Go to contact">
-  <img src="icons/contact.png" alt="Contact" class="icon">
-</button>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toTop = document.querySelector('.to-top');
-    const toContact = document.querySelector('.to-contact');
-    const contactSection = document.getElementById('contact');
-
-    if (toTop) {
-      toTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (toContact && contactSection) {
-      toContact.addEventListener('click', () => {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    }
-  });
-</script>
+<header id="site-header"></header>
+<nav    id="site-nav"></nav>
+<div   id="floating-buttons"></div>
 
 <section class="content-section">
   <h2>Academic Background</h2>
-
-  <div class="skills-container">
-
-    <div class="skill-category">
-      <div class="education-details">
-
-        <div class="edu-top-row">
-          <div class="edu-top-title">Bachelor's Degree</div>
-          <div class="edu-top-date">February 2020 - November 2024</div>
-        </div>
-
-        <div class="edu-degree-name">Bachelor of Engineering in Mechatronics Engineering (Hons)</div>
-
-        <div class="edu-meta-row">
-          <div class="edu-school">Universiti Sains Malaysia (USM)</div>
-          <div class="edu-location">📍 Penang, Malaysia</div>
-        </div>
-
-        <div class="edu-block">
-          <p><strong>Relevant Courses:</strong></p>
-          <div class="skill-tags">
-            <span class="skill-tag">Robotics and Automation</span>
-            <span class="skill-tag">Instrumentation</span>
-            <span class="skill-tag">Machine Vision</span>
-            <span class="skill-tag">Mechatronics Design</span>
-            <span class="skill-tag">Control Systems</span>
-            <span class="skill-tag">Embedded Systems</span>
-            <span class="skill-tag">Manufacturing Processes</span>
-            <span class="skill-tag">Quality Engineering</span>
-          </div>
-        </div>
-
-        <div class="edu-split">
-          <div class="edu-achievements">
-            <p><strong>Achievements:</strong></p>
-            <ul>
-              <li>Board of Engineers Malaysia Registration</li>
-              <li>Dean's List Conferment</li>
-              <li>Vice President of Student Society</li>
-              <li>Completed with Honors distinction</li>
-            </ul>
-          </div>
-
-          <div class="edu-vline" aria-hidden="true"></div>
-
-          <div class="edu-rank">
-            <p><strong>Global Rank:</strong></p>
-            <div class="edu-rank-value">#137</div>
-            <div class="edu-rank-note">Based on: QS World University Rankings 2025</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <div class="education-details">
-
-        <div class="edu-top-row">
-          <div class="edu-top-title">High School Diploma</div>
-          <div class="edu-top-date">January 2016 - June 2019</div>
-        </div>
-
-        <div class="edu-degree-name">American Curriculum High School Diploma</div>
-
-        <div class="edu-meta-row">
-          <div class="edu-school">Al Nahda National School</div>
-          <div class="edu-location">📍 Abu Dhabi, UAE</div>
-        </div>
-
-        <div class="edu-block">
-          <p><strong>Focus Areas:</strong></p>
-          <div class="skill-tags">
-            <span class="skill-tag">Science (Biology, Chemoistry, Physics)</span>
-            <span class="skill-tag">Business and Finance</span>
-            <span class="skill-tag">Sociology</span>
-          </div>
-        </div>
-
-        <div class="edu-block">
-          <p><strong>Achievements:</strong></p>
-          <ul>
-            <li>SAT Math Score: 600/800</li>
-            <li>IELTS Score: 7 (C1 Level)</li>
-            <li>PISA Achievement Recognition</li>
-            <li>SMART Program Participant</li>
-            <li>ICDL certificate aquired</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
+  <div class="skills-container" id="edu-list"></div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Contact & Connect</h2>
+<section id="site-contact"></section>
+<footer  id="site-footer"></footer>
 
-  <div class="contact-row">
-    <div class="contact-info">
-      <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
-      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
-      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
-    </div>
+<script src="render.js"></script>
+<script src="main.js"></script>
+<script>
+  SiteRender.bootstrapPage({
+    activePage: 'education.html',
+    renderBody(content) {
+      document.getElementById('edu-list').innerHTML =
+        content.education.map(edu => {
+          const courses = edu.courses.map(c =>
+            `<span class="skill-tag">${SiteRender.esc(c)}</span>`
+          ).join('');
 
-    <div class="contact-download">
-      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>
-        <img src="icons/dwn.png" alt="Toggle theme" class="icon"> Download My Full CV</a>
-    </div>
+          const achievements = edu.achievements.map(a =>
+            `<li>${SiteRender.esc(a)}</li>`
+          ).join('');
 
-    <div class="contact-qr">
-      <img src="icons/QR.png" alt="QR code" class="qr-code">
-      <div class="qr-caption">Scan this code to access this site on mobile</div>
-    </div>
-  </div>
-</section>
+          const rankBlock = edu.rank ? `
+            <div class="edu-split">
+              <div class="edu-achievements">
+                <p><strong>Achievements:</strong></p>
+                <ul>${achievements}</ul>
+              </div>
+              <div class="edu-vline" aria-hidden="true"></div>
+              <div class="edu-rank">
+                <p><strong>Global Rank:</strong></p>
+                <div class="edu-rank-value">${edu.rank.value}</div>
+                <div class="edu-rank-note">${SiteRender.esc(edu.rank.note)}</div>
+              </div>
+            </div>
+          ` : `
+            <div class="edu-block">
+              <p><strong>Achievements:</strong></p>
+              <ul>${achievements}</ul>
+            </div>
+          `;
 
-<footer>
-  &copy; 2025 Seif Eddine Joul | All rights reserved.
-</footer>
+          const coursesLabel = edu.courses.length && edu.courses.some(c => c.includes('Science'))
+            ? 'Focus Areas' : 'Relevant Courses';
+
+          return `
+            <div class="skill-category">
+              <div class="education-details">
+                <div class="edu-top-row">
+                  <div class="edu-top-title">${SiteRender.esc(edu.type)}</div>
+                  <div class="edu-top-date">${SiteRender.esc(edu.dateRange)}</div>
+                </div>
+                <div class="edu-degree-name">${SiteRender.esc(edu.degree)}</div>
+                <div class="edu-meta-row">
+                  <div class="edu-school">${SiteRender.esc(edu.school)}</div>
+                  <div class="edu-location">📍 ${SiteRender.esc(edu.location)}</div>
+                </div>
+                <div class="edu-block">
+                  <p><strong>${coursesLabel}:</strong></p>
+                  <div class="skill-tags">${courses}</div>
+                </div>
+                ${rankBlock}
+              </div>
+            </div>
+          `;
+        }).join('');
+
+      /* Copy buttons */
+      document.querySelectorAll('.skill-category').forEach((card, i) => {
+        const edu = content.education[i];
+        if (!edu) return;
+        makeCopyable(card, () => {
+          return [
+            `SEIF-EDDINE JOUL – Education`,
+            `──────────────────────────────────`,
+            `${edu.type}: ${edu.degree}`,
+            `School: ${edu.school}, ${edu.location}`,
+            `Period: ${edu.dateRange}`,
+            edu.rank ? `Global Rank: ${edu.rank.value} (${edu.rank.note})` : '',
+            `Achievements:`,
+            edu.achievements.map(a => `  • ${a}`).join('\n'),
+            ``,
+            `Portfolio: ${location.origin}`,
+            `Contact: seifjoul@gmail.com`,
+          ].filter(l => l !== '').join('\n');
+        });
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

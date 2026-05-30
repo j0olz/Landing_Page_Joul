@@ -1,220 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C8K6QM5ZGZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C8K6QM5ZGZ');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N5KVXWVH');</script>
-<!-- End Google Tag Manager -->
-  <title>My Personal Life</title>
+  <title>Personal Life | Seif Joul</title>
+  <meta property="og:title"       content="Personal Life – Seif-Eddine Joul" />
+  <meta property="og:description" content="Background, martial arts, hobbies, values, and what drives me beyond work." />
+  <meta property="og:image"       content="icons/face.png" />
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5KVXWVH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header>
-  <a href="index.html" class="home-button float-btn" aria-label="Go to home">
-  <img src="icons/home.png" alt="Home" class="icon">
-</a>
 
-
-<button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
-  <img src="icons/moon.png" alt="Toggle theme" class="icon">
-</button>
-
-
-  <div class="header-bar">
-    <div class="header-spacer"></div>
-
-    <div class="header-text">
-      <h1>Seif-Eddine  Joul</h1>
-      <p>Versatile and Ambitious Engineer, Quality and Safety focused, Team player and solo achiever</p>
-      <p>
-        <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
-        <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
-      </p>
-    </div>
-
-    <div class="header-photo-wrap">
- 
-      <img src="icons/face.png" alt="Profile photo" class="profile-pic">
-    </div>
-  </div>
-</header>
-
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const icon = toggle.querySelector('.icon');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    if (document.body.classList.contains('dark')) {
-      icon.src = 'icons/sun.png';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      icon.src = 'icons/moon.png';
-      localStorage.setItem('theme', 'light');
-    }
-  });
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-    icon.src = 'icons/sun.png';
-  }
-</script>
-
-<nav class="page-nav">
-    <a href="my-skills.html" class="page-pill">My Skills</a>
-    <a href="my-projects.html" class="page-pill">My Projects</a>
-    <a href="my-certifications.html" class="page-pill">My Certifications</a>
-    <a href="personal-life.html" class="page-pill-active">My Personal Life</a>
-    <a href="education.html" class="page-pill">Education</a>
-    <a href="professional-experience.html" class="page-pill">Professional Experience</a>
-</nav>
-
-<!-- Navigation buttons -->
-<button class="float-btn to-top" type="button" aria-label="Back to top">↑</button>
-<button class="float-btn to-contact" type="button" aria-label="Go to contact">
-  <img src="icons/contact.png" alt="Contact" class="icon">
-</button>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toTop = document.querySelector('.to-top');
-    const toContact = document.querySelector('.to-contact');
-    const contactSection = document.getElementById('contact');
-
-    if (toTop) {
-      toTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (toContact && contactSection) {
-      toContact.addEventListener('click', () => {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    }
-  });
-</script>
-
-
-
-<!-- <section class="page-title-section">
-  <h2>My Personal Life</h2>
-  <p>Beyond the resume and technical achievements, here's a glimpse into who I am, what drives me, and how I spend my time outside of work and academics.</p>
-</section> -->
+<header id="site-header"></header>
+<nav    id="site-nav"></nav>
+<div   id="floating-buttons"></div>
 
 <section class="content-section">
-  <!-- <h2>Life Beyond Work</h2> -->
-  
-  <div class="personal-grid">
-    
-    <!-- Card 1: Background & Origin -->
-    <div class="personal-card">
-      <div class="card-icon"></div>
-      <h3>Background & Roots</h3>
-      <p>Born and raised in Abu Dhabi- UAE, I grew up in a multicultural environment that shaped my adaptability and global perspective. Moving to Malaysia for my studies opened my eyes to new cultures, cuisines, and ways of thinking. This cross-cultural experience taught me the value of diversity and the importance of staying curious about the world around me.</p>
-    </div>
-
-    <!-- Card 2: Martial Arts -->
-    <div class="personal-card">
-      <div class="card-icon"></div>
-      <h3>Martial Arts Journey</h3>
-      <p>Muay Thai has been more than just a sport for me, it's a discipline that shaped my personality. Competing at national and international levels, including representing Morocco at the IFMA Youth World Championship in  Thailand, taught me resilience, focus, and the importance of consistent effort. The ring is where I learned that setbacks are just setups for comebacks.</p>
-    </div>
-
-    <!-- Card 3: Continuous Learning -->
-    <div class="personal-card">
-      <div class="card-icon"></div>
-      <h3>Always a Student</h3>
-      <p>I believe learning never stops. Whether it's picking up a new skill, exploring niche subjects, or reading about proffesional mentalities and strategies, I'm constantly feeding my curiosity. I enjoy online courses and hands-on experimentation. My philosophy: every day is an opportunity to know something I didn't know yesterday.</p>
-    </div>
-
-    <!-- Card 4: Problem Solving Mindset -->
-    <div class="personal-card">
-      <div class="card-icon"></div>
-      <h3>Problem Solver at Heart</h3>
-      <p>I find genuine joy in fixing things—whether it's a broken appliance, squeaky chair, or a overheating laptop. Friends and family often call me when something's not working right, and I take pride in diagnosing and solving issues others might overlook. For me, every problem is just a puzzle waiting to be solved.</p>
-    </div>
-
-    <!-- Card 5: Community & Leadership -->
-    <div class="personal-card">
-      <div class="card-icon"></div>
-      <h3>Community Builder</h3>
-      <p>I've always believed in the power of bringing people together. From organizing large-scale cultural events to coordinating international student exchanges, I feel proud when I'm helping others connect and open-up. Leadership, to me, is about creating spaces where everyone feels valued and heard—and I try to embody that in everything I do.</p>
-    </div>
-
-    <!-- Card 6: Hobbies & Interests -->
-    <div class="personal-card">
-      <div class="card-icon"></div>
-      <h3>Hobbies & Interests</h3>
-      <p>Outside of work and academics, I enjoy swimming, playing futsal with friends, and exploring new cuisines. I'm also fascinated by seeing things move and work, which attracted me to simulation games or programms such as Mindustry. When I am bored I am trying to perfect a recipe, my life as a foreign single student taught me how to make cheap things edible and taste good.</p>
-    </div>
-
-    <!-- Card 7: Values & Philosophy -->
-    <div class="personal-card">
-      <div class="card-icon"></div>
-      <h3>Core Values</h3>
-      <p>Integrity, adaptability, and empathy guide my decisions. I value transparency in relationships, flexibility in the face of change, and understanding in my interactions with others. I believe success isn't just about what you achieve, but how you treat people along the way. And I try to always leave a lasting impression or nice memory for people I meet.</p>
-    </div>
-
-    <!-- Card 8: Volunteering -->
-    <!-- <div class="personal-card">
-      <div class="card-icon"></div> 
-      <h3>Volunteering</h3>
-      <p>i volunteer</p>
-    </div> -->
-
-     <!-- Card 9: Future Aspirations -->
-    <div class="personal-card">
-      <div class="card-icon"></div>
-      <h3>Looking Ahead</h3>
-      <p>I'm excited about the future. Both professionally and personally. I want to continue growing as an engineer, contribute to meaningful projects, and eventually mentor the next generation of problem-solvers. My goal is to build a career that combines technical excellence with positive impact, whilst allowing me the freedom and resources to explore and live my personal life.</p>
-    </div>
-  </div>
+  <h2>Life Beyond Work</h2>
+  <div class="personal-grid" id="personal-grid"></div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Contact & Connect</h2>
+<section id="site-contact"></section>
+<footer  id="site-footer"></footer>
 
-  <div class="contact-row">
-    <div class="contact-info">
-      <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
-      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
-      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
-    </div>
+<script src="render.js"></script>
+<script src="main.js"></script>
+<script>
+  SiteRender.bootstrapPage({
+    activePage: 'personal-life.html',
+    renderBody(content) {
+      document.getElementById('personal-grid').innerHTML =
+        content.personalLife.map(card => `
+          <div class="personal-card">
+            <div class="card-icon"></div>
+            <h3>${SiteRender.esc(card.title)}</h3>
+            <p>${SiteRender.esc(card.body)}</p>
+          </div>
+        `).join('');
 
-    <div class="contact-download">
-      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>
-        <img src="icons/dwn.png" alt="Toggle theme" class="icon"> Download My Full CV</a>
-    </div>
-
-    <div class="contact-qr">
- 
-      <img src="icons/QR.png" alt="QR code" class="qr-code">
-      <div class="qr-caption">Scan this code to access this site on mobile</div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 Seif-Eddine  Joul | All rights reserved.
-</footer>
+      /* Copy buttons */
+      document.querySelectorAll('.personal-card').forEach((card, i) => {
+        const item = content.personalLife[i];
+        if (!item) return;
+        makeCopyable(card, () => {
+          return [
+            `SEIF-EDDINE JOUL – Personal Life`,
+            `──────────────────────────────────`,
+            `Personal Life – ${item.title}`,
+            `  • ${item.body}`,
+            ``,
+            `Portfolio: ${location.origin}`,
+          ].join('\n');
+        });
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

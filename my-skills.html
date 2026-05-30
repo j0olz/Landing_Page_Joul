@@ -1,365 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C8K6QM5ZGZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C8K6QM5ZGZ');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N5KVXWVH');</script>
-<!-- End Google Tag Manager -->
-  <title>My Skills</title>
+  <title>Skills | Seif Joul</title>
+  <meta property="og:title"       content="Skills – Seif-Eddine Joul" />
+  <meta property="og:description" content="50+ skills across technical, software, quality, and management disciplines." />
+  <meta property="og:image"       content="icons/face.png" />
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
-  <script src="skills-data.js"></script>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5KVXWVH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header>
-  <a href="index.html" class="home-button float-btn" aria-label="Go to home">
-  <img src="icons/home.png" alt="Home" class="icon">
-</a>
 
-
-<button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
-  <img src="icons/moon.png" alt="Toggle theme" class="icon">
-</button>
-
-
-  <div class="header-bar">
-    <div class="header-spacer"></div>
-
-    <div class="header-text">
-      <h1>Seif-Eddine  Joul</h1>
-      <p>Versatile and Ambitious Engineer, Quality and Safety focused, Team player and solo achiever</p>
-      <p>
-        <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
-        <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
-      </p>
-    </div>
-
-    <div class="header-photo-wrap">
- 
-      <img src="icons/face.png" alt="Profile photo" class="profile-pic">
-    </div>
-  </div>
-</header>
-
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const icon = toggle.querySelector('.icon');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    if (document.body.classList.contains('dark')) {
-      icon.src = 'icons/sun.png';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      icon.src = 'icons/moon.png';
-      localStorage.setItem('theme', 'light');
-    }
-  });
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-    icon.src = 'icons/sun.png';
-  }
-</script>
-
-<nav class="page-nav">
-    <a href="my-skills.html" class="page-pill-active">My Skills</a>
-    <a href="my-projects.html" class="page-pill">My Projects</a>
-    <a href="my-certifications.html" class="page-pill">My Certifications</a>
-    <a href="personal-life.html" class="page-pill">My Personal Life</a>
-    <a href="education.html" class="page-pill">Education</a>
-    <a href="professional-experience.html" class="page-pill">Professional Experience</a>
-</nav>
-
-<!-- Navigation buttons -->
-<button class="float-btn to-top" type="button" aria-label="Back to top">↑</button>
-<button class="float-btn to-contact" type="button" aria-label="Go to contact">
-  <img src="icons/contact.png" alt="Contact" class="icon">
-</button>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toTop = document.querySelector('.to-top');
-    const toContact = document.querySelector('.to-contact');
-    const contactSection = document.getElementById('contact');
-
-    if (toTop) {
-      toTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (toContact && contactSection) {
-      toContact.addEventListener('click', () => {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    }
-  });
-</script>
-
-
-
-<!-- <section class="page-title-section">
-  <h2>My Skills</h2>
-  <p>An overview of my technical expertise, soft skills, and software proficiencies developed through academic projects, professional work, and hands-on experience.</p>
-  <p style="font-size: 0.9rem; color: #666;"><em>Hover over any skill to see where it was used...</em></p>
-</section> -->
+<header id="site-header"></header>
+<nav    id="site-nav"></nav>
+<div   id="floating-buttons"></div>
 
 <section class="content-section">
-  <!-- <h2>Skills Overview</h2> -->
-  
-  <div class="skills-container">
-    
-    <div class="skill-category"> <!--- the actual card containing the skills and category -->
-  <h3>Technical Skills</h3>
-  <div class="skill-tags">
-    <!-- <span class="skill-tag" data-skill="Robotics">Robotics</span> -->
-    <!-- <span class="skill-tag" data-skill="Sensor Fusion">Sensor Fusion</span> -->
-    <span class="skill-tag" data-skill="AutoCAD">AutoCAD</span>
-    <span class="skill-tag" data-skill="SolidWorks">SolidWorks</span>
-    <span class="skill-tag" data-skill="MATLAB & Simulink">MATLAB & Simulink</span>
-    <span class="skill-tag" data-skill="NI LabVIEW">NI LabVIEW</span>
-    <span class="skill-tag" data-skill="Robotics & Automation">Robotics & Automation</span>
-    <span class="skill-tag" data-skill="Mechanical Coupling and Assembly">Mechanical Coupling and Assembly</span>
-    <span class="skill-tag" data-skill="OrCAD PSpice">OrCAD PSpice</span>
-    <span class="skill-tag" data-skill="Microcontrollers">Microcontrollers</span>
-    <span class="skill-tag" data-skill="OMRON CX-ONE">OMRON CX-ONE</span>
-    <span class="skill-tag" data-skill="PCB Design">PCB Design</span>
-    <span class="skill-tag" data-skill="Power Distribution">Power Distribution</span>
-    <span class="skill-tag" data-skill="Motor Control">Motor Control</span>
-    <span class="skill-tag" data-skill="Sensors and Actuators">Sensors and Actuators</span>
-    <span class="skill-tag" data-skill="Instrumentation">Instrumentation</span>
-    <span class="skill-tag" data-skill="Pneumatic Systems">Pneumatic Systems</span>
-    <!-- <span class="skill-tag" data-skill="Electromechanics">Electromechanics</span> -->
-    <span class="skill-tag" data-skill="3D Printing">3D Printing</span>
-    <span class="skill-tag" data-skill="Arduino">Arduino</span>
-    <span class="skill-tag" data-skill="Raspberry Pi">Raspberry Pi</span>
-    <span class="skill-tag" data-skill="CNC Machine Operation">CNC Machine Operation</span>
-    <span class="skill-tag" data-skill="PLC Programming">PLC Programming</span>
-
-  </div>
-</div>
-
-<div class="skill-category">
-  <h3>Programming & Software</h3>
-  <div class="skill-tags">
-    <span class="skill-tag" data-skill="C/C++">C++</span>
-    <span class="skill-tag" data-skill="Python">Python</span>
-    <span class="skill-tag" data-skill="Visual Studio">Visual Studio</span>
-    <span class="skill-tag" data-skill="Microsoft Office (ICDL)">Microsoft Office (ICDL)</span>
-    <!-- <span class="skill-tag" data-skill="Microsoft Azure AI">Microsoft Azure AI</span> -->
-    <!-- <span class="skill-tag" data-skill="AI Prompting">AI tools</span> -->
-    <span class="skill-tag" data-skill="OpenCV">OpenCV</span>
-    <span class="skill-tag" data-skill="GitHub">GitHub</span>
-    <span class="skill-tag" data-skill="Microsoft Office Suite">Microsoft Office Suite</span>
-
-  </div>
-</div>
-
-<div class="skill-category">
-  <h3>Data, Quality & Research</h3>
-  <div class="skill-tags">
-    <span class="skill-tag" data-skill="ANOVA">ANOVA</span>
-    <span class="skill-tag" data-skill="Design of Experiments">Design of Experiments</span>
-    <span class="skill-tag" data-skill="Minitab">Minitab</span>
-    <span class="skill-tag" data-skill="FMEA">FMEA (Failure Mode and Effects Analysis)</span>
-    <span class="skill-tag" data-skill="SPC"> SPC (Statistical Process Control)</span>
-    <span class="skill-tag" data-skill="Six Sigma">DMAIC/Six Sigma (WB)</span>
-    <span class="skill-tag" data-skill="Power Query in Excel">Power Query in Excel</span>
-    <span class="skill-tag" data-skill="Root Cause Analysis (5 Whys)">Root Cause Analysis (5 Whys)</span>
-    <span class="skill-tag" data-skill="Pareto Analysis">Pareto Analysis</span>
-    <span class="skill-tag" data-skill="Reliability Testing">Reliability Testing</span>
-    <!-- <span class="skill-tag" data-skill="Lean Manufacturing">Lean Manufacturing</span> -->
-    <span class="skill-tag" data-skill="Continuous Improvement">Continuous Improvement</span>
-  </div>
-</div>
-
-<div class="skill-category">
-  <h3>Project & Management</h3>
-  <div class="skill-tags">
-    <span class="skill-tag" data-skill="Agile Project Management">Agile Project Management</span>
-    <span class="skill-tag" data-skill="Time Management">Time Management</span>
-    <span class="skill-tag" data-skill="Change Management">Change Management</span>
-    <span class="skill-tag" data-skill="Risk Management">Risk Management</span>
-    <!-- <span class="skill-tag" data-skill="Resource Management">Resource Management</span> -->
-    <span class="skill-tag" data-skill="Team Coordination">Team Coordination</span>
-        <span class="skill-tag" data-skill="Ms Project">Ms Project</span>
-    <span class="skill-tag" data-skill="Budgeting">Budgeting</span>
-    <span class="skill-tag" data-skill="Inventory Keeping">Inventory Keeping</span>
-    <span class="skill-tag" data-skill="Event Planning">Event Planning</span>
-  </div>
-</div>
-
-<div class="skill-category">
-  <h3>Soft Skills</h3>
-  <div class="skill-tags">
-    <span class="skill-tag" data-skill="Leadership">Leadership</span>
-    <!-- <span class="skill-tag" data-skill="Teamwork">Teamwork</span> -->
-    <span class="skill-tag" data-skill="Problem Solving">Problem Solving</span>
-    <span class="skill-tag" data-skill="Critical Thinking">Critical Thinking</span>
-    <span class="skill-tag" data-skill="Adaptability">Adaptability</span>
-    <span class="skill-tag" data-skill="Analytical Mindset">Analytical Mindset</span>
-    <span class="skill-tag" data-skill="Multicultural Communication">Multicultural Communication</span>
-    <span class="skill-tag" data-skill="Public Speaking">Public Speaking</span>
-    <span class="skill-tag" data-skill="Communication">Communication</span>
-  </div>
-</div>
-
-<div class="skill-category">
-  <h3>Hands-On & Practical</h3>
-  <div class="skill-tags">
-    <span class="skill-tag" data-skill="Soldering">Soldering</span>
-    <span class="skill-tag" data-skill="Mechanical Coupling/Assembly">Mechanical Coupling/Assembly</span>
-    <span class="skill-tag" data-skill="Electrical Wiring">Electrical Wiring</span>
-    <span class="skill-tag" data-skill="Cable Management">Cable Management</span>
-    <span class="skill-tag" data-skill="Switchgear/Main Panel">Switchgear/Main Panel</span>
-    <span class="skill-tag" data-skill="Power/Hand Tools">Power/Hand Tools</span>
-    <span class="skill-tag" data-skill="Cable Junction/Termination">Cable Junction/Termination</span>
-    <!-- <span class="skill-tag" data-skill="MIG Welding">MIG Welding</span> -->
-  </div>
-</div>
-
-<!-- <div class="skill-category">
-  <h3>Languages</h3>
-  <div class="skill-tags">
-    <span class="skill-tag" data-skill="English (C1 – IELTS 7)">English (C1 – IELTS 7)</span>
-    <span class="skill-tag" data-skill="Arabic (Native)">Arabic (Native)</span>
-    <span class="skill-tag" data-skill="French (Elementary)">French (Elementary)</span>
-  </div>
-</div> -->
-
-  </div>
-  
-  <!-- Tooltip element -->
+  <h2>Skills Overview</h2>
+  <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;">
+    <em>Hover over any skill to see where it was applied… (tap on mobile)</em>
+  </p>
+  <div class="skills-container" id="skills-container"></div>
   <div id="skill-tooltip" class="skill-tooltip"></div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Contact & Connect</h2>
+<section id="site-contact"></section>
+<footer  id="site-footer"></footer>
 
-  <div class="contact-row">
-    <div class="contact-info">
-      <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
-      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
-      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
-    </div>
-
-    <div class="contact-download">
-      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>
-        <img src="icons/dwn.png" alt="Toggle theme" class="icon"> Download My Full CV</a>
-    </div>
-
-    <div class="contact-qr">
- 
-      <img src="icons/QR.png" alt="QR code" class="qr-code">
-      <div class="qr-caption">Scan this code to access this site on mobile</div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 Seif-Eddine  Joul | All rights reserved.
-</footer>
-
+<script src="render.js"></script>
+<script src="main.js"></script>
 <script>
-  // Initialize skill tooltips
-  document.addEventListener('DOMContentLoaded', () => {
-    const skillTags = document.querySelectorAll('.skill-tag');
-    const tooltip = document.getElementById('skill-tooltip');
-    
-    skillTags.forEach(tag => {
-      tag.addEventListener('mouseenter', (e) => {
-        const skillName = tag.getAttribute('data-skill');
-        const projects = getProjectsForSkill(skillName);
-        
-        if (projects.length > 0) {
-          tooltip.innerHTML = `<strong>Used in:</strong><br>${projects.map(p => `• ${p}`).join('<br>')}`;
-        } 
-        else { return;
-          //tooltip.innerHTML = '<em>No projects linked yet</em>';
-        }
-        
-        tooltip.style.display = 'block';
-        
-        // Position tooltip near cursor
-        const rect = tag.getBoundingClientRect();
-        tooltip.style.left = rect.left + 'px';
-        tooltip.style.top = (rect.bottom + 10) + 'px';
+  let _skillMappings = {};
+
+  function getProjectsForSkill(skillName) {
+    return _skillMappings[skillName] || [];
+  }
+
+  SiteRender.bootstrapPage({
+    activePage: 'my-skills.html',
+    async renderBody(content, skills) {
+      _skillMappings = skills.projectMappings || {};
+
+      document.getElementById('skills-container').innerHTML =
+        skills.categories.map(cat => {
+          const chips = cat.skills.map(skill => {
+            const slug = encodeURIComponent(skill.replace(/\s+/g, '-'));
+            return `<span class="skill-tag" data-skill="${SiteRender.esc(skill)}" id="${slug}">${SiteRender.esc(skill)}</span>`;
+          }).join('');
+
+          return `
+            <div class="skill-category">
+              <h3>${SiteRender.esc(cat.title)}</h3>
+              <div class="skill-tags">${chips}</div>
+            </div>
+          `;
+        }).join('');
+
+      /* Copy buttons on each skill category card (4.1) */
+      document.querySelectorAll('.skill-category').forEach((card, i) => {
+        const cat = skills.categories[i];
+        if (!cat) return;
+        makeCopyable(card, () => {
+          const lines = [
+            `SEIF-EDDINE JOUL – Skills`,
+            `──────────────────────────────────`,
+            `Category: ${cat.title}`,
+            `  • ${cat.skills.join('\n  • ')}`,
+            ``,
+            `Portfolio: ${location.origin}`,
+            `Contact: seifjoul@gmail.com`,
+          ];
+          return lines.join('\n');
+        });
       });
-      
-      tag.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
-      });
-    });
-  });
-</script>
-
-
-
-<script>
-  // Scroll to the exact skill when arriving with a hash in the URL (e.g., my-skills.html#Motor-Control)
-  document.addEventListener('DOMContentLoaded', () => {
-    const rawHash = window.location.hash ? decodeURIComponent(window.location.hash.substring(1)) : '';
-    if (!rawHash) return;
-
-    const normalize = (s) => (s || '')
-      .toLowerCase()
-      .replace(/&/g, 'and')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '');
-
-    const targetKey = normalize(rawHash);
-
-    // 1) Direct ID match
-    let target = document.getElementById(rawHash) || document.getElementById(targetKey);
-
-    const tags = Array.from(document.querySelectorAll('.skill-tag'));
-
-    // Ensure each tag has an id for future linking
-    tags.forEach(tag => {
-      const key = normalize(tag.getAttribute('data-skill') || tag.textContent);
-      if (!tag.id && key) tag.id = key;
-    });
-
-    // 2) Exact normalized match (data-skill / text)
-    if (!target) {
-      target = tags.find(tag => {
-        const key = normalize(tag.getAttribute('data-skill') || tag.textContent);
-        return key === targetKey;
-      }) || null;
-    }
-
-    // 3) Fuzzy match for short hashes (e.g., "MATLAB" should match "MATLAB & Simulink")
-    if (!target) {
-      target = tags.find(tag => {
-        const key = normalize(tag.getAttribute('data-skill') || tag.textContent);
-        return key.includes(targetKey) || targetKey.includes(key);
-      }) || null;
-    }
-
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   });
 </script>
-
-
 
 </body>
 </html>

@@ -1,184 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!----------------------THIS IS V2 INDEX!!-------------------------------->
-
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C8K6QM5ZGZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C8K6QM5ZGZ');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N5KVXWVH');</script>
-<!-- End Google Tag Manager -->
-  <title>SEIF EDDINE JOUL - Virtual Resume</title>
+  <title>Seif Joul | Virtual Resume</title>
+  <!-- Open Graph (cat 7) -->
+  <meta property="og:title"       content="Seif-Eddine Joul – Mechatronics Engineer" />
+  <meta property="og:description" content="Virtual resume of Seif-Eddine Joul: projects, experience, skills, and education." />
+  <meta property="og:image"       content="icons/face.png" />
+  <meta property="og:type"        content="website" />
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5KVXWVH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<header>
 
+<header id="site-header"></header>
 
-<button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
-  <img src="icons/moon.png" alt="Toggle theme" class="icon">
-</button>
-
-  <div class="header-bar">
-    <div class="header-spacer"></div>
-
-    <div class="header-text">
-      <h1>Seif-Eddine  Joul</h1>
-      <p>Versatile and Ambitious Engineer, Quality and Safety focused, Team player and solo achiever</p>
-      <p>
-        <a href="https://www.linkedin.com/in/seifjoul" target="_blank">LinkedIn</a> |
-        <a href="https://bold.pro/my/s-joul" target="_blank">Bold.pro</a>
-      </p>
-    </div>
-
-    <div class="header-photo-wrap">
- 
-      <img src="icons/face.png" alt="Profile photo" class="profile-pic">
-    </div>
-  </div>
-</header>
-
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const icon = toggle.querySelector('.icon');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-
-    if (document.body.classList.contains('dark')) {
-      icon.src = 'icons/sun.png';
-      localStorage.setItem('theme', 'dark');
-    } else {
-      icon.src = 'icons/moon.png';
-      localStorage.setItem('theme', 'light');
-    }
-  });
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-    icon.src = 'icons/sun.png';
-  }
-</script>
-
-<!-- Navigation buttons -->
-<button class="float-btn to-top" type="button" aria-label="Back to top">↑</button>
-<button class="float-btn to-contact" type="button" aria-label="Go to contact">
-  <img src="icons/contact.png" alt="Contact" class="icon">
-</button>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toTop = document.querySelector('.to-top');
-    const toContact = document.querySelector('.to-contact');
-    const contactSection = document.getElementById('contact');
-
-    if (toTop) {
-      toTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (toContact && contactSection) {
-      toContact.addEventListener('click', () => {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    }
-  });
-</script>
+<div id="floating-buttons"></div>
 
 <section class="index-who">
+  <!-- Hook line (2.3) injected here -->
+  <p class="who-hook" id="who-hook"></p>
   <h2>Who am I...?</h2>
-  <p>Mechatronics Engineer who is driven, curious, and adaptable. With hands-on experience across electrical, electronic, and mechanical systems; from maintenance and LV installations to 3D design and automation, I've done them all. <br><br>
-I thrive in collaborative quality-focused environments and I’m continuously expanding my skill set through project management practices/mentality and the exploration of AI-driven tools and automation, ensuring my engineering approach is always aligned with modern industry standards.</p>
- <h2 style = text-align:right;>...the one you're looking for!</h2>
+  <p id="who-body"></p>
+  <h2 style="text-align:right;" id="who-closing"></h2>
 </section>
 
 <section class="content-section">
   <h2>Virtual CV</h2>
-  <p style="max-width: 800px; margin: 0 auto 2rem auto;">Navigate through different aspects of my professional and personal journey. Each section provides detailed insights into my experiences, skills, and achievements.</p>
-  
-  <div class="index-cards-grid">
-    
-     <a href="professional-experience.html" class="index-card">
-      <div class="index-cards-icon"><img src="icons/xp.png" alt="Professional Experience" class="icons"></div>
-      <h3>Career</h3>
-    </a>
-    
-     <a href="my-skills.html" class="index-card">
-      <div class="index-cards-icon"><img src="icons/skl.png" alt="My Skills" class="icons"></div>
-      <h3>Skills</h3>
-    </a>
-    
-    <a href="my-projects.html" class="index-card">
-      <div class="index-cards-icon"><img src="icons/pro.png" alt="My Projects" class="icons"></div>
-      <h3>Projects</h3>
-    </a>
-    
-    <a href="my-certifications.html" class="index-card">
-      <div class="index-cards-icon"><img src="icons/cert.png" alt="My Certifications" class="icons"></div>
-      <h3>Certificates</h3>
-    </a>
-    
-    <a href="personal-life.html" class="index-card">
-      <div class="index-cards-icon"><img src="icons/life.png" alt="My Personal Life" class="icons"></div>
-      <h3>Personal Life</h3>
-    </a>
-    
-     <a href="education.html" class="index-card">
-      <div class="index-cards-icon"><img src="icons/edu.png" alt="Education" class="icons"></div>
-      <h3>Education</h3>
-    </a> 
-   
-    
-  </div>
+  <p style="max-width:800px;margin:0 auto 2rem auto;">
+    Navigate through different aspects of my professional and personal journey.
+    Each section provides detailed insights into my experiences, skills, and achievements.
+  </p>
+  <div class="index-cards-grid" id="index-cards"></div>
+  <p class="cards-swipe-hint" id="cards-swipe-hint"></p>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Contact & Connect</h2>
- 
-  <div class="contact-row"> 
-    <div class="contact-info">
-      <p>Email: <a href="mailto:seifjoul@gmail.com">seifjoul@gmail.com</a></p>
-      <p> Phone: <a href="https://wa.link/jy8ah4">+212 6 3129 3071 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
-      <p> Phone: <a href="https://wa.link/x9e47d">+971 52 6000 849 </a><img src="icons/wts.png" alt="WhatsApp" class="icon"> </p>
-    </div>
+<section id="site-contact"></section>
+<footer id="site-footer"></footer>
 
-    <div class="contact-download">
-      <a href="SEIF JOUL RESUME.pdf" class="cv-btn" download>
-        <img src="icons/dwn.png" alt="Toggle theme" class="icon"> Download My Full CV</a>
-    </div>
+<script src="render.js"></script>
+<script src="main.js"></script>
+<script>
+  SiteRender.bootstrapPage({
+    activePage: null,
+    showHomeBtn: false,
+    renderBody(content) {
+      const { index } = content;
 
-    <div class="contact-qr">
- 
-      <img src="icons/QR.png" alt="QR code" class="qr-code">
-      <div class="qr-caption">Scan this code to access this site on mobile</div>
-    </div>
-  </div>
-</section>
+      document.getElementById('who-hook').textContent =
+        'I build things that move, sense, and respond; I lead the people who build them with me.';
 
-<footer>
-  &copy; 2025 Seif-Eddine  Joul | All rights reserved. <br>
- <!-- hitwebcounter Code START -->
-  <P>Visitor Counter:</P>
-<a href="https://www.hitwebcounter.com/" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=21457518&style=0006&nbdigits=5&type=page&initCount=200" title="Free Tools" Alt="Free Tools"   border="0" /></a>                       
-</footer>
+      document.getElementById('who-body').innerHTML =
+        index.whoAmI.replace(/\n\n/g, '<br><br>');
+      document.getElementById('who-closing').textContent = index.whoAmIClosing;
+
+      document.getElementById('index-cards').innerHTML = index.cards.map(c => `
+        <a href="${c.href}" class="index-card">
+          <div class="index-cards-icon"><img src="${c.icon}" alt="${c.label}" class="icons"></div>
+          <h3>${c.label}</h3>
+        </a>
+      `).join('');
+
+      // Show swipe navigation hint on mobile
+      const swipeHint = document.getElementById('cards-swipe-hint');
+      if (swipeHint) {
+        swipeHint.textContent = '← swipe left or right on any page to navigate →';
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
