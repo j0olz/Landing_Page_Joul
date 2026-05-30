@@ -371,12 +371,17 @@
     initPageTransitions();
   };
 
-  // Also bind to DOMContentLoaded as a fallback
-  // (bootstrapPage dispatches a synthetic one after render)
+  // DOMContentLoaded fires before bootstrapPage() finishes its async fetches,
+  // so we do NOT init here — bootstrapPage() is the sole boot caller.
+  // This listener is kept only as a last-resort fallback for pages that do
+  // NOT use bootstrapPage at all (i.e. no async render layer).
   document.addEventListener('DOMContentLoaded', () => {
-    if (window._mainInitDone) return;
-    window._mainInitDone = true;
-    window._mainInit();
+    // Delay slightly so bootstrapPage has a chance to run first on fast loads
+    setTimeout(() => {
+      if (window._mainInitDone) return;
+      window._mainInitDone = true;
+      window._mainInit();
+    }, 0);
   });
 
 })();
