@@ -371,17 +371,18 @@
     initPageTransitions();
   };
 
-  // DOMContentLoaded fires before bootstrapPage() finishes its async fetches,
-  // so we do NOT init here — bootstrapPage() is the sole boot caller.
-  // This listener is kept only as a last-resort fallback for pages that do
-  // NOT use bootstrapPage at all (i.e. no async render layer).
+  // NOTE: _mainInit() is called by bootstrapPage() in render.js AFTER the full
+  // DOM is injected. Do NOT call it on DOMContentLoaded — that fires before
+  // bootstrapPage finishes its async fetch, so the buttons don't exist yet.
+  // This fallback only runs on pages that have no render.js / bootstrapPage at all.
   document.addEventListener('DOMContentLoaded', () => {
-    // Delay slightly so bootstrapPage has a chance to run first on fast loads
-    setTimeout(() => {
+    if (window._mainInitDone) return; // bootstrapPage already handled it
+    // Give bootstrapPage one tick to start; if it never runs, we're the fallback
+    Promise.resolve().then(() => {
       if (window._mainInitDone) return;
       window._mainInitDone = true;
       window._mainInit();
-    }, 0);
+    });
   });
 
 })();

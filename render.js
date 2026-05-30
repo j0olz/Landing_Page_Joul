@@ -278,12 +278,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         await renderBody(content, skills);
       }
 
-      // Boot main.js interactivity now that all DOM is ready
-      if (window._mainInit && !window._mainInitDone) {
-        window._mainInitDone = true;
+      // Boot main.js interactivity now that the full DOM is ready.
+      // Always call _mainInit here — the DOM was just built by bootstrapPage,
+      // so any earlier DOMContentLoaded call ran on an empty page and is stale.
+      window._mainInitDone = true;
+      if (typeof window._mainInit === 'function') {
         window._mainInit();
-      } else if (document.readyState !== 'loading') {
-        document.dispatchEvent(new Event('DOMContentLoaded'));
       }
 
     } catch (err) {
