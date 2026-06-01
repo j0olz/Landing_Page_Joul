@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Seif-Eddine Joul",
-    "tagline": "Versatile and Ambitious Engineer, Quality and Safety focused, Team player and solo achiever",
+    "tagline": "I build things that move, sense, and respond; I lead the people who build them with me.",
     "linkedin": "https://www.linkedin.com/in/seifjoul",
     "boldpro": "https://bold.pro/my/s-joul",
     "email": "seifjoul@gmail.com",
@@ -59,7 +59,7 @@
     {
       "type": "Bachelor's Degree",
       "dateRange": "February 2020 – November 2024",
-      "degree": "Bachelor of Engineering in Mechatronics Engineering (Hons)",
+      "degree": "Bachelor of Engineering in Mechatronics Engineering (Honours)",
       "school": "Universiti Sains Malaysia (USM)",
       "location": "Penang, Malaysia",
       "courses": [
@@ -73,10 +73,11 @@
         "Quality Engineering"
       ],
       "achievements": [
-        "Board of Engineers Malaysia Registration",
+        "Registred on the Board of Engineers of Malaysia",
         "Dean's List Conferment",
         "Vice President of Student Society",
-        "Completed with Honors distinction"
+        "Officially recognized under the Washington Accord, meeting international professional engineering standards.",
+        "Completed an Outcome-Based Education (OBE) program accredited under the international Washington Accord framework."
       ],
       "rank": {
         "value": "#137",
@@ -99,9 +100,7 @@
         "IELTS Score: 7 (C1 Level)",
         "PISA Achievement Recognition",
         "SMART Program Participant",
-        "ICDL certificate acquired",
-        "Accreditation: Globally recognized under the Washington Accord (via BEM), meeting international professional engineering standards.",
-        "Curriculum: Completed an Outcome-Based Education (OBE) program accredited under the international Washington Accord framework."
+        "ICDL certificate acquired"
       ]
     }
   ],

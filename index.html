@@ -21,7 +21,7 @@
 
 <section class="index-who">
   <!-- Hook line (2.3) injected here -->
-  <p class="who-hook" id="who-hook"></p>
+  <!-- <p class="who-hook" id="who-hook"></p> -->
   <h2>Who am I...?</h2>
   <p id="who-body"></p>
   <h2 style="text-align:right;" id="who-closing"></h2>
@@ -49,8 +49,8 @@
     renderBody(content) {
       const { index } = content;
 
-      document.getElementById('who-hook').textContent =
-        'I build things that move, sense, and respond; I lead the people who build them with me.';
+      // document.getElementById('who-hook').textContent =
+      //   'I build things that move, sense, and respond; I lead the people who build them with me.';
 
       document.getElementById('who-body').innerHTML =
         index.whoAmI.replace(/\n\n/g, '<br><br>');
