@@ -1081,6 +1081,14 @@ body.dark .personal-card h3 { color: var(--amber); }
   letter-spacing: 0.3px;
 }
 
+.visitor-num {
+  font-family: var(--font-body);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--amber);
+  letter-spacing: 0.05em;
+}
+
 /* ============================================
    EDUCATION PAGE
    ============================================ */
