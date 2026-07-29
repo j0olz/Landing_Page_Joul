@@ -112,7 +112,7 @@
         "Dean's List Conferment",
         "SAT Math 600/800",
         "IELTS (C1 / Score 7)",
-        "ICDL",
+        "ICDL (Internatinal Computer Driving License)",
         "PISA (Programme for International Student Assessment)",
         "S.M.A.R.T Math"
       ]
@@ -141,13 +141,14 @@
       ]
     },
     {
-      "category": "Project Management & Agile",
+      "category": "Project Management & Coordination",
       "items": [
         "Project Management Foundations",
+        "Advanced Primavera P6",
         "Agile Project Management",
         "Introduction to Kanban",
-        "IT Service Change Management",
-        "IT Service Problem Management"
+        "SAP ERP Essentials",
+        "SAP Materials Management"       
       ]
     },
     {
@@ -176,7 +177,7 @@
     },
     {
       "title": "Martial Arts Journey",
-      "body": "Muay Thai has been more than just a sport for me — it's a discipline that shaped my personality. Competing at national and international levels, including representing Morocco at the IFMA Youth World Championship in Thailand, taught me resilience, focus, and the importance of consistent effort. The ring is where I learned that setbacks are just setups for comebacks."
+      "body": "Muay Thai has been more than just a sport for me, it's a discipline that shaped my personality. Competing at national and international levels, including representing Morocco at the IFMA Youth World Championship in Thailand, taught me resilience, focus, and the importance of consistent effort. The ring is where I learned that setbacks are just setups for comebacks."
     },
     {
       "title": "Always a Student",
@@ -184,15 +185,15 @@
     },
     {
       "title": "Problem Solver at Heart",
-      "body": "I find genuine joy in fixing things — whether it's a broken appliance, squeaky chair, or an overheating laptop. Friends and family often call me when something's not working right, and I take pride in diagnosing and solving issues others might overlook. For me, every problem is just a puzzle waiting to be solved."
+      "body": "I find genuine joy in fixing things, whether it's a broken appliance, squeaky chair, or an overheating laptop. Friends and family often call me when something's not working right, and I take pride in diagnosing and solving issues others might overlook. For me, every problem is just a puzzle waiting to be solved."
     },
     {
       "title": "Community Builder",
-      "body": "I've always believed in the power of bringing people together. From organizing large-scale cultural events to coordinating international student exchanges, I feel proud when I'm helping others connect and open up. Leadership, to me, is about creating spaces where everyone feels valued and heard — and I try to embody that in everything I do."
+      "body": "I've always believed in the power of bringing people together. From organizing large-scale cultural events to coordinating international student exchanges, I feel proud when I'm helping others connect and open up. Leadership, to me, is about creating spaces where everyone feels valued and heard, and I try to embody that in everything I do."
     },
     {
       "title": "Hobbies & Interests",
-      "body": "Outside of work and academics, I enjoy swimming, playing futsal with friends, and exploring new cuisines. I'm also fascinated by seeing things move and work, which attracted me to simulation games or programs such as Mindustry. When I am bored I try to perfect a recipe — my life as a foreign single student taught me how to make cheap things edible and taste good."
+      "body": "Outside of work and academics, I enjoy swimming, playing futsal with friends, and exploring new cuisines. I'm also fascinated by seeing things move and work, which attracted me to simulation games or programs such as Mindustry. When I am bored I try to perfect a recipe, my life as a foreign single student taught me how to make cheap things edible and taste good."
     },
     {
       "title": "Core Values",
@@ -200,12 +201,12 @@
     },
     {
       "title": "Looking Ahead",
-      "body": "I'm excited about the future — both professionally and personally. I want to continue growing as an engineer, contribute to meaningful projects, and eventually mentor the next generation of problem-solvers. My goal is to build a career that combines technical excellence with positive impact, whilst allowing me the freedom and resources to explore and live my personal life."
+      "body": "I'm excited about the future, both professionally and personally. I want to continue growing as an engineer, contribute to meaningful projects, and eventually mentor the next generation of problem-solvers. My goal is to build a career that combines technical excellence with positive impact, whilst allowing me the freedom and resources to explore and live my personal life."
     }
   ],
   "experience": [
     {
-      "title": "Field Technician",
+      "title": "EE Technician",
       "company": "Independent",
       "location": "Morocco",
       "dateRange": "Apr 2025 – Present",
@@ -218,7 +219,7 @@
         "Designed and fabricated custom metal structures such as window frames and light support using precise cutting/drilling, coupling, and galvanized painting techniques for long-term durability."
       ],
       "achievements": [
-        "Successfully completed several projects under the criteria set by customers, under guidance.",
+        "Successfully completed several projects under the criteria set by customers.",
         "Maintained safe, accident-free and tidy work-sites during and post-service.",
         "Offered proofing and finishing services to customers, leaving behind a clean, protected and pleasant scene after each project when possible."
       ],
@@ -307,7 +308,7 @@
         "Managed daily café operations including team coordination, inventory tracking, and cash handling, ensuring smooth transitions between shifts and consistent service quality during high-traffic hours.",
         "Supervised a small team of baristas, monitored performance and hygiene compliance, resolved customer concerns on-site, and upheld service standards that enhanced customer satisfaction and repeat business.",
         "Oversaw inventory and financial routines including revenue recording, petty cash management, staff compensation, and accurate preparation of next-day funds.",
-        "Applied technical background to continuously maintain and improve the café's electrical, lighting, network, and security systems — including CCTV, Wi-Fi, and media displays — ensuring consistent reliability, safety, and smooth daily operation."
+        "Applied technical background to continuously maintain and improve the café's electrical, lighting, network, and security systems including CCTV, Wi-Fi, and media displays, ensuring consistent reliability, safety, and smooth daily operation."
       ],
       "achievements": [
         "Strengthened leadership, multitasking, and communication skills through hands-on team management in a fast-paced, customer-facing environment.",

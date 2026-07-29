@@ -216,7 +216,7 @@ footer a { color: var(--amber); }
   position: fixed;
 }
 
-/* Home button: amber background — warm and immediately recognisable */
+/* Home button: amber background, warm and immediately recognisable */
 .home-button {
   background: var(--amber);
   color: var(--navy);
@@ -231,7 +231,7 @@ footer a { color: var(--amber); }
   box-shadow: 0 4px 18px rgba(232,160,32,0.55);
 }
 
-/* Theme toggle: deep navy with amber border — clearly separate from header */
+/* Theme toggle: deep navy with amber border, clearly separate from header */
 .theme-toggle {
   background: #0f1923;
   color: var(--amber);
@@ -1365,7 +1365,7 @@ img {
   }
 }
 
-/* --- Cat 3.2: Header mobile — vertical stack --- */
+/* --- Cat 3.2: Header mobile, vertical stack --- */
 @media (max-width: 640px) {
   .header-bar {
     flex-direction: column;
@@ -1398,7 +1398,7 @@ img {
   }
 }
 
-/* --- Cat 3.3: Index cards — 2-col on mobile, 1-col only at 360px --- */
+/* --- Cat 3.3: Index cards, 2-col on mobile, 1-col only at 360px --- */
 @media (max-width: 600px) {
   .index-card {
     width: calc(50% - 0.75rem);
@@ -1418,7 +1418,7 @@ img {
   .skill-tag { font-size: 0.88rem; }
 }
 
-/* --- Cat 7: Timeline mobile — date gap --- */
+/* --- Cat 7: Timeline mobile, date gap --- */
 @media (max-width: 768px) {
   .timeline-date { margin-top: 0.5rem; }
 }
