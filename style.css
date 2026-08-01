@@ -233,7 +233,7 @@ footer a { color: var(--amber); }
 
 /* Theme toggle: deep navy with amber border, clearly separate from header */
 .theme-toggle {
-  background: #0f1923;
+  background: var(--navy-light);
   color: var(--amber);
   top: 1rem;
   right: 1rem;
@@ -248,7 +248,7 @@ footer a { color: var(--amber); }
 }
 
 body.dark .home-button { background: var(--amber); border-color: var(--amber-dim); }
-body.dark .theme-toggle { background: #0a1118; border-color: rgba(232,160,32,0.55); }
+body.dark .theme-toggle { background: var(--amber); border-color: #0a1118; }
 body.dark .theme-toggle:hover { background: var(--amber); color: var(--navy); }
 
 /* Scroll buttons */
@@ -1333,7 +1333,7 @@ header::before {
 /* Prevent image save via drag */
 img {
   -webkit-user-drag: none;
-  user-drag: none;
+  /* user-drag: none; */
   -webkit-user-select: none;
   user-select: none;
 }

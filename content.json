@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Seif-Eddine Joul",
-    "tagline": "I build things that move, sense, and respond; I lead the people who build them with me.",
+    "tagline": "I run on the dopamine of solving problems, technical, systemic, or social. I thrive in collaborative environments.",
     "linkedin": "https://www.linkedin.com/in/seifjoul",
     "boldpro": "https://bold.pro/my/s-joul",
     "email": "seifjoul@gmail.com",
@@ -66,7 +66,7 @@
         "Robotics and Automation",
         "Instrumentation",
         "Machine Vision",
-        "Mechatronics Design",
+        "Engineering Design",
         "Control Systems",
         "Embedded Systems",
         "Manufacturing Processes",
@@ -128,6 +128,7 @@
         "Copper & Fiber Optic Communication Systems",
         "Electrical Panel Boards, Frequency Drives & Transformers",
         "HVAC & Plumbing Schematics",
+        "ICWF lEVEL 1 Programme",
         "Electronics Foundations: Semiconductor Devices"
       ]
     },
@@ -214,59 +215,49 @@
       "color": "#e74c3c",
       "overview": [
         "Performed on-site electrical installations for renovation and expansion projects, handling full wiring systems, circuit extensions, and load calculations for residential and commercial clients.",
-        "Commissioned electrical circuits from MCB panels to outlets and fixtures, enforcing improved cable management, conduit use, and introducing grounding/color-coding standards enhancing safety and reducing troubleshooting time.",
         "Installed CCTV surveillance systems, along with centralized power supply and discreet cable routing to ensure reliable 24/7 operation without overloading existing circuits, educated clients to access and control the systems over a network.",
         "Designed and fabricated custom metal structures such as window frames and light support using precise cutting/drilling, coupling, and galvanized painting techniques for long-term durability."
       ],
       "achievements": [
-        "Successfully completed several projects under the criteria set by customers.",
-        "Maintained safe, accident-free and tidy work-sites during and post-service.",
-        "Offered proofing and finishing services to customers, leaving behind a clean, protected and pleasant scene after each project when possible."
       ],
       "skills": [
         "Electrical Wiring",
         "Cable Management",
         "Power Distribution",
         "Problem Solving",
-        "Switchgear/Main Panel",
         "Cable Junction/Termination",
-        "Fault Isolation & Diagnostics",
-        "Customer Service",
         "Load Calculations",
-        "Schematics Design",
         "Structured Cabling",
         "CCTV & DVR Installation",
         "Metalworking/Fabrication"
       ]
     },
     {
-      "title": "Electromechanical Engineer",
+      "title": "Assistant Engineer (Electromechanical)",
       "company": "Hitronik",
       "location": "Penang, Malaysia",
       "dateRange": "Aug 2023 – Oct 2023",
       "duration": "3 months",
       "color": "#3498db",
       "overview": [
-        "Restored a CNC lathe machine by diagnosing, fixing electronic faults and recalibrating motion settings, as well as measuring and ordering custom parts, then machining them to the desired fit.",
-        "Designed and installed a solar-powered LED signage system with custom PCB and rooftop solar integration, enabling 24/7 off-grid lighting, with waterproof and heatproof conduits for safe operation in all forecasts.",
-        "Built an automated solar-powered pump system using custom circuitry, microcontroller logic, and mechanical coupling to regulate upstream irrigation, with an independent and secure rechargeable battery, all using recycled parts."
+        "Restored a University Lab machinery and equipment by diagnosing, fixing electronic faults and recalibrating settings, as well as measuring and ordering custom parts, or machining them to the desired fit.",
+        "Co-led the development of multiple solar powered automated systems using repurposed mechanical and electrical components, specialized in control/power circuitry design and on-site system installation."
       ],
       "achievements": [
         "Brought CNC machine back to full operation within one week, resuming its intended precision manufacturing capabilities.",
-        "Successfully delivered off-grid renewable energy solutions using sustainable and cost-effective approaches."
+        "Successfully delivered off-grid renewable energy solutions using sustainable and cost-effective approaches.",
+        "Designed and installed a solar-powered LED signage system with custom PCB and rooftop solar integration, enabling 24/7 off-grid lighting, with waterproof and heatproof conduits for safe operation in all forecasts.",
+        "Built an automated solar-powered pump+valves system using custom circuitry, microcontroller logic, and mechanical coupling to regulate upstream irrigation, with an independent and secure rechargeable battery, all using recycled parts."
       ],
       "skills": [
-        "CNC Machine Operation",
         "PCB Design",
         "Soldering",
         "Arduino",
-        "Problem Solving",
         "Circuit Design",
         "Fault Isolation & Diagnostics",
         "Solar Power Systems",
         "Microcontrollers",
         "Mechanical Assembly & Coupling",
-        "KiCAD",
         "Power Electronics"
       ]
     },
@@ -282,8 +273,8 @@
         "Introduced an energetic, collaborative, and results-driven mentality, establishing new partnerships with campus societies and departments, and significantly increasing USMi's outreach and visibility among students and staff."
       ],
       "achievements": [
-        "Successfully organized multiple flagship multicultural events including the International Food Fiesta 2024 with 300+ attendees and budget exceeding RM 20,000.",
-        "Expanded organization's network and strengthened cross-cultural collaboration across the university campus."
+        "Successfully organized multiple flagship multicultural events such as the International Food Fiesta 2024 with 300+ attendees and budget exceeding RM 20,000.",
+        "Expanded the organization's network and strengthened cross-cultural collaboration across the university campus, furthering our 'Global Village' vision and goal. "
       ],
       "skills": [
         "Leadership",
@@ -302,7 +293,7 @@
       "company": "Beauhope Café",
       "location": "Penang, Malaysia",
       "dateRange": "Aug 2022 – May 2024",
-      "duration": "1 year 10 months",
+      "duration": "On and Off throughout",
       "color": "#27ae60",
       "overview": [
         "Managed daily café operations including team coordination, inventory tracking, and cash handling, ensuring smooth transitions between shifts and consistent service quality during high-traffic hours.",
@@ -322,10 +313,7 @@
         "Customer Service",
         "Customer Retention",
         "Time Management",
-        "Communication",
-        "Network & Wi-Fi Setup",
-        "CCTV & DVR Installation",
-        "Fault Isolation & Diagnostics"
+        "Communication"
       ]
     }
   ],
@@ -354,14 +342,11 @@
       "body": "Designed and implemented a 4-degree-of-freedom robotic arm with servo-based actuation for pick-and-place operations. Integrated forward and inverse kinematics algorithms for real-time spatial manipulation with Cartesian coordinate input. Constructed custom GUI interface and achieved end-effector placement accuracy within ±2 mm with response latency under 100 ms.",
       "skills": [
         "SolidWorks",
-        "Arduino",
         "NI LabVIEW",
         "3D Printing",
         "Motor Control",
-        "C/C++",
         "Kinematics (Forward/Inverse)",
         "PID Tuning",
-        "HMI Design",
         "Mechanical Assembly & Coupling"
       ]
     },
@@ -379,7 +364,6 @@
         "C/C++",
         "Robotics & Automation",
         "Mechanical Assembly & Coupling",
-        "Critical Thinking",
         "Problem Solving"
       ]
     },
@@ -391,13 +375,11 @@
       "skills": [
         "Motor Control",
         "Sensors and Actuators",
-        "Arduino",
         "Power Distribution",
         "C/C++",
         "Circuit Design",
         "Power Electronics",
-        "Electromechanics",
-        "Analytical Mindset"
+        "Electromechanics"
       ]
     },
     {
@@ -415,7 +397,6 @@
         "Direct Digital Control",
         "Industrial Automation",
         "I/O Configuration",
-        "FMEA",
         "Signal Mapping"
       ]
     },
@@ -440,7 +421,6 @@
       "skills": [
         "Arduino",
         "Sensors and Actuators",
-        "C/C++",
         "Instrumentation",
         "3D Printing",
         "IoT",
@@ -469,7 +449,7 @@
       "name": "Adhesive Hook Reliability Project",
       "category": "extracurricular",
       "categoryLabel": "Quality and Reliability Analysis",
-      "body": "Demonstrated reliability prediction techniques applicable to consumer and industrial product validation. Analyzed failure modes using Weibull distribution, demonstrating >90% confidence in expected performance lifetime. Conducted accelerated life testing using stress analysis (temperature and load cycles) to predict long-term failure patterns.",
+      "body": "Applied reliability prediction techniques for consumer products validation. Analyzed failure modes using Weibull distribution, demonstrating >90% confidence in expected performance lifetime. Conducted accelerated life testing using stress analysis (temperature and load cycles) to predict long-term failure patterns.",
       "skills": [
         "Reliability Testing",
         "Minitab",
@@ -480,7 +460,6 @@
         "Design Verification Planning",
         "Risk-Based Inspection (RBI)",
         "FMEA",
-        "Six Sigma (DMAIC)",
         "SPC",
         "PDCA Cycle",
         "Pareto Analysis",
@@ -491,7 +470,7 @@
       "name": "International Food Fiesta 2024",
       "category": "part-time",
       "categoryLabel": "Organisation and Management",
-      "body": "Led the entire organizing effort for a multicultural celebration with 300+ attendees as Deputy President of USMi. Managed logistics, booths, media coordination, and a budget exceeding RM 20,000. Event became one of USM's flagship experiences for the year, showcasing cross-cultural collaboration and community building.",
+      "body": "Led the entire organizing effort for a multicultural celebration with 300+ attendees as Deputy President of USMi. Managed logistics, teams, media coordination, and a budget exceeding RM 20,000. Event became one of USM's flagship experiences for the year, showcasing cross-cultural collaboration and community building.",
       "skills": [
         "Leadership",
         "Event Planning",
@@ -533,7 +512,7 @@
       "name": "Fruit Harvesting Robotic Arm (4-DOF)",
       "category": "academic",
       "categoryLabel": "Computer Aided Design and Robotics",
-      "body": "Developed a 4-DOF fruit-harvesting robotic arm concept and simulation, using DH-based kinematic modeling and MATLAB analysis. Contributed to trajectory planning (joint position/velocity/acceleration), NI myRIO + LabVIEW hardware integration, and system documentation as part of a multi-member robotics project.",
+      "body": "Developed a 4-DOF fruit-harvesting robotic arm concept and simulation, using DH-based kinematic modeling and MATLAB analysis. Contributed to trajectory planning (joint position/velocity/acceleration), NI myRIO + LabVIEW hardware integration, and system documentation as part of a NI x USM collaboration event robotics project.",
       "skills": [
         "MATLAB & Simulink",
         "NI LabVIEW",

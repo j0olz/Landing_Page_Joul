@@ -244,7 +244,7 @@ In admin mode, show each skill chip with a small sync indicator — green if it 
 
 - **Page titles:** Currently all pages say "Seif-Eddine Joul" — good. But `professional-experience.html` says "Professional Experience – Seif-Eddine Joul". Standardize the format across all pages: `[Page Name] | Seif Joul`.
 - **Favicon:** Not mentioned in the code. A small gear or "SJ" monogram favicon reinforces branding in browser tabs.
-- **Open Graph meta tags:** Add `<meta property="og:title">`, `og:description`, `og:image` (use `face.png`) so sharing the portfolio link on WhatsApp or LinkedIn shows a rich preview card instead of a plain URL.
+- **Open Graph meta tags:** Add `<meta property="og:title">`, `og:description`, `og:image` (use `face.jpeg`) so sharing the portfolio link on WhatsApp or LinkedIn shows a rich preview card instead of a plain URL.
 - **Smooth page transitions:** Add a CSS `body { opacity: 0; animation: fadeIn 0.3s ease forwards; }` — makes every page load feel intentional and not a jarring hard swap.
 - **Timeline on mobile:** The `timeline-header { flex-direction: column }` breakpoint is at 768px which is correct, but the date badge and duration chip stack vertically without enough gap — add `margin-top: 0.5rem` to `.timeline-date` in the mobile query.
 - **"Currently" indicator on career timeline:** The first (current) job should have a green pulsing dot to make clear this is the current role at a glance.
