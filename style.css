@@ -231,6 +231,28 @@ footer a { color: var(--amber); }
   box-shadow: 0 4px 18px rgba(232,160,32,0.55);
 }
 
+/* Language toggle: sits directly under the home button, same footprint */
+.lang-toggle {
+  background: var(--navy-light);
+  color: var(--amber);
+  top: calc(1rem + 44px + 0.6rem);
+  left: 1rem;
+  border: 2px solid rgba(232,160,32,0.5);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.lang-toggle:hover {
+  background: var(--amber);
+  color: var(--navy);
+  transform: scale(1.1);
+  box-shadow: 0 4px 18px rgba(232,160,32,0.55);
+  border-color: var(--amber);
+}
+.lang-toggle .lang-label {
+  pointer-events: none;
+}
+
 /* Theme toggle: deep navy with amber border, clearly separate from header */
 .theme-toggle {
   background: var(--navy-light);
@@ -250,6 +272,8 @@ footer a { color: var(--amber); }
 body.dark .home-button { background: var(--amber); border-color: var(--amber-dim); }
 body.dark .theme-toggle { background: var(--amber); border-color: #0a1118; }
 body.dark .theme-toggle:hover { background: var(--amber); color: var(--navy); }
+body.dark .lang-toggle { background: var(--amber); color: var(--navy); border-color: #0a1118; }
+body.dark .lang-toggle:hover { background: var(--amber); color: var(--navy); }
 
 /* Scroll buttons */
 .to-top     { left: 1rem; bottom: 5rem;   background: var(--navy-mid); color: #fff; border: 2px solid rgba(232,160,32,0.25); }

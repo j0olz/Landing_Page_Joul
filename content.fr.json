@@ -1,0 +1,540 @@
+{
+  "meta": {
+    "name": "Seif-Eddine Joul",
+    "tagline": "Je fonctionne à la dopamine que procure la résolution de problèmes, techniques, systémiques ou sociaux. Je m'épanouis dans les environnements collaboratifs.",
+    "linkedin": "https://www.linkedin.com/in/seifjoul",
+    "boldpro": "https://bold.pro/my/s-joul",
+    "email": "seifjoul@gmail.com",
+    "phone1": {
+      "display": "+212 6 3129 3071",
+      "wa": "https://wa.link/jy8ah4"
+    },
+    "phone2": {
+      "display": "+971 52 6000 849",
+      "wa": "https://wa.link/x9e47d"
+    },
+    "cvFile": "SEIF JOUL RESUME.pdf",
+    "qrCaption": "Scannez ce code pour accéder à ce site sur mobile",
+    "copyright": "2025 Seif-Eddine Joul | Tous droits réservés.",
+    "gtag": "G-C8K6QM5ZGZ",
+    "gtm": "GTM-N5KVXWVH"
+  },
+  "index": {
+    "whoAmI": "Ingénieur en mécatronique, déterminé, curieux et adaptable. Fort d'une expérience pratique dans les systèmes électriques, électroniques et mécaniques, de la maintenance et des installations basse tension jusqu'à la conception 3D et l'automatisation, j'ai touché à tout.\n\nJe m'épanouis dans des environnements collaboratifs axés sur la qualité et j'élargis continuellement mes compétences grâce aux pratiques et à l'état d'esprit de la gestion de projet, ainsi qu'à l'exploration des outils d'IA et de l'automatisation, afin que mon approche de l'ingénierie reste toujours alignée sur les standards modernes de l'industrie.",
+    "whoAmIClosing": "...celui que vous cherchez !",
+    "cards": [
+      {
+        "href": "professional-experience.html",
+        "icon": "icons/xp.png",
+        "label": "Parcours"
+      },
+      {
+        "href": "my-skills.html",
+        "icon": "icons/skl.png",
+        "label": "Compétences"
+      },
+      {
+        "href": "my-projects.html",
+        "icon": "icons/pro.png",
+        "label": "Projets"
+      },
+      {
+        "href": "my-certifications.html",
+        "icon": "icons/cert.png",
+        "label": "Certificats"
+      },
+      {
+        "href": "personal-life.html",
+        "icon": "icons/life.png",
+        "label": "Vie personnelle"
+      },
+      {
+        "href": "education.html",
+        "icon": "icons/edu.png",
+        "label": "Éducation"
+      }
+    ]
+  },
+  "education": [
+    {
+      "type": "Licence (Bachelor)",
+      "dateRange": "Février 2020 – Novembre 2024",
+      "degree": "Licence d'ingénierie en génie mécatronique (avec mention/Honours)",
+      "school": "Universiti Sains Malaysia (USM)",
+      "location": "Penang, Malaisie",
+      "courses": [
+        "Robotique et automatisation",
+        "Instrumentation",
+        "Vision industrielle (Machine Vision)",
+        "Conception en ingénierie",
+        "Systèmes de contrôle",
+        "Systèmes embarqués",
+        "Procédés de fabrication",
+        "Ingénierie de la qualité"
+      ],
+      "achievements": [
+        "Inscrit au Conseil des ingénieurs de Malaisie (Board of Engineers Malaysia)",
+        "Distinction au tableau d'honneur (Dean's List)",
+        "Vice-président de l'association étudiante",
+        "Officiellement reconnu dans le cadre du Washington Accord, répondant aux normes internationales de la profession d'ingénieur.",
+        "A suivi un programme d'éducation par les résultats (Outcome-Based Education) accrédité selon le cadre international du Washington Accord."
+      ],
+      "rank": {
+        "value": "#137",
+        "note": "Classement : QS World University Rankings 2025"
+      }
+    },
+    {
+      "type": "Diplôme d'études secondaires",
+      "dateRange": "Janvier 2016 – Juin 2019",
+      "degree": "Diplôme d'études secondaires, cursus américain",
+      "school": "Al Nahda National School",
+      "location": "Abou Dabi, Émirats arabes unis",
+      "courses": [
+        "Sciences (Biologie, Chimie, Physique)",
+        "Commerce et finance",
+        "Sociologie"
+      ],
+      "achievements": [
+        "Score SAT en mathématiques : 600/800",
+        "Score IELTS : 7 (niveau C1)",
+        "Reconnaissance de réussite PISA",
+        "Participant au programme SMART",
+        "Certificat ICDL obtenu"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "category": "Académique",
+      "items": [
+        "Board of Engineers Malaysia",
+        "Distinction au tableau d'honneur (Dean's List)",
+        "SAT Mathématiques 600/800",
+        "IELTS (C1 / Score 7)",
+        "ICDL (Permis de conduire informatique international)",
+        "PISA (Programme international pour le suivi des acquis des élèves)",
+        "S.M.A.R.T Mathématiques"
+      ]
+    },
+    {
+      "category": "Ingénierie et technique",
+      "items": [
+        "Dessins techniques pour la fabrication",
+        "Lecture de schémas et plans de systèmes électriques",
+        "Durabilité dans la conception, la construction et la fabrication",
+        "Découverte de l'automatisation industrielle",
+        "Logique de séquenceur pour automates (PLC)",
+        "Systèmes de communication cuivre et fibre optique",
+        "Tableaux électriques, variateurs de fréquence et transformateurs",
+        "Schémas CVC (HVAC) et plomberie",
+        "Programme ICWF Niveau 1",
+        "Fondamentaux de l'électronique : composants semi-conducteurs"
+      ]
+    },
+    {
+      "category": "Données, qualité et fiabilité",
+      "items": [
+        "Six Sigma (Ceinture blanche)",
+        "Introduction à Minitab",
+        "Machine Learning pour débutants",
+        "Reconnaissance d'images par apprentissage automatique"
+      ]
+    },
+    {
+      "category": "Gestion de projet et coordination",
+      "items": [
+        "Fondamentaux de la gestion de projet",
+        "Primavera P6 avancé",
+        "Gestion de projet Agile",
+        "Introduction au Kanban",
+        "Fondamentaux SAP ERP",
+        "SAP - Gestion des matières"
+      ]
+    },
+    {
+      "category": "Informatique et gestion des services",
+      "items": [
+        "Gestion des services informatiques (ITSM)",
+        "Suivi et indicateurs du support informatique",
+        "Zendesk Agent Practitioner",
+        "HubSpot Service Hub Certified",
+        "Introduction à Git et GitHub"
+      ]
+    },
+    {
+      "category": "Développement professionnel",
+      "items": [
+        "Rédaction technique",
+        "Fondamentaux de la communication",
+        "Fondamentaux de la gestion du temps"
+      ]
+    }
+  ],
+  "personalLife": [
+    {
+      "title": "Origines et racines",
+      "body": "Né et élevé à Abou Dabi, aux Émirats arabes unis, j'ai grandi dans un environnement multiculturel qui a façonné mon adaptabilité et ma vision du monde. Mon déménagement en Malaisie pour mes études m'a ouvert à de nouvelles cultures, cuisines et façons de penser. Cette expérience interculturelle m'a appris la valeur de la diversité et l'importance de rester curieux du monde qui m'entoure."
+    },
+    {
+      "title": "Parcours en arts martiaux",
+      "body": "Le Muay Thaï a été bien plus qu'un sport pour moi, c'est une discipline qui a façonné ma personnalité. Ayant compétitionné aux niveaux national et international, notamment en représentant le Maroc au championnat du monde jeunesse IFMA en Thaïlande, j'y ai appris la résilience, la concentration et l'importance d'un effort constant. Le ring est l'endroit où j'ai appris que les échecs ne sont que des tremplins vers le rebond."
+    },
+    {
+      "title": "Éternel étudiant",
+      "body": "Je crois que l'apprentissage ne s'arrête jamais. Que ce soit pour acquérir une nouvelle compétence, explorer des sujets pointus, ou lire sur les mentalités et stratégies professionnelles, je nourris constamment ma curiosité. J'apprécie les cours en ligne et l'expérimentation pratique. Ma philosophie : chaque jour est une occasion d'apprendre quelque chose que je ne savais pas la veille."
+    },
+    {
+      "title": "Un résolveur de problèmes dans l'âme",
+      "body": "Je trouve une joie sincère à réparer les choses, qu'il s'agisse d'un appareil en panne, d'une chaise qui grince ou d'un ordinateur portable qui surchauffe. Mes amis et ma famille m'appellent souvent lorsque quelque chose ne fonctionne pas correctement, et je suis fier de diagnostiquer et de résoudre des problèmes que d'autres pourraient négliger. Pour moi, chaque problème n'est qu'un casse-tête qui attend d'être résolu."
+    },
+    {
+      "title": "Bâtisseur de communauté",
+      "body": "J'ai toujours cru au pouvoir de rassembler les gens. De l'organisation d'événements culturels à grande échelle à la coordination d'échanges étudiants internationaux, je suis fier d'aider les autres à se connecter et à s'ouvrir. Pour moi, le leadership consiste à créer des espaces où chacun se sent valorisé et écouté, et j'essaie d'incarner cela dans tout ce que je fais."
+    },
+    {
+      "title": "Loisirs et centres d'intérêt",
+      "body": "En dehors du travail et des études, j'aime nager, jouer au futsal avec des amis et découvrir de nouvelles cuisines. Je suis aussi fasciné par la façon dont les choses bougent et fonctionnent, ce qui m'a attiré vers les jeux ou logiciels de simulation comme Mindustry. Quand je m'ennuie, j'essaie de perfectionner une recette ; ma vie d'étudiant célibataire à l'étranger m'a appris à rendre des choses bon marché mangeables et savoureuses."
+    },
+    {
+      "title": "Valeurs fondamentales",
+      "body": "L'intégrité, l'adaptabilité et l'empathie guident mes décisions. Je valorise la transparence dans les relations, la flexibilité face au changement, et la compréhension dans mes interactions avec les autres. Je crois que la réussite ne se mesure pas seulement à ce que l'on accomplit, mais à la façon dont on traite les gens en chemin. Et j'essaie toujours de laisser une impression durable ou un bon souvenir aux personnes que je rencontre."
+    },
+    {
+      "title": "Regard vers l'avenir",
+      "body": "Je suis enthousiaste à l'idée de l'avenir, tant sur le plan professionnel que personnel. Je veux continuer à progresser en tant qu'ingénieur, contribuer à des projets porteurs de sens, et un jour encadrer la prochaine génération de résolveurs de problèmes. Mon objectif est de bâtir une carrière alliant excellence technique et impact positif, tout en me laissant la liberté et les moyens d'explorer et de vivre ma vie personnelle."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Technicien en électricité (EE Technician)",
+      "company": "Indépendant",
+      "location": "Maroc",
+      "dateRange": "Avr. 2025 – Présent",
+      "duration": "En cours",
+      "color": "#e74c3c",
+      "overview": [
+        "Réalisation d'installations électriques sur site pour des projets de rénovation et d'extension, en gérant l'ensemble des systèmes de câblage, des extensions de circuits et des calculs de charge pour des clients résidentiels et commerciaux.",
+        "Installation de systèmes de vidéosurveillance CCTV, avec alimentation électrique centralisée et cheminement discret des câbles pour assurer un fonctionnement fiable 24h/24 et 7j/7 sans surcharger les circuits existants ; formation des clients à l'accès et au contrôle des systèmes via le réseau.",
+        "Conception et fabrication de structures métalliques sur mesure telles que des cadres de fenêtres et supports d'éclairage, à l'aide de techniques précises de découpe/perçage, d'assemblage et de peinture galvanisée pour une durabilité à long terme."
+      ],
+      "achievements": [],
+      "skills": [
+        "Câblage électrique",
+        "Gestion des câbles",
+        "Distribution d'énergie",
+        "Résolution de problèmes",
+        "Raccordement/jonction de câbles",
+        "Calculs de charge",
+        "Câblage structuré",
+        "Installation de CCTV et DVR",
+        "Travail des métaux/fabrication"
+      ]
+    },
+    {
+      "title": "Ingénieur assistant (Électromécanique)",
+      "company": "Hitronik",
+      "location": "Penang, Malaisie",
+      "dateRange": "Août 2023 – Oct. 2023",
+      "duration": "3 mois",
+      "color": "#3498db",
+      "overview": [
+        "Remise en état de machines et équipements d'un laboratoire universitaire en diagnostiquant et réparant des pannes électroniques et en recalibrant les réglages, ainsi qu'en mesurant et commandant des pièces sur mesure, ou en les usinant à l'ajustement souhaité.",
+        "Co-direction du développement de plusieurs systèmes automatisés à énergie solaire à partir de composants mécaniques et électriques réutilisés, avec une spécialisation dans la conception de circuits de commande/puissance et l'installation de systèmes sur site."
+      ],
+      "achievements": [
+        "Remise en fonctionnement complet d'une machine CNC en une semaine, lui permettant de reprendre ses capacités de fabrication de précision.",
+        "Livraison réussie de solutions d'énergie renouvelable hors réseau, avec des approches durables et économiques.",
+        "Conception et installation d'un système d'enseigne LED à énergie solaire avec PCB sur mesure et intégration solaire en toiture, permettant un éclairage hors réseau 24h/24 et 7j/7, avec des conduits étanches et résistants à la chaleur pour un fonctionnement sûr par tous les temps.",
+        "Construction d'un système automatisé de pompe et de vannes à énergie solaire à l'aide de circuits sur mesure, d'une logique de microcontrôleur et d'un couplage mécanique pour réguler l'irrigation en amont, avec une batterie rechargeable indépendante et sécurisée, le tout à partir de pièces recyclées."
+      ],
+      "skills": [
+        "Conception de PCB",
+        "Soudure",
+        "Arduino",
+        "Conception de circuits",
+        "Diagnostic et isolement des pannes",
+        "Systèmes d'énergie solaire",
+        "Microcontrôleurs",
+        "Assemblage et couplage mécanique",
+        "Électronique de puissance"
+      ]
+    },
+    {
+      "title": "Vice-président de USMi",
+      "company": "USM International Student Society",
+      "location": "Penang, Malaisie",
+      "dateRange": "Fév. 2023 – Avr. 2025",
+      "duration": "2 ans 3 mois",
+      "color": "#f1c40f",
+      "overview": [
+        "Travail sous la direction du fondateur de USMi pour planifier et exécuter plusieurs initiatives multiculturelles à grande échelle ayant touché des centaines d'étudiants et fait constamment progresser la vision et la mission de l'association.",
+        "Introduction d'un état d'esprit dynamique, collaboratif et axé sur les résultats, établissant de nouveaux partenariats avec les associations et départements du campus, et augmentant significativement la portée et la visibilité de USMi auprès des étudiants et du personnel."
+      ],
+      "achievements": [
+        "Organisation réussie de plusieurs événements multiculturels phares tels que l'International Food Fiesta 2024, avec plus de 300 participants et un budget dépassant 20 000 RM.",
+        "Élargissement du réseau de l'organisation et renforcement de la collaboration interculturelle sur l'ensemble du campus universitaire, faisant avancer notre vision et objectif de « village mondial »."
+      ],
+      "skills": [
+        "Leadership",
+        "Organisation d'événements",
+        "Coordination d'équipe",
+        "Gestion d'équipe",
+        "Gestion budgétaire",
+        "Prise de parole en public",
+        "Communication",
+        "Gestion du changement",
+        "Définition d'objectifs SMART"
+      ]
+    },
+    {
+      "title": "Superviseur de l'équipe du soir",
+      "company": "Beauhope Café",
+      "location": "Penang, Malaisie",
+      "dateRange": "Août 2022 – Mai 2024",
+      "duration": "De façon intermittente tout au long de la période",
+      "color": "#27ae60",
+      "overview": [
+        "Gestion des opérations quotidiennes du café, y compris la coordination de l'équipe, le suivi des stocks et la gestion de caisse, en assurant des transitions fluides entre les équipes et une qualité de service constante durant les heures de forte affluence.",
+        "Supervision d'une petite équipe de baristas, suivi des performances et du respect des normes d'hygiène, résolution des préoccupations des clients sur place, et maintien de standards de service ayant renforcé la satisfaction client et la fidélisation.",
+        "Supervision des routines d'inventaire et financières, notamment l'enregistrement des recettes, la gestion de la petite caisse, la rémunération du personnel et la préparation précise des fonds pour le jour suivant.",
+        "Application de mes compétences techniques pour entretenir et améliorer en continu les systèmes électriques, d'éclairage, de réseau et de sécurité du café, y compris la CCTV, le Wi-Fi et les écrans média, garantissant fiabilité, sécurité et bon déroulement des opérations quotidiennes."
+      ],
+      "achievements": [
+        "Renforcement des compétences en leadership, en gestion multitâche et en communication grâce à une gestion d'équipe pratique dans un environnement dynamique en contact avec la clientèle.",
+        "Maintien d'un niveau constant de satisfaction client et d'un déroulement opérationnel fluide durant les équipes du soir."
+      ],
+      "skills": [
+        "Leadership",
+        "Coordination d'équipe",
+        "Gestion des stocks",
+        "Gestion budgétaire",
+        "Service client",
+        "Fidélisation de la clientèle",
+        "Gestion du temps",
+        "Communication"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "LiDAR-Camera Sensor Fusion System",
+      "category": "academic",
+      "categoryLabel": "Vision industrielle",
+      "body": "Développement d'un système de fusion de capteurs sous MATLAB combinant des nuages de points LiDAR avec des données d'images de caméra, via un calibrage extrinsèque et une transformation projective. Intégration de la détection d'objets YOLOv4 et obtention d'un alignement au sous-pixel avec une erreur de reprojection moyenne inférieure à 0,03 px. L'approche de fusion a amélioré la précision de détection d'obstacles et l'estimation de la profondeur d'environ 35 % par rapport aux capteurs utilisés seuls.",
+      "skills": [
+        "MATLAB et Simulink",
+        "Python",
+        "Capteurs et actionneurs",
+        "OpenCV",
+        "Fusion de capteurs",
+        "Capteurs LiDAR",
+        "Algorithmes YOLO",
+        "Détection d'objets",
+        "Documentation technique"
+      ]
+    },
+    {
+      "name": "4-DOF Robotic Arm – Simulation, Fabrication and Control",
+      "category": "academic",
+      "categoryLabel": "Robotique et contrôle",
+      "body": "Conception et réalisation d'un bras robotisé à 4 degrés de liberté avec actionnement par servomoteurs pour des opérations de préhension et de dépose. Intégration d'algorithmes de cinématique directe et inverse pour une manipulation spatiale en temps réel avec saisie de coordonnées cartésiennes. Construction d'une interface graphique sur mesure et obtention d'une précision de positionnement de l'effecteur de ±2 mm avec une latence de réponse inférieure à 100 ms.",
+      "skills": [
+        "SolidWorks",
+        "NI LabVIEW",
+        "Impression 3D",
+        "Commande de moteurs",
+        "Cinématique (directe/inverse)",
+        "Réglage PID",
+        "Assemblage et couplage mécanique"
+      ]
+    },
+    {
+      "name": "Search and Rescue Robot",
+      "category": "academic",
+      "categoryLabel": "Robotique et systèmes embarqués",
+      "body": "Construction d'un robot de recherche et sauvetage prêt pour la compétition, capable de parcourir des parcours d'obstacles et de détecter et récupérer des objets sous contrainte de temps. Conception d'un châssis sur mesure et intégration de plusieurs types de capteurs pour le retour d'information sur l'environnement. Optimisation des algorithmes de contrôle moteur pour améliorer la précision de navigation et le temps de réponse.",
+      "skills": [
+        "SolidWorks",
+        "Arduino",
+        "Impression 3D",
+        "Capteurs et actionneurs",
+        "Commande de moteurs",
+        "C/C++",
+        "Robotique et automatisation",
+        "Assemblage et couplage mécanique",
+        "Résolution de problèmes"
+      ]
+    },
+    {
+      "name": "Regenerative Braking System",
+      "category": "personal",
+      "categoryLabel": "Systèmes électriques et de puissance",
+      "body": "Conception et construction d'un prototype de système de freinage régénératif pour un démonstrateur de véhicule électrique à petite échelle. Conception d'une circuiterie de récupération d'énergie captant l'énergie cinétique lors des cycles de freinage et rechargeant un module de batterie. Obtention d'un rendement de récupération d'énergie mesurable et validation des performances du système sous des cycles répétés de charge et d'arrêt.",
+      "skills": [
+        "Commande de moteurs",
+        "Capteurs et actionneurs",
+        "Distribution d'énergie",
+        "C/C++",
+        "Conception de circuits",
+        "Électronique de puissance",
+        "Électromécanique"
+      ]
+    },
+    {
+      "name": "Vacuum Pick-and-Place Station",
+      "category": "academic",
+      "categoryLabel": "Automatisation et automates (PLC)",
+      "body": "Programmation et mise en service d'une station de préhension et dépose pneumatique utilisant un automate OMRON et le logiciel CX-ONE. Conception de séquences en logique à contacts (ladder) pour un minutage précis des actionneurs et des transitions d'état déclenchées par capteurs. Le système a atteint une exécution de cycle fiable et reproductible avec une logique complète de détection et de récupération des défauts.",
+      "skills": [
+        "Programmation d'automates (PLC)",
+        "Systèmes pneumatiques",
+        "OMRON CX-ONE",
+        "Instrumentation",
+        "Logique à contacts (Ladder)",
+        "Langages IEC 61131-3",
+        "Contrôle numérique direct",
+        "Automatisation industrielle",
+        "Configuration des E/S",
+        "Cartographie des signaux"
+      ]
+    },
+    {
+      "name": "Coin Measurement System",
+      "category": "academic",
+      "categoryLabel": "Vision par ordinateur",
+      "body": "Développement d'un système de vision industrielle basé sur Python/OpenCV permettant de détecter, classifier et mesurer automatiquement les dimensions de pièces de monnaie à partir d'une caméra en direct. Mise en œuvre de la segmentation colorimétrique HSV et d'algorithmes de détection de cercles de Hough pour une identification robuste des pièces sous des conditions d'éclairage variables. Le système a démontré une précision de mesure de ±0,5 mm sous un éclairage contrôlé.",
+      "skills": [
+        "Python",
+        "OpenCV",
+        "Esprit analytique",
+        "Détection d'objets",
+        "Git et GitHub"
+      ]
+    },
+    {
+      "name": "Automatic Plant Care System",
+      "category": "personal",
+      "categoryLabel": "Systèmes embarqués et IoT",
+      "body": "Conception et construction d'une station autonome de soin des plantes utilisant Arduino et des capteurs environnementaux. Le système surveillait l'humidité du sol, le niveau de lumière et la température, déclenchant l'arrosage automatique et des alertes via une logique de seuils. Un boîtier compact imprimé en 3D abritait l'ensemble des composants électroniques et d'arrosage dans une unité intégrée unique.",
+      "skills": [
+        "Arduino",
+        "Capteurs et actionneurs",
+        "Instrumentation",
+        "Impression 3D",
+        "IoT",
+        "Protocoles de communication",
+        "Microcontrôleurs"
+      ]
+    },
+    {
+      "name": "Drone Delivery Optimization via DoE & ANOVA",
+      "category": "extracurricular",
+      "categoryLabel": "Analyse de données et simulation",
+      "body": "Conception et réalisation d'un plan d'expériences (DoE) basé sur simulation évaluant l'impact de la capacité de la plateforme de drone sur le temps de livraison, en analysant 5 configurations avec plus de 20 essais de simulation chacune. Application d'une ANOVA à un facteur pour confirmer l'effet statistiquement significatif de la taille de la plateforme sur l'efficacité de livraison. Observation d'un doublement du temps de livraison entre les tailles de plateforme 2 et 10 ; utilisation d'une modélisation par régression pour ajuster une courbe polynomiale du 3e ordre en vue de la prédiction des performances.",
+      "skills": [
+        "Minitab",
+        "ANOVA",
+        "Plans d'expériences (DoE)",
+        "Esprit analytique",
+        "Modélisation par régression",
+        "Cycle PDCA",
+        "Excel",
+        "Documentation technique",
+        "Esprit critique"
+      ]
+    },
+    {
+      "name": "Adhesive Hook Reliability Project",
+      "category": "extracurricular",
+      "categoryLabel": "Analyse de la qualité et de la fiabilité",
+      "body": "Application de techniques de prédiction de la fiabilité pour la validation de produits de grande consommation. Analyse des modes de défaillance à l'aide de la distribution de Weibull, démontrant une confiance de plus de 90 % dans la durée de vie de performance attendue. Réalisation d'essais de vie accélérés à l'aide d'une analyse des contraintes (cycles de température et de charge) pour prédire les schémas de défaillance à long terme.",
+      "skills": [
+        "Essais de fiabilité",
+        "Minitab",
+        "Analyse des causes profondes",
+        "Esprit analytique",
+        "Distribution de Weibull",
+        "Analyse des contraintes",
+        "Planification de la vérification de conception",
+        "Inspection basée sur les risques (RBI)",
+        "AMDEC (FMEA)",
+        "MSP (SPC)",
+        "Cycle PDCA",
+        "Analyse de Pareto",
+        "Documentation technique"
+      ]
+    },
+    {
+      "name": "International Food Fiesta 2024",
+      "category": "part-time",
+      "categoryLabel": "Organisation et gestion",
+      "body": "Direction de l'ensemble des efforts d'organisation d'une célébration multiculturelle réunissant plus de 300 participants, en tant que vice-président de USMi. Gestion de la logistique, des équipes, de la coordination médiatique et d'un budget dépassant 20 000 RM. L'événement est devenu l'une des expériences phares de l'USM pour l'année, mettant en valeur la collaboration interculturelle et la construction communautaire.",
+      "skills": [
+        "Leadership",
+        "Organisation d'événements",
+        "Gestion budgétaire",
+        "Coordination d'équipe",
+        "Prise de parole en public",
+        "Communication interculturelle",
+        "Gestion d'équipe",
+        "Gestion du temps",
+        "Suite Microsoft Office"
+      ]
+    },
+    {
+      "name": "Explorace – Large-Scale Campus Challenge Event",
+      "category": "extracurricular",
+      "categoryLabel": "Organisation et gestion",
+      "body": "Organisation et exécution d'un défi Explorace à l'échelle de l'université, impliquant une logistique complexe, une coordination multi-sites et une résolution de problèmes en temps réel. Collaboration avec des équipes transversales pour gérer les participants, les points de contrôle, la sécurité et le bon déroulement de l'événement sous contraintes de temps et de ressources.",
+      "skills": [
+        "Coordination d'équipe",
+        "Organisation d'événements",
+        "Résolution de problèmes",
+        "Leadership",
+        "Gestion des risques"
+      ]
+    },
+    {
+      "name": "Academic & English Language Support",
+      "category": "personal",
+      "categoryLabel": "Tutorat et bénévolat",
+      "body": "Accompagnement académique et linguistique auprès de lycéens et d'étudiants universitaires, incluant la structuration de rapports, la relecture, la synthèse et la préparation de supports d'étude. Accompagnement également de candidats se préparant à des examens de certification en anglais (Linguaskill, Duolingo) grâce à un tutorat ciblé et des ressources d'entraînement, avec des résultats constamment probants.",
+      "skills": [
+        "Communication",
+        "Esprit critique",
+        "Adaptabilité",
+        "Documentation technique"
+      ]
+    },
+    {
+      "name": "Fruit Harvesting Robotic Arm (4-DOF)",
+      "category": "academic",
+      "categoryLabel": "Conception assistée par ordinateur et robotique",
+      "body": "Développement du concept et de la simulation d'un bras robotisé de récolte de fruits à 4 degrés de liberté, à l'aide d'une modélisation cinématique basée sur Denavit-Hartenberg (DH) et d'une analyse sous MATLAB. Contribution à la planification de trajectoire (position/vitesse/accélération des articulations), à l'intégration matérielle NI myRIO + LabVIEW, et à la documentation du système dans le cadre d'un projet robotique lors d'un événement de collaboration NI x USM.",
+      "skills": [
+        "MATLAB et Simulink",
+        "NI LabVIEW",
+        "Robotique et automatisation",
+        "Instrumentation",
+        "Cinématique (directe/inverse)",
+        "Réglage PID",
+        "Documentation technique"
+      ]
+    },
+    {
+      "name": "International Mobility & Global Representation Programs",
+      "category": "extracurricular",
+      "categoryLabel": "Leadership et représentation",
+      "body": "Représentation de l'USM lors d'échanges étudiants de haut niveau, en prononçant des discours de bienvenue officiels pour des délégations sud-coréennes et en gérant la logistique d'accueil sur 4 jours pour des étudiants de NYP Singapour. Direction de la coordination médiatique et de la planification du programme pour faciliter une intégration culturelle harmonieuse et renforcer les partenariats institutionnels.",
+      "skills": [
+        "Communication",
+        "Prise de parole en public",
+        "Coordination d'équipe",
+        "Communication interculturelle",
+        "Organisation d'événements",
+        "Leadership"
+      ]
+    }
+  ]
+}

@@ -12,28 +12,97 @@
   let _content = null;
   let _skills  = null;
 
+  /* ------------------------------------------
+     LANGUAGE STATE (3-state: en -> ar -> fr -> en)
+  ------------------------------------------ */
+  const LANGS = ['en', 'ar', 'fr'];
+  const LANG_LABELS = { en: 'En', ar: 'Ar', fr: 'Fr' };
+  const LANG_STORAGE_KEY = 'siteLang';
+
+  function getLang() {
+    const stored = localStorage.getItem(LANG_STORAGE_KEY);
+    return LANGS.includes(stored) ? stored : 'en';
+  }
+
+  function setLang(lang) {
+    if (!LANGS.includes(lang)) lang = 'en';
+    localStorage.setItem(LANG_STORAGE_KEY, lang);
+    applyLangAttrs(lang);
+  }
+
+  function applyLangAttrs(lang) {
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  }
+
+  // File suffix for a given language: en -> content.json, ar -> content.ar.json, fr -> content.fr.json
+  function langFile(baseName, lang) {
+    return lang === 'en' ? `${baseName}.json` : `${baseName}.${lang}.json`;
+  }
+
   async function loadContent() {
     if (_content) return _content;
-    if (location.protocol === 'file:') { _content = _CONTENT_DATA; return _content; }
-    try {
-      const r = await fetch('content.json');
-      if (!r.ok) throw new Error('fetch failed');
-      _content = await r.json();
-    } catch (_) {
+    const lang = getLang();
+    if (location.protocol === 'file:') {
+      if (lang !== 'en') {
+        console.warn(`[render.js] Running from file:// — the browser can't fetch ${langFile('content', lang)}, so falling back to the built-in English content. Serve the site over http(s) (a local server or GitHub Pages) to see translations.`);
+      }
       _content = _CONTENT_DATA;
+      return _content;
+    }
+    try {
+      const r = await fetch(langFile('content', lang));
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      _content = await r.json();
+    } catch (err) {
+      // Fall back to English data (translated file may be missing) rather than fail silently
+      if (lang !== 'en') {
+        console.warn(`[render.js] Could not load ${langFile('content', lang)} (${err.message}). Falling back to content.json.`);
+        try {
+          const r2 = await fetch('content.json');
+          if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
+          _content = await r2.json();
+        } catch (err2) {
+          console.warn(`[render.js] Could not load content.json either (${err2.message}). Using built-in fallback data.`);
+          _content = _CONTENT_DATA;
+        }
+      } else {
+        console.warn(`[render.js] Could not load content.json (${err.message}). Using built-in fallback data.`);
+        _content = _CONTENT_DATA;
+      }
     }
     return _content;
   }
 
   async function loadSkills() {
     if (_skills) return _skills;
-    if (location.protocol === 'file:') { _skills = _SKILLS_DATA; return _skills; }
-    try {
-      const r = await fetch('skills.json');
-      if (!r.ok) throw new Error('fetch failed');
-      _skills = await r.json();
-    } catch (_) {
+    const lang = getLang();
+    if (location.protocol === 'file:') {
+      if (lang !== 'en') {
+        console.warn(`[render.js] Running from file:// — the browser can't fetch ${langFile('skills', lang)}, so falling back to the built-in English skills data. Serve the site over http(s) (a local server or GitHub Pages) to see translations.`);
+      }
       _skills = _SKILLS_DATA;
+      return _skills;
+    }
+    try {
+      const r = await fetch(langFile('skills', lang));
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      _skills = await r.json();
+    } catch (err) {
+      if (lang !== 'en') {
+        console.warn(`[render.js] Could not load ${langFile('skills', lang)} (${err.message}). Falling back to skills.json.`);
+        try {
+          const r2 = await fetch('skills.json');
+          if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
+          _skills = await r2.json();
+        } catch (err2) {
+          console.warn(`[render.js] Could not load skills.json either (${err2.message}). Using built-in fallback data.`);
+          _skills = _SKILLS_DATA;
+        }
+      } else {
+        console.warn(`[render.js] Could not load skills.json (${err.message}). Using built-in fallback data.`);
+        _skills = _SKILLS_DATA;
+      }
     }
     return _skills;
   }
@@ -81,16 +150,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     if (!document.getElementById('header-overlay-btns')) {
       const overlay = document.createElement('div');
       overlay.id = 'header-overlay-btns';
+      const currentLang = getLang();
       overlay.innerHTML = `
         ${showHomeBtn ? `
           <a href="index.html" class="home-button float-btn" aria-label="Go to home">
             <img src="icons/home.png" alt="Home" class="icon">
           </a>` : ''}
+        <button id="lang-toggle" class="lang-toggle float-btn" type="button" aria-label="Change language">
+          <span class="lang-label">${LANG_LABELS[currentLang]}</span>
+        </button>
         <button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
           <img src="icons/moon.png" alt="Toggle theme" class="icon">
         </button>
       `;
       document.body.appendChild(overlay);
+
+      applyLangAttrs(currentLang);
+
+      const langBtn = document.getElementById('lang-toggle');
+      langBtn.addEventListener('click', () => {
+        const next = LANGS[(LANGS.indexOf(getLang()) + 1) % LANGS.length];
+        setLang(next);
+        // Reset cached data so the new language's JSON is fetched fresh,
+        // then re-run whatever bootstrapPage call built this page.
+        _content = null;
+        _skills = null;
+        location.reload();
+      });
     }
 
     el.innerHTML = `
@@ -335,6 +421,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     bootstrapPage,
     loadContent,
     loadSkills,
+    getLang,
+    setLang,
     renderHeader,
     renderNav,
     renderBreadcrumb,
