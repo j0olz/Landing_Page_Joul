@@ -208,7 +208,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       const isRTL = document.documentElement.dir === 'rtl';
       if (isRTL) {
         const baseSize = parseFloat(window.getComputedStyle(nameEl).fontSize);
-        nameEl.style.fontSize = (baseSize * 1.45) + 'px';
+        nameEl.style.fontSize = (baseSize * 3) + 'px';
       } else {
         nameEl.style.fontSize = '';
       }
