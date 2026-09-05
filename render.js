@@ -208,7 +208,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       const isRTL = document.documentElement.dir === 'rtl';
       if (isRTL) {
         const baseSize = parseFloat(window.getComputedStyle(nameEl).fontSize);
-        nameEl.style.fontSize = (baseSize * 3) + 'px';
+        nameEl.style.fontSize = (baseSize * 1.45) + 'px';
       } else {
         nameEl.style.fontSize = '';
       }
@@ -371,10 +371,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     // number stuck at "—" on every page). Their counter.php endpoint is
     // meant to be embedded directly as an <img> instead — it increments AND
     // visually renders the digit count in one request, no JS parsing needed.
-    const counterImg = location.protocol !== 'file:'
-      ? `<img class="visitor-counter-img" alt="${visitsLabel}"
-             src="https://hitwebcounter.com/counter/counter.php?page=21457518&style=0006&nbdigits=5&type=page&initCount=200">`
-      : '—';
+const counterImg = location.protocol !== 'file:'
+  ? `<img class="visitor-counter-img" alt="${visitsLabel}"
+         src="https://hitwebcounter.com/counter/counter.php?page=21518146&style=0006&nbdigits=5&type=page&initCount=280">`
+  : '—';
 
     el.innerHTML = `
       &copy; ${meta.copyright}
