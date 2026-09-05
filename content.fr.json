@@ -19,6 +19,68 @@
     "gtag": "G-C8K6QM5ZGZ",
     "gtm": "GTM-N5KVXWVH"
   },
+  "ui": {
+    "whoTitle": "Qui suis-je...?",
+    "virtualCvTitle": "CV Virtuel",
+    "cardsSwipeHint": "← Balayez à gauche ou à droite sur n'importe quelle page pour naviguer →",
+    "swipeHint": "← Balayez pour naviguer →",
+    "nav": {
+      "career": "Parcours",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "certificates": "Certificats",
+      "personalLife": "Vie Personnelle",
+      "education": "Éducation"
+    },
+    "education": {
+      "title": "Parcours Académique",
+      "achievements": "Réalisations :",
+      "globalRank": "Classement Mondial :",
+      "relevantCourses": "Cours Pertinents :",
+      "focusAreas": "Domaines de Spécialisation :"
+    },
+    "certifications": {
+      "title": "Certifications et Qualifications"
+    },
+    "personalLife": {
+      "title": "La Vie en Dehors du Travail"
+    },
+    "skills": {
+      "title": "Aperçu des Compétences",
+      "hoverTip": "Appuyez ou cliquez sur une compétence pour voir où elle a été appliquée…"
+    },
+    "projects": {
+      "title": "Projets Phares",
+      "using": "Utilise :"
+    },
+    "career": {
+      "title": "Carrière",
+      "overview": "Aperçu",
+      "keyAchievements": "Réalisations Clés",
+      "skillsUsed": "Compétences utilisées :",
+      "stats": {
+        "countries": "Pays",
+        "countriesSub": "ÉAU · Malaisie · Maroc",
+        "projectsBuilt": "Projets Réalisés",
+        "projectsSub": "Toutes disciplines confondues",
+        "disciplines": "Disciplines",
+        "disciplinesSub": "Mécanique · Électrique · Logiciel · Gestion"
+      }
+    },
+    "contact": {
+      "title": "Contact et Connexion",
+      "email": "E-mail :",
+      "phone": "Téléphone :",
+      "resumeBtn": "CV et Portfolio",
+      "downloadPdf": "Télécharger le PDF",
+      "shareWhatsapp": "Partager via WhatsApp",
+      "shareEmail": "Partager par e-mail",
+      "copyLink": "Copier le lien du portfolio"
+    },
+    "footer": {
+      "visits": "visites"
+    }
+  },
   "index": {
     "whoAmI": "Ingénieur en mécatronique, déterminé, curieux et adaptable. Fort d'une expérience pratique dans les systèmes électriques, électroniques et mécaniques, de la maintenance et des installations basse tension jusqu'à la conception 3D et l'automatisation, j'ai touché à tout.\n\nJe m'épanouis dans des environnements collaboratifs axés sur la qualité et j'élargis continuellement mes compétences grâce aux pratiques et à l'état d'esprit de la gestion de projet, ainsi qu'à l'exploration des outils d'IA et de l'automatisation, afin que mon approche de l'ingénierie reste toujours alignée sur les standards modernes de l'industrie.",
     "whoAmIClosing": "...celui que vous cherchez !",
@@ -82,7 +144,8 @@
       "rank": {
         "value": "#137",
         "note": "Classement : QS World University Rankings 2025"
-      }
+      },
+      "coursesLabelKey": "relevantCourses"
     },
     {
       "type": "Diplôme d'études secondaires",
@@ -101,7 +164,8 @@
         "Reconnaissance de réussite PISA",
         "Participant au programme SMART",
         "Certificat ICDL obtenu"
-      ]
+      ],
+      "coursesLabelKey": "focusAreas"
     }
   ],
   "certifications": [

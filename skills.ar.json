@@ -122,313 +122,313 @@
   ],
   "projectMappings": {
     "التصميم بمساعدة الحاسوب CAD (SolidWorks, AutoCAD)": [
-      "Field Technician - General Contractors",
-      "Electromechanical Engineer - Hitronik",
-      "4-DOF Robotic Arm",
-      "Search and Rescue Robot"
+      "فني ميداني - مقاولون عامون",
+      "مهندس مساعد (كهروميكانيك) - Hitronik",
+      "الذراع الروبوتية رباعية الحرية",
+      "روبوت البحث والإنقاذ"
     ],
     "KiCAD": [
-      "Electromechanical Engineer - Hitronik"
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "MATLAB/Simulink": [
-      "LiDAR-Camera Sensor Fusion System",
-      "4-DOF Robotic Arm",
-      "Fruit Harvesting Robotic Arm (4-DOF)",
-      "Drone Delivery Optimization via DoE & ANOVA"
+      "نظام دمج بيانات LiDAR والكاميرا",
+      "الذراع الروبوتية رباعية الحرية",
+      "ذراع روبوتية لقطف الفاكهة (أربع درجات حرية)",
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)"
     ],
     "NI LabVIEW": [
-      "4-DOF Robotic Arm",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "الذراع الروبوتية رباعية الحرية",
+      "ذراع روبوتية لقطف الفاكهة (أربع درجات حرية)"
     ],
     "OrCAD (Capture و PSpice)": [
-      "Electromechanical Engineer - Hitronik"
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "الأنظمة المدمجة (Arduino, Raspberry Pi)": [
-      "4-DOF Robotic Arm",
-      "Search and Rescue Robot",
-      "Regenerative Braking System",
-      "Automatic Plant Care System",
-      "Electromechanical Engineer - Hitronik"
+      "الذراع الروبوتية رباعية الحرية",
+      "روبوت البحث والإنقاذ",
+      "نظام الفرملة التجديدية",
+      "نظام العناية الآلي بالنباتات",
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "المتحكمات الدقيقة (Microcontrollers)": [
-      "Electromechanical Engineer - Hitronik",
-      "Automatic Plant Care System",
-      "Regenerative Braking System"
+      "مهندس مساعد (كهروميكانيك) - Hitronik",
+      "نظام العناية الآلي بالنباتات",
+      "نظام الفرملة التجديدية"
     ],
     "OMRON CX-ONE": [
-      "Vacuum Pick-and-Place Station"
+      "محطة الالتقاط والوضع بالشفط"
     ],
     "CODESYS": [],
     "تصميم واجهات التحكم HMI": [
-      "Vacuum Pick-and-Place Station",
-      "4-DOF Robotic Arm"
+      "محطة الالتقاط والوضع بالشفط",
+      "الذراع الروبوتية رباعية الحرية"
     ],
     "تصميم الدوائر المطبوعة PCB": [
-      "Electromechanical Engineer - Hitronik"
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "تصميم الدوائر التناظرية": [
-      "Electromechanical Engineer - Hitronik",
-      "Regenerative Braking System"
+      "مهندس مساعد (كهروميكانيك) - Hitronik",
+      "نظام الفرملة التجديدية"
     ],
     "معالجة وتهيئة الإشارات": [],
     "أنظمة الطاقة الكهربائية": [
-      "Regenerative Braking System",
-      "Electromechanical Engineer - Hitronik"
+      "نظام الفرملة التجديدية",
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "أنظمة الطاقة الشمسية": [
-      "Electromechanical Engineer - Hitronik"
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "الكهروميكانيك": [
-      "Electromechanical Engineer - Hitronik",
-      "Regenerative Braking System"
+      "مهندس مساعد (كهروميكانيك) - Hitronik",
+      "نظام الفرملة التجديدية"
     ],
     "التحكم في المحركات": [
-      "4-DOF Robotic Arm",
-      "Search and Rescue Robot",
-      "Regenerative Braking System"
+      "الذراع الروبوتية رباعية الحرية",
+      "روبوت البحث والإنقاذ",
+      "نظام الفرملة التجديدية"
     ],
     "أجهزة الاستشعار والقياس": [
-      "LiDAR-Camera Sensor Fusion System",
-      "Regenerative Braking System",
-      "Automatic Plant Care System",
-      "Search and Rescue Robot",
-      "Vacuum Pick-and-Place Station",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "نظام دمج بيانات LiDAR والكاميرا",
+      "نظام الفرملة التجديدية",
+      "نظام العناية الآلي بالنباتات",
+      "روبوت البحث والإنقاذ",
+      "محطة الالتقاط والوضع بالشفط",
+      "ذراع روبوتية لقطف الفاكهة (أربع درجات حرية)"
     ],
     "دمج بيانات المستشعرات (Sensor Fusion)": [
-      "LiDAR-Camera Sensor Fusion System"
+      "نظام دمج بيانات LiDAR والكاميرا"
     ],
     "LiDAR": [
-      "LiDAR-Camera Sensor Fusion System"
+      "نظام دمج بيانات LiDAR والكاميرا"
     ],
     "الاتصال عبر الألياف الضوئية": [
-      "Field Technician - General Contractors"
+      "فني ميداني - مقاولون عامون"
     ],
     "بروتوكولات الاتصال": [
-      "Vacuum Pick-and-Place Station",
-      "Automatic Plant Care System"
+      "محطة الالتقاط والوضع بالشفط",
+      "نظام العناية الآلي بالنباتات"
     ],
     "الكابلات المهيكلة (Structured Cabling)": [
-      "Field Technician - General Contractors"
+      "فني ميداني - مقاولون عامون"
     ],
     "الطباعة ثلاثية الأبعاد": [
-      "4-DOF Robotic Arm",
-      "Search and Rescue Robot",
-      "Automatic Plant Care System"
+      "الذراع الروبوتية رباعية الحرية",
+      "روبوت البحث والإنقاذ",
+      "نظام العناية الآلي بالنباتات"
     ],
     "برمجة المتحكمات المنطقية القابلة للبرمجة PLC": [
-      "Vacuum Pick-and-Place Station"
+      "محطة الالتقاط والوضع بالشفط"
     ],
     "منطق السلم (Ladder Logic)": [
-      "Vacuum Pick-and-Place Station"
+      "محطة الالتقاط والوضع بالشفط"
     ],
     "IEC 61131-3": [
-      "Vacuum Pick-and-Place Station"
+      "محطة الالتقاط والوضع بالشفط"
     ],
     "التحكم PID": [
-      "4-DOF Robotic Arm",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "الذراع الروبوتية رباعية الحرية",
+      "ذراع روبوتية لقطف الفاكهة (أربع درجات حرية)"
     ],
     "الأتمتة الصناعية": [
-      "Vacuum Pick-and-Place Station",
-      "Electromechanical Engineer - Hitronik"
+      "محطة الالتقاط والوضع بالشفط",
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "الروبوتات والأتمتة": [
-      "4-DOF Robotic Arm",
-      "Search and Rescue Robot",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "الذراع الروبوتية رباعية الحرية",
+      "روبوت البحث والإنقاذ",
+      "ذراع روبوتية لقطف الفاكهة (أربع درجات حرية)"
     ],
     "التجميع والاقتران الميكانيكي": [
-      "Electromechanical Engineer - Hitronik",
-      "4-DOF Robotic Arm",
-      "Search and Rescue Robot"
+      "مهندس مساعد (كهروميكانيك) - Hitronik",
+      "الذراع الروبوتية رباعية الحرية",
+      "روبوت البحث والإنقاذ"
     ],
     "تشخيص وعزل الأعطال": [
-      "Field Technician - General Contractors",
-      "Electromechanical Engineer - Hitronik",
-      "Evening Shift Supervisor - Beauhope Café"
+      "فني ميداني - مقاولون عامون",
+      "مهندس مساعد (كهروميكانيك) - Hitronik",
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "إعداد المداخل والمخارج (I/O)": [
-      "Vacuum Pick-and-Place Station",
-      "Electromechanical Engineer - Hitronik"
+      "محطة الالتقاط والوضع بالشفط",
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "أجهزة القطع الكهربائي وتوزيع الطاقة": [
-      "Regenerative Braking System",
-      "Field Technician - General Contractors"
+      "نظام الفرملة التجديدية",
+      "فني ميداني - مقاولون عامون"
     ],
     "إعداد الشبكات والواي فاي": [
-      "Evening Shift Supervisor - Beauhope Café",
-      "Field Technician - General Contractors"
+      "مشرف الوردية المسائية - Beauhope Café",
+      "فني ميداني - مقاولون عامون"
     ],
     "تركيب أنظمة المراقبة (CCTV/DVR)": [
-      "Field Technician - General Contractors",
-      "Evening Shift Supervisor - Beauhope Café"
+      "فني ميداني - مقاولون عامون",
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "إنترنت الأشياء (IoT)": [
-      "Automatic Plant Care System",
-      "Evening Shift Supervisor - Beauhope Café"
+      "نظام العناية الآلي بالنباتات",
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "C/C++": [
-      "4-DOF Robotic Arm",
-      "Search and Rescue Robot",
-      "Regenerative Braking System",
-      "Automatic Plant Care System"
+      "الذراع الروبوتية رباعية الحرية",
+      "روبوت البحث والإنقاذ",
+      "نظام الفرملة التجديدية",
+      "نظام العناية الآلي بالنباتات"
     ],
     "Python": [
-      "LiDAR-Camera Sensor Fusion System",
-      "Coin Measurement System"
+      "نظام دمج بيانات LiDAR والكاميرا",
+      "نظام قياس العملات المعدنية"
     ],
     "Git و GitHub": [
-      "LiDAR-Camera Sensor Fusion System",
-      "Coin Measurement System"
+      "نظام دمج بيانات LiDAR والكاميرا",
+      "نظام قياس العملات المعدنية"
     ],
     "OpenCV": [
-      "Coin Measurement System",
-      "LiDAR-Camera Sensor Fusion System"
+      "نظام قياس العملات المعدنية",
+      "نظام دمج بيانات LiDAR والكاميرا"
     ],
     "YOLO": [
-      "LiDAR-Camera Sensor Fusion System"
+      "نظام دمج بيانات LiDAR والكاميرا"
     ],
     "Microsoft 365": [
-      "USMi Deputy President",
-      "International Food Fiesta 2024"
+      "نائب رئيس USMi",
+      "مهرجان الطعام الدولي 2024"
     ],
     "تحليل التباين (ANOVA)": [
-      "Drone Delivery Optimization via DoE & ANOVA"
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)"
     ],
     "تصميم التجارب (DoE)": [
-      "Drone Delivery Optimization via DoE & ANOVA"
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)"
     ],
     "نمذجة الانحدار": [
-      "Drone Delivery Optimization via DoE & ANOVA",
-      "Adhesive Hook Reliability Project"
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)",
+      "مشروع موثوقية الخطافات اللاصقة"
     ],
     "تحليل الإجهاد": [
-      "Adhesive Hook Reliability Project"
+      "مشروع موثوقية الخطافات اللاصقة"
     ],
     "Minitab": [
-      "Drone Delivery Optimization via DoE & ANOVA",
-      "Adhesive Hook Reliability Project"
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)",
+      "مشروع موثوقية الخطافات اللاصقة"
     ],
     "الضبط الإحصائي للعمليات (SPC)": [
-      "Adhesive Hook Reliability Project"
+      "مشروع موثوقية الخطافات اللاصقة"
     ],
     "أدوات الجودة السبع": [],
     "سيكس سيجما (Six Sigma - DMAIC)": [
-      "Adhesive Hook Reliability Project",
-      "Drone Delivery Optimization via DoE & ANOVA"
+      "مشروع موثوقية الخطافات اللاصقة",
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)"
     ],
     "تحليل أنماط الفشل وتأثيراتها (FMEA)": [
-      "Adhesive Hook Reliability Project",
-      "Vacuum Pick-and-Place Station"
+      "مشروع موثوقية الخطافات اللاصقة",
+      "محطة الالتقاط والوضع بالشفط"
     ],
     "تحليل السبب الجذري": [
-      "Adhesive Hook Reliability Project",
-      "Field Technician - General Contractors"
+      "مشروع موثوقية الخطافات اللاصقة",
+      "فني ميداني - مقاولون عامون"
     ],
     "تحليل باريتو": [
-      "Adhesive Hook Reliability Project"
+      "مشروع موثوقية الخطافات اللاصقة"
     ],
     "هندسة الموثوقية": [
-      "Field Technician - General Contractors"
+      "فني ميداني - مقاولون عامون"
     ],
     "اختبارات الموثوقية": [
-      "Adhesive Hook Reliability Project"
+      "مشروع موثوقية الخطافات اللاصقة"
     ],
     "التصنيع الرشيق (Lean Manufacturing)": [
-      "Vacuum Pick-and-Place Station",
-      "Electromechanical Engineer - Hitronik"
+      "محطة الالتقاط والوضع بالشفط",
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "التحسين المستمر": [
-      "USMi Deputy President",
-      "Evening Shift Supervisor - Beauhope Café"
+      "نائب رئيس USMi",
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "Power BI": [
-      "Drone Delivery Optimization via DoE & ANOVA"
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)"
     ],
     "Excel": [
-      "Drone Delivery Optimization via DoE & ANOVA",
-      "Adhesive Hook Reliability Project",
-      "USMi Deputy President"
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)",
+      "مشروع موثوقية الخطافات اللاصقة",
+      "نائب رئيس USMi"
     ],
     "Agile (Kanban)": [],
     "إدارة التغيير": [
-      "USMi Deputy President"
+      "نائب رئيس USMi"
     ],
     "إدارة المخاطر": [
-      "USMi Deputy President",
-      "Explorace - Large-Scale Campus Challenge Event"
+      "نائب رئيس USMi",
+      "إكسبلوريس - فعالية تحدي جامعية واسعة النطاق"
     ],
     "القيادة": [
-      "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "Explorace - Large-Scale Campus Challenge Event",
-      "Evening Shift Supervisor - Beauhope Café"
+      "مهرجان الطعام الدولي 2024",
+      "نائب رئيس USMi",
+      "إكسبلوريس - فعالية تحدي جامعية واسعة النطاق",
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "تنسيق الفريق": [
-      "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "Evening Shift Supervisor - Beauhope Café",
-      "Explorace - Large-Scale Campus Challenge Event"
+      "مهرجان الطعام الدولي 2024",
+      "نائب رئيس USMi",
+      "مشرف الوردية المسائية - Beauhope Café",
+      "إكسبلوريس - فعالية تحدي جامعية واسعة النطاق"
     ],
     "MS Project": [],
     "إدارة الميزانية": [
-      "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "Evening Shift Supervisor - Beauhope Café"
+      "مهرجان الطعام الدولي 2024",
+      "نائب رئيس USMi",
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "إدارة المخزون": [
-      "Evening Shift Supervisor - Beauhope Café"
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "قائمة المواد الهندسية (BOM)": [],
     "تنظيم الفعاليات": [
-      "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "Explorace - Large-Scale Campus Challenge Event"
+      "مهرجان الطعام الدولي 2024",
+      "نائب رئيس USMi",
+      "إكسبلوريس - فعالية تحدي جامعية واسعة النطاق"
     ],
     "مكتب الدعم التقني (IT Service Desk)": [
-      "Evening Shift Supervisor - Beauhope Café"
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "أنظمة تذاكر الدعم": [
-      "Evening Shift Supervisor - Beauhope Café"
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "Zendesk": [],
     "HubSpot Service Hub": [],
     "التوثيق التقني": [
-      "LiDAR-Camera Sensor Fusion System",
-      "Fruit Harvesting Robotic Arm (4-DOF)",
-      "Drone Delivery Optimization via DoE & ANOVA",
-      "Adhesive Hook Reliability Project"
+      "نظام دمج بيانات LiDAR والكاميرا",
+      "ذراع روبوتية لقطف الفاكهة (أربع درجات حرية)",
+      "تحسين توصيل الطائرات المسيّرة (DoE & ANOVA)",
+      "مشروع موثوقية الخطافات اللاصقة"
     ],
     "خدمة العملاء": [
-      "Evening Shift Supervisor - Beauhope Café",
-      "Field Technician - General Contractors"
+      "مشرف الوردية المسائية - Beauhope Café",
+      "فني ميداني - مقاولون عامون"
     ],
     "التواصل بين الثقافات": [
-      "International Food Fiesta 2024",
-      "International Mobility & Global Representation Programs"
+      "مهرجان الطعام الدولي 2024",
+      "برامج التنقل الدولي والتمثيل العالمي"
     ],
     "التحدث أمام الجمهور": [
-      "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "International Mobility & Global Representation Programs"
+      "مهرجان الطعام الدولي 2024",
+      "نائب رئيس USMi",
+      "برامج التنقل الدولي والتمثيل العالمي"
     ],
     "اللحام (Soldering)": [
-      "Electromechanical Engineer - Hitronik"
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "التمديدات الكهربائية": [
-      "Field Technician - General Contractors",
-      "Evening Shift Supervisor - Beauhope Café"
+      "فني ميداني - مقاولون عامون",
+      "مشرف الوردية المسائية - Beauhope Café"
     ],
     "إدارة الكابلات": [
-      "Field Technician - General Contractors"
+      "فني ميداني - مقاولون عامون"
     ],
     "الأدوات اليدوية والكهربائية": [
-      "Field Technician - General Contractors",
-      "Electromechanical Engineer - Hitronik"
+      "فني ميداني - مقاولون عامون",
+      "مهندس مساعد (كهروميكانيك) - Hitronik"
     ],
     "توصيل نهايات الكابلات": [
-      "Field Technician - General Contractors"
+      "فني ميداني - مقاولون عامون"
     ]
   }
 }

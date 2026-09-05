@@ -17,7 +17,7 @@
 <div   id="floating-buttons"></div>
 
 <section class="content-section">
-  <h2>Life Beyond Work</h2>
+  <h2 id="personal-title"></h2>
   <div class="personal-grid" id="personal-grid"></div>
 </section>
 
@@ -30,6 +30,8 @@
   SiteRender.bootstrapPage({
     activePage: 'personal-life.html',
     renderBody(content) {
+      document.getElementById('personal-title').textContent = content.ui.personalLife.title;
+
       document.getElementById('personal-grid').innerHTML =
         content.personalLife.map(card => `
           <div class="personal-card">

@@ -17,9 +17,9 @@
 <div   id="floating-buttons"></div>
 
 <section class="content-section">
-  <h2>Skills Overview</h2>
+  <h2 id="skills-title"></h2>
   <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;">
-    <em>Hover over any skill to see where it was applied… (tap on mobile)</em>
+    <em id="skills-tip"></em>
   </p>
   <div class="skills-container" id="skills-container"></div>
   <div id="skill-tooltip" class="skill-tooltip"></div>
@@ -41,6 +41,9 @@
     activePage: 'my-skills.html',
     async renderBody(content, skills) {
       _skillMappings = skills.projectMappings || {};
+
+      document.getElementById('skills-title').textContent = content.ui.skills.title;
+      document.getElementById('skills-tip').textContent = content.ui.skills.hoverTip;
 
       document.getElementById('skills-container').innerHTML =
         skills.categories.map(cat => {

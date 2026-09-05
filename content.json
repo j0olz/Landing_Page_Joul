@@ -19,6 +19,68 @@
     "gtag": "G-C8K6QM5ZGZ",
     "gtm": "GTM-N5KVXWVH"
   },
+  "ui": {
+    "whoTitle": "Who am I...?",
+    "virtualCvTitle": "Virtual CV",
+    "cardsSwipeHint": "← swipe left or right on any page to navigate →",
+    "swipeHint": "← swipe to navigate →",
+    "nav": {
+      "career": "Career",
+      "skills": "Skills",
+      "projects": "Projects",
+      "certificates": "Certificates",
+      "personalLife": "Personal Life",
+      "education": "Education"
+    },
+    "education": {
+      "title": "Academic Background",
+      "achievements": "Achievements:",
+      "globalRank": "Global Rank:",
+      "relevantCourses": "Relevant Courses:",
+      "focusAreas": "Focus Areas:"
+    },
+    "certifications": {
+      "title": "Certifications & Qualifications"
+    },
+    "personalLife": {
+      "title": "Life Beyond Work"
+    },
+    "skills": {
+      "title": "Skills Overview",
+      "hoverTip": "Tap or click on any skill to see where it was applied…"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "using": "Using:"
+    },
+    "career": {
+      "title": "Career",
+      "overview": "Overview",
+      "keyAchievements": "Key Achievements",
+      "skillsUsed": "Skills used:",
+      "stats": {
+        "countries": "Countries",
+        "countriesSub": "UAE · Malaysia · Morocco",
+        "projectsBuilt": "Projects Built",
+        "projectsSub": "Across all disciplines",
+        "disciplines": "Disciplines",
+        "disciplinesSub": "Mechanical · Electrical · Software · Management"
+      }
+    },
+    "contact": {
+      "title": "Contact & Connect",
+      "email": "Email:",
+      "phone": "Phone:",
+      "resumeBtn": "Resume & Portfolio",
+      "downloadPdf": "Download PDF",
+      "shareWhatsapp": "Share via WhatsApp",
+      "shareEmail": "Share via Email",
+      "copyLink": "Copy Portfolio Link"
+    },
+    "footer": {
+      "visits": "visits"
+    }
+  },
   "index": {
     "whoAmI": "Mechatronics Engineer who is driven, curious, and adaptable. With hands-on experience across electrical, electronic, and mechanical systems; from maintenance and LV installations to 3D design and automation, I've done them all.\n\nI thrive in collaborative quality-focused environments and I'm continuously expanding my skill set through project management practices/mentality and the exploration of AI-driven tools and automation, ensuring my engineering approach is always aligned with modern industry standards.",
     "whoAmIClosing": "...the one you're looking for!",
@@ -82,7 +144,8 @@
       "rank": {
         "value": "#137",
         "note": "Based on: QS World University Rankings 2025"
-      }
+      },
+      "coursesLabelKey": "relevantCourses"
     },
     {
       "type": "High School Diploma",
@@ -101,7 +164,8 @@
         "PISA Achievement Recognition",
         "SMART Program Participant",
         "ICDL certificate acquired"
-      ]
+      ],
+      "coursesLabelKey": "focusAreas"
     }
   ],
   "certifications": [
@@ -149,7 +213,7 @@
         "Agile Project Management",
         "Introduction to Kanban",
         "SAP ERP Essentials",
-        "SAP Materials Management"       
+        "SAP Materials Management"
       ]
     },
     {
@@ -218,8 +282,7 @@
         "Installed CCTV surveillance systems, along with centralized power supply and discreet cable routing to ensure reliable 24/7 operation without overloading existing circuits, educated clients to access and control the systems over a network.",
         "Designed and fabricated custom metal structures such as window frames and light support using precise cutting/drilling, coupling, and galvanized painting techniques for long-term durability."
       ],
-      "achievements": [
-      ],
+      "achievements": [],
       "skills": [
         "Electrical Wiring",
         "Cable Management",

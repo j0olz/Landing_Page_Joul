@@ -17,7 +17,7 @@
 <div   id="floating-buttons"></div>
 
 <section class="content-section">
-  <h2>Career</h2>
+  <h2 id="career-title"></h2>
   <div class="experience-stats" id="exp-stats"></div>
   <div class="timeline-container" id="exp-timeline"></div>
 </section>
@@ -32,12 +32,15 @@
     activePage: 'professional-experience.html',
     renderBody(content) {
       const exp = content.experience;
+      const ui  = content.ui.career;
+
+      document.getElementById('career-title').textContent = ui.title;
 
       /* ---- Stats Row (2.1), replaced all four ---- */
       const stats = [
-        { value: '3',  label: 'Countries',          sub: 'UAE · Malaysia · Morocco' },
-        { value: '14+', label: 'Projects Built',     sub: 'Across all disciplines' },
-        { value: '4',  label: 'Disciplines',        sub: 'Mechanical · Electrical · Software · Management' },
+        { value: '3',   label: ui.stats.countries,     sub: ui.stats.countriesSub },
+        { value: '14+', label: ui.stats.projectsBuilt, sub: ui.stats.projectsSub },
+        { value: '4',   label: ui.stats.disciplines,   sub: ui.stats.disciplinesSub },
       ];
       document.getElementById('exp-stats').innerHTML = stats.map(s => `
         <div class="stat-card" title="${s.sub}">
@@ -86,11 +89,11 @@
                 </div>
               </div>
               <div class="timeline-body">
-                ${overview     ? `<h4>Overview</h4><ul>${overview}</ul>` : ''}
-                ${achievements ? `<h4>Key Achievements</h4><ul>${achievements}</ul>` : ''}
+                ${overview     ? `<h4>${ui.overview}</h4><ul>${overview}</ul>` : ''}
+                ${achievements ? `<h4>${ui.keyAchievements}</h4><ul>${achievements}</ul>` : ''}
                 ${chips ? `
                   <div class="timeline-skills">
-                    <strong>Skills used:</strong> ${chips}
+                    <strong>${ui.skillsUsed}</strong> ${chips}
                   </div>` : ''}
               </div>
             </div>

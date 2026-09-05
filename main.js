@@ -98,105 +98,122 @@
   }
 
   /* ------------------------------------------
-     SKILL TOOLTIPS (desktop hover)
+     CLICK/TAP POPOVER (skills, and reusable later
+     for certifications)
+     - Click/tap a pill to open a small box near it.
+     - Stays open while the mouse is over the box.
+     - Closes ~1s after the mouse leaves both the
+       pill and the box, or immediately on an
+       outside click/tap.
   ------------------------------------------ */
-  function initSkillTooltips() {
-    const tags    = document.querySelectorAll('.skill-tag');
-    const tooltip = document.getElementById('skill-tooltip');
-    if (!tags.length || !tooltip) return;
+  function initClickPopover(tagSelector, popoverEl, contentFn) {
+    const tags = document.querySelectorAll(tagSelector);
+    if (!tags.length || !popoverEl) return;
+
+    let openTag   = null;
+    let hideTimer = null;
+
+    function cancelHide() {
+      if (hideTimer) { clearTimeout(hideTimer); hideTimer = null; }
+    }
+
+    function scheduleHide() {
+      cancelHide();
+      hideTimer = setTimeout(closePopover, 1000);
+    }
+
+    function closePopover() {
+      cancelHide();
+      popoverEl.style.display = 'none';
+      if (openTag) openTag.classList.remove('skill-tag--open');
+      openTag = null;
+    }
+
+    function positionNear(tag) {
+      popoverEl.style.visibility = 'hidden';
+      popoverEl.style.display    = 'block';
+
+      const rect = tag.getBoundingClientRect();
+      const ttW  = popoverEl.offsetWidth  || 260;
+      const ttH  = popoverEl.offsetHeight || 80;
+      const vw   = window.innerWidth;
+      const vh   = window.innerHeight;
+      const GAP  = 8;
+
+      // Prefer below the tag; flip above if it would go off-screen bottom
+      let top = rect.bottom + GAP;
+      if (top + ttH > vh - GAP) top = rect.top - ttH - GAP;
+      top = Math.max(GAP, top);
+
+      // Center horizontally on the tag, clamped to viewport
+      let left = rect.left + (rect.width / 2) - (ttW / 2);
+      left = Math.min(left, vw - ttW - GAP);
+      left = Math.max(GAP, left);
+
+      popoverEl.style.top        = top  + 'px';
+      popoverEl.style.left       = left + 'px';
+      popoverEl.style.visibility = '';
+    }
+
+    function openFor(tag) {
+      const html = contentFn(tag);
+      if (!html) return;
+      cancelHide();
+      if (openTag && openTag !== tag) openTag.classList.remove('skill-tag--open');
+      popoverEl.innerHTML = html;
+      positionNear(tag);
+      tag.classList.add('skill-tag--open');
+      openTag = tag;
+    }
 
     tags.forEach(tag => {
-      tag.addEventListener('mouseenter', () => {
-        const skillName = tag.getAttribute('data-skill');
-        if (!skillName) return;
-
-        const projects =
-          typeof getProjectsForSkill === 'function'
-            ? getProjectsForSkill(skillName)
-            : [];
-
-        if (!projects.length) return;
-
-        tooltip.innerHTML =
-          `<strong>Used in:</strong><br>${projects.map(p => `• ${p}`).join('<br>')}`;
-
-        // Measure tooltip size before positioning
-        tooltip.style.visibility = 'hidden';
-        tooltip.style.display    = 'block';
-
-        const rect = tag.getBoundingClientRect();
-        const ttW  = tooltip.offsetWidth  || 300;
-        const ttH  = tooltip.offsetHeight || 80;
-        const vw   = window.innerWidth;
-        const vh   = window.innerHeight;
-        const GAP  = 8;
-
-        // Prefer below the tag; flip above if it would go off-screen bottom
-        let top = rect.bottom + GAP;
-        if (top + ttH > vh - GAP) top = rect.top - ttH - GAP;
-
-        // Clamp horizontally so it never overflows left or right edge
-        let left = rect.left;
-        left = Math.min(left, vw - ttW - GAP);
-        left = Math.max(GAP, left);
-
-        tooltip.style.top        = top  + 'px';
-        tooltip.style.left       = left + 'px';
-        tooltip.style.visibility = '';
+      tag.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (openTag === tag && popoverEl.style.display === 'block') {
+          closePopover();
+        } else {
+          openFor(tag);
+        }
       });
+    });
 
+    popoverEl.addEventListener('mouseenter', cancelHide);
+    popoverEl.addEventListener('mouseleave', scheduleHide);
+
+    tags.forEach(tag => {
       tag.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
+        if (openTag === tag) scheduleHide();
       });
+      tag.addEventListener('mouseenter', () => {
+        if (openTag === tag) cancelHide();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!openTag) return;
+      if (e.target === openTag || openTag.contains(e.target)) return;
+      if (popoverEl.contains(e.target)) return;
+      closePopover();
+    });
+
+    window.addEventListener('resize', () => {
+      if (openTag) positionNear(openTag);
     });
   }
 
-  /* ------------------------------------------
-     SKILL TAP-TO-REVEAL (mobile)
-     First tap expands inline project list,
-     second tap or tap-elsewhere collapses it.
-  ------------------------------------------ */
-  function initSkillTapReveal() {
-    // Only activate on touch devices
-    if (!('ontouchstart' in window)) return;
-    const tags = document.querySelectorAll('.skill-tag[data-skill]');
-    if (!tags.length) return;
+  function initSkillTooltips() {
+    const tooltip = document.getElementById('skill-tooltip');
+    if (!tooltip) return;
 
-    let openTag = null;
-
-    function closeOpen() {
-      if (openTag) {
-        const popup = openTag.querySelector('.skill-tap-popup');
-        if (popup) popup.remove();
-        openTag.classList.remove('skill-tag--open');
-        openTag = null;
-      }
-    }
-
-    document.addEventListener('touchstart', (e) => {
-      if (openTag && !openTag.contains(e.target)) closeOpen();
-    }, { passive: true });
-
-    tags.forEach(tag => {
-      tag.addEventListener('touchstart', (e) => {
-        if (tag === openTag) { closeOpen(); e.preventDefault(); return; }
-        closeOpen();
-
-        const skillName = tag.getAttribute('data-skill');
-        const projects = typeof getProjectsForSkill === 'function'
-          ? getProjectsForSkill(skillName) : [];
-
-        if (!projects.length) return;
-        e.preventDefault();
-
-        tag.classList.add('skill-tag--open');
-        openTag = tag;
-
-        const popup = document.createElement('span');
-        popup.className = 'skill-tap-popup';
-        popup.innerHTML = projects.map(p => `<span class="stp-item">→ ${p}</span>`).join('');
-        tag.appendChild(popup);
-      }, { passive: false });
+    initClickPopover('.skill-tag[data-skill]', tooltip, (tag) => {
+      const skillName = tag.getAttribute('data-skill');
+      if (!skillName) return null;
+      const projects =
+        typeof getProjectsForSkill === 'function'
+          ? getProjectsForSkill(skillName)
+          : [];
+      if (!projects.length) return null;
+      return `<strong><bdi dir="ltr">Used in:</bdi></strong><br>${projects.map(p => `• ${p}`).join('<br>')}`;
     });
   }
 
@@ -259,8 +276,12 @@
     el.appendChild(btn);
   }
 
-  window.makeCopyable = makeCopyable;
-  window.showToast    = showToast;
+  window.makeCopyable     = makeCopyable;
+  window.showToast        = showToast;
+  // Exposed so a future certifications popover (or anything else) can reuse
+  // the same click/tap-to-open, hover-to-stay-open, 1s-after-leave-to-close
+  // behavior without duplicating it.
+  window.initClickPopover = initClickPopover;
 
   /* ------------------------------------------
      CONTENT PROTECTION
@@ -364,7 +385,6 @@
     initFloatingButtons();
     initSkillHashLink();
     initSkillTooltips();
-    initSkillTapReveal();
     initVisitorCounter();
     initContentProtection();
     initSwipeNav();

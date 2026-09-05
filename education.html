@@ -17,7 +17,7 @@
 <div   id="floating-buttons"></div>
 
 <section class="content-section">
-  <h2>Academic Background</h2>
+  <h2 id="edu-title"></h2>
   <div class="skills-container" id="edu-list"></div>
 </section>
 
@@ -30,6 +30,9 @@
   SiteRender.bootstrapPage({
     activePage: 'education.html',
     renderBody(content) {
+      const ui = content.ui.education;
+      document.getElementById('edu-title').textContent = ui.title;
+
       document.getElementById('edu-list').innerHTML =
         content.education.map(edu => {
           const courses = edu.courses.map(c =>
@@ -43,25 +46,25 @@
           const rankBlock = edu.rank ? `
             <div class="edu-split">
               <div class="edu-achievements">
-                <p><strong>Achievements:</strong></p>
+                <p><strong>${ui.achievements}</strong></p>
                 <ul>${achievements}</ul>
               </div>
               <div class="edu-vline" aria-hidden="true"></div>
               <div class="edu-rank">
-                <p><strong>Global Rank:</strong></p>
+                <p><strong>${ui.globalRank}</strong></p>
                 <div class="edu-rank-value">${edu.rank.value}</div>
                 <div class="edu-rank-note">${SiteRender.esc(edu.rank.note)}</div>
               </div>
             </div>
           ` : `
             <div class="edu-block">
-              <p><strong>Achievements:</strong></p>
+              <p><strong>${ui.achievements}</strong></p>
               <ul>${achievements}</ul>
             </div>
           `;
 
-          const coursesLabel = edu.courses.length && edu.courses.some(c => c.includes('Science'))
-            ? 'Focus Areas' : 'Relevant Courses';
+          const coursesLabel = edu.coursesLabelKey === 'focusAreas'
+            ? ui.focusAreas : ui.relevantCourses;
 
           return `
             <div class="skill-category">
@@ -76,7 +79,7 @@
                   <div class="edu-location">📍 ${SiteRender.esc(edu.location)}</div>
                 </div>
                 <div class="edu-block">
-                  <p><strong>${coursesLabel}:</strong></p>
+                  <p><strong>${coursesLabel}</strong></p>
                   <div class="skill-tags">${courses}</div>
                 </div>
                 ${rankBlock}

@@ -17,7 +17,7 @@
 <div   id="floating-buttons"></div>
 
 <section class="content-section">
-  <h2>Certifications &amp; Qualifications</h2>
+  <h2 id="cert-title"></h2>
   <div class="skills-container" id="cert-list"></div>
 </section>
 
@@ -30,6 +30,8 @@
   SiteRender.bootstrapPage({
     activePage: 'my-certifications.html',
     renderBody(content) {
+      document.getElementById('cert-title').textContent = content.ui.certifications.title;
+
       document.getElementById('cert-list').innerHTML =
         content.certifications.map(cat => `
           <div class="skill-category">

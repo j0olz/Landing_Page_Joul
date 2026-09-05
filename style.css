@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@300;400;600;700&family=Aref+Ruqaa:wght@400;700&display=swap');
 
 /* ============================================
    DESIGN SYSTEM – CSS VARIABLES
@@ -155,6 +155,9 @@ footer a { color: var(--amber); }
   justify-content: center;
   gap: 1.5rem;
   position: relative;
+  /* Locked to LTR regardless of page language: the profile photo and
+     spacer must never mirror sides when Arabic mode is active. */
+  direction: ltr;
 }
 
 .header-spacer {
@@ -194,6 +197,13 @@ footer a { color: var(--amber); }
   object-fit: cover;
   border: 3px solid var(--amber);
   box-shadow: 0 0 0 4px rgba(232,160,32,0.2);
+}
+
+/* Give the Arabic name a calligraphic feel instead of the plain body font */
+html[lang="ar"] .site-name {
+  font-family: 'Aref Ruqaa', 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.15em;
 }
 
 /* ============================================
@@ -251,6 +261,12 @@ footer a { color: var(--amber); }
 }
 .lang-toggle .lang-label {
   pointer-events: none;
+}
+
+/* When there's no home button (home page), the language toggle moves up
+   into the home button's slot instead of floating awkwardly underneath it. */
+.lang-toggle--top {
+  top: 1rem;
 }
 
 /* Theme toggle: deep navy with amber border, clearly separate from header */
@@ -351,8 +367,8 @@ body.dark .to-contact:hover { background: var(--amber); color: var(--navy); }
   margin: 1.8rem auto;
   padding: 2rem 2rem;
   max-width: 1060px;
-  border-left: 5px solid var(--amber);
-  border-right: 5px solid var(--navy-mid);
+  border-inline-start: 5px solid var(--amber);
+  border-inline-end: 5px solid var(--navy-mid);
   box-shadow: var(--shadow-md);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 }
@@ -383,7 +399,7 @@ body.dark .contact h2 {
 }
 
 .index-who {
-  text-align: left;
+  text-align: start;
   border-radius: var(--radius-sm);
 }
 
@@ -394,7 +410,7 @@ body.dark .contact h2 {
 
 body.dark .index-who h2 { color: var(--amber); }
 
-.index-who h2:last-of-type { text-align: right; }
+.index-who h2:last-of-type { text-align: end; }
 
 /* ============================================
    SHARED BUTTON STYLES
@@ -601,7 +617,7 @@ body.dark .project-card h3 { color: var(--amber); }
 .project-card p {
   color: var(--text-secondary);
   line-height: 1.65;
-  text-align: left;
+  text-align: start;
   font-size: 0.92rem;
   margin-bottom: 1rem;
 }
@@ -612,13 +628,13 @@ body.dark .project-card p { color: var(--text-secondary); }
   margin-top: 1rem;
   padding-top: 0.8rem;
   border-top: 1px solid var(--border);
-  text-align: left;
+  text-align: start;
 }
 
 .project-card-skills strong {
   color: var(--text-muted);
   font-size: 0.85rem;
-  margin-right: 0.4rem;
+  margin-inline-end: 0.4rem;
 }
 
 /* ============================================
@@ -637,8 +653,8 @@ body.dark .project-card p { color: var(--text-secondary); }
   padding: 1.8rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  border-left: 6px solid var(--amber);
-  text-align: left;
+  border-inline-start: 6px solid var(--amber);
+  text-align: start;
   transition: box-shadow 0.3s ease;
 }
 
@@ -701,7 +717,7 @@ body.dark .skill-category h3 { color: var(--amber); }
   max-width: 300px;
   box-shadow: var(--shadow-lg);
   z-index: 1000;
-  pointer-events: none;
+  pointer-events: auto;
   line-height: 1.6;
   border: 1px solid rgba(232,160,32,0.3);
 }
@@ -775,7 +791,7 @@ body.dark .stat-card { background: var(--surface); }
 
 .timeline-marker {
   position: relative;
-  margin-right: 1.5rem;
+  margin-inline-end: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -821,9 +837,9 @@ body.dark .stat-card { background: var(--surface); }
   padding: 1.8rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  border-left: 4px solid var(--timeline-color, var(--amber));
+  border-inline-start: 4px solid var(--timeline-color, var(--amber));
   transition: all 0.3s ease;
-  text-align: left;
+  text-align: start;
 }
 
 .timeline-content:hover {
@@ -859,7 +875,7 @@ body.dark .timeline-content { background: var(--surface); }
   margin: 0.2rem 0;
 }
 
-.timeline-date { text-align: right; white-space: nowrap; }
+.timeline-date { text-align: end; white-space: nowrap; }
 
 .date-range {
   display: block;
@@ -892,9 +908,11 @@ body.dark .timeline-content { background: var(--surface); }
 body.dark .timeline-body h4 { color: var(--amber); }
 
 .timeline-body ul {
-  margin: 0.4rem 0 1rem 1.4rem;
+  margin-block: 0.4rem 1rem;
+  margin-inline-start: 1.4rem;
+  margin-inline-end: 0;
   padding: 0;
-  text-align: left;
+  text-align: start;
 }
 
 .timeline-body li {
@@ -912,7 +930,7 @@ body.dark .timeline-body h4 { color: var(--amber); }
 .timeline-skills strong {
   color: var(--text-muted);
   font-size: 0.85rem;
-  margin-right: 0.4rem;
+  margin-inline-end: 0.4rem;
 }
 
 /* Skill Tag Mini (in experience / project cards) */
@@ -1024,7 +1042,7 @@ body.dark .personal-card h3 { color: var(--amber); }
 .personal-card p {
   color: var(--text-secondary);
   line-height: 1.7;
-  text-align: left;
+  text-align: start;
   font-size: 0.9rem;
 }
 
@@ -1034,8 +1052,8 @@ body.dark .personal-card h3 { color: var(--amber); }
 
 .contact {
   background: var(--content-bg);
-  border-left: 5px solid var(--amber);
-  border-right: 5px solid var(--navy-mid);
+  border-inline-start: 5px solid var(--amber);
+  border-inline-end: 5px solid var(--navy-mid);
 }
 
 .contact-row {
@@ -1046,6 +1064,9 @@ body.dark .personal-card h3 { color: var(--amber); }
   max-width: 1000px;
   margin: 0 auto;
   text-align: left;
+  /* Locked to LTR regardless of page language: contact info, the
+     resume button, and the QR code must keep their fixed positions. */
+  direction: ltr;
 }
 
 .contact-info {
@@ -1117,7 +1138,7 @@ body.dark .personal-card h3 { color: var(--amber); }
    EDUCATION PAGE
    ============================================ */
 
-.education-details { text-align: left; }
+.education-details { text-align: start; }
 
 .edu-top-row {
   display: flex;
@@ -1249,11 +1270,11 @@ body.dark .personal-card h3 { color: var(--amber); }
   .experience-stats { gap: 0.8rem; }
   .stat-card { min-width: 110px; padding: 1rem 1.2rem; }
   .stat-card h3 { font-size: 1.8rem; }
-  .timeline-marker { margin-right: 0.8rem; min-width: 28px; }
+  .timeline-marker { margin-inline-end: 0.8rem; min-width: 28px; }
   .timeline-dot { width: 14px; height: 14px; }
   .timeline-content { padding: 1.3rem; }
   .timeline-header { flex-direction: column; }
-  .timeline-date { text-align: left; }
+  .timeline-date { text-align: start; }
   .timeline-header h3 { font-size: 1.2rem; }
   .skill-category { padding: 1.2rem; }
   .skill-tags { gap: 0.5rem; }
@@ -1283,7 +1304,7 @@ body.dark .personal-card h3 { color: var(--amber); }
 @media (max-width: 480px) {
   .project-card, .personal-card { padding: 1.1rem; }
   .category-tag { font-size: 0.75rem; padding: 0.25rem 0.7rem; }
-  .timeline-marker { margin-right: 0.6rem; min-width: 22px; }
+  .timeline-marker { margin-inline-end: 0.6rem; min-width: 22px; }
   .timeline-dot { width: 12px; height: 12px; border-width: 2px; }
   .timeline-content { padding: 1rem; }
 }
@@ -1414,9 +1435,9 @@ img {
   .content-section,
   .contact,
   .index-who {
-    border-right: none;
-    border-top: 5px solid var(--navy-mid);
-    border-left: 5px solid var(--amber);
+    border-inline-end: none;
+    border-block-start: 5px solid var(--navy-mid);
+    border-inline-start: 5px solid var(--amber);
     margin: 1rem auto;
     padding: 1.2rem 0.9rem;
   }
@@ -1472,8 +1493,11 @@ img {
   padding: 0.3rem 1rem 0.45rem 1rem;
   font-size: 0.82rem;
   color: rgba(255,255,255,0.5);
-  text-align: left;
   border-bottom: 1px solid rgba(232,160,32,0.1);
+  /* Always English/LTR, independent of the page's current language/direction */
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
 }
 .breadcrumb a {
   color: rgba(255,255,255,0.6);
@@ -1578,13 +1602,14 @@ img {
   border: none;
   width: 100%;
   cursor: pointer;
-  text-align: left;
+  text-align: start;
   transition: background 0.15s ease;
   border-bottom: 1px solid var(--border);
 }
 .share-option:last-child { border-bottom: none; }
 .share-option:hover { background: var(--amber-glow); }
-.share-opt-icon { font-size: 1.1rem; }
+.share-opt-icon { font-size: 1.1rem; display: inline-flex; align-items: center; }
+.share-opt-icon-img { width: 1.1rem; height: 1.1rem; object-fit: contain; }
 
 /* --- Cat 1.3 / 4.6: Skill tap popup (mobile) --- */
 .skill-tag--open {

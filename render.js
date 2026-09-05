@@ -51,7 +51,7 @@
       return _content;
     }
     try {
-      const r = await fetch(langFile('content', lang));
+      const r = await fetch(langFile('content', lang), { cache: 'no-store' });
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       _content = await r.json();
     } catch (err) {
@@ -59,7 +59,7 @@
       if (lang !== 'en') {
         console.warn(`[render.js] Could not load ${langFile('content', lang)} (${err.message}). Falling back to content.json.`);
         try {
-          const r2 = await fetch('content.json');
+          const r2 = await fetch('content.json', { cache: 'no-store' });
           if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
           _content = await r2.json();
         } catch (err2) {
@@ -85,14 +85,14 @@
       return _skills;
     }
     try {
-      const r = await fetch(langFile('skills', lang));
+      const r = await fetch(langFile('skills', lang), { cache: 'no-store' });
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       _skills = await r.json();
     } catch (err) {
       if (lang !== 'en') {
         console.warn(`[render.js] Could not load ${langFile('skills', lang)} (${err.message}). Falling back to skills.json.`);
         try {
-          const r2 = await fetch('skills.json');
+          const r2 = await fetch('skills.json', { cache: 'no-store' });
           if (!r2.ok) throw new Error(`HTTP ${r2.status}`);
           _skills = await r2.json();
         } catch (err2) {
@@ -151,12 +151,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       const overlay = document.createElement('div');
       overlay.id = 'header-overlay-btns';
       const currentLang = getLang();
+      // On the home page there's no home button, so the language toggle
+      // moves up into the home button's slot instead of sitting under it.
+      const langToggleClass = showHomeBtn ? 'lang-toggle' : 'lang-toggle lang-toggle--top';
       overlay.innerHTML = `
         ${showHomeBtn ? `
           <a href="index.html" class="home-button float-btn" aria-label="Go to home">
             <img src="icons/home.png" alt="Home" class="icon">
           </a>` : ''}
-        <button id="lang-toggle" class="lang-toggle float-btn" type="button" aria-label="Change language">
+        <button id="lang-toggle" class="${langToggleClass} float-btn" type="button" aria-label="Change language">
           <span class="lang-label">${LANG_LABELS[currentLang]}</span>
         </button>
         <button id="theme-toggle" class="theme-toggle float-btn" aria-label="Toggle theme">
@@ -183,7 +186,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="header-bar">
         <div class="header-spacer"></div>
         <div class="header-text">
-          <h1>${meta.name}</h1>
+          <h1 class="site-name">${meta.name}</h1>
           <p>${meta.tagline}</p>
           <p>
             <a href="${meta.linkedin}" target="_blank" rel="noopener">LinkedIn</a> |
@@ -200,32 +203,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ------------------------------------------
      NAV
   ------------------------------------------ */
-  const NAV_LINKS = [
-    { href: 'professional-experience.html', label: 'Career'        },
-    { href: 'my-skills.html',               label: 'Skills'        },
-    { href: 'my-projects.html',             label: 'Projects'      },
-    { href: 'my-certifications.html',       label: 'Certificates'  },
-    { href: 'personal-life.html',           label: 'Personal Life' },
-    { href: 'education.html',               label: 'Education'     },
+  // href -> key in ui.nav, keeps page order
+  const NAV_KEYS = [
+    { href: 'professional-experience.html', key: 'career'        },
+    { href: 'my-skills.html',               key: 'skills'        },
+    { href: 'my-projects.html',             key: 'projects'      },
+    { href: 'my-certifications.html',       key: 'certificates'  },
+    { href: 'personal-life.html',           key: 'personalLife'  },
+    { href: 'education.html',               key: 'education'     },
   ];
 
-  function renderNav(activePage) {
+  // Breadcrumb intentionally always stays in English/LTR regardless of the
+  // site language, so it keeps its own fixed English labels.
+  const NAV_LABELS_EN = {
+    career: 'Career', skills: 'Skills', projects: 'Projects',
+    certificates: 'Certificates', personalLife: 'Personal Life', education: 'Education',
+  };
+
+  function renderNav(activePage, ui) {
     const el = document.getElementById('site-nav');
     if (!el) return;
 
+    const navUi = (ui && ui.nav) || NAV_LABELS_EN;
     el.className = 'page-nav';
-    el.innerHTML = NAV_LINKS.map(({ href, label }) => {
+    el.innerHTML = NAV_KEYS.map(({ href, key }) => {
       const isActive = href === activePage;
+      const label = navUi[key] || NAV_LABELS_EN[key];
       return `<a href="${href}" class="${isActive ? 'page-pill-active' : 'page-pill'}">${label}</a>`;
     }).join('');
   }
 
   /* ------------------------------------------
      BREADCRUMB (4.5)
+     Always English / LTR, regardless of site language.
   ------------------------------------------ */
   function renderBreadcrumb(activePage) {
     if (!activePage) return;
-    const link = NAV_LINKS.find(n => n.href === activePage);
+    const link = NAV_KEYS.find(n => n.href === activePage);
     if (!link) return;
 
     // Insert after nav
@@ -233,7 +247,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     if (!nav) return;
     const bc = document.createElement('div');
     bc.className = 'breadcrumb';
-    bc.innerHTML = `<a href="index.html">Home</a> <span class="bc-sep">›</span> <span class="bc-current">${link.label}</span>`;
+    bc.setAttribute('dir', 'ltr');
+    bc.innerHTML = `<a href="index.html">Home</a> <span class="bc-sep">›</span> <span class="bc-current">${NAV_LABELS_EN[link.key]}</span>`;
     nav.insertAdjacentElement('afterend', bc);
   }
 
@@ -254,9 +269,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ------------------------------------------
      CONTACT SECTION — with share button (4.2)
   ------------------------------------------ */
-  function renderContact(meta) {
+  function renderContact(meta, ui) {
     const el = document.getElementById('site-contact');
     if (!el) return;
+
+    const c = (ui && ui.contact) || {};
+    const t = (key, fallback) => c[key] || fallback;
 
     el.className = 'contact content-section';
     el.id = 'contact';
@@ -267,32 +285,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     const mailBody = encodeURIComponent(`Portfolio: ${siteURL}\r\nCV Download: ${cvURL}`);
 
     el.innerHTML = `
-      <h2>Contact &amp; Connect</h2>
+      <h2>${t('title', 'Contact &amp; Connect')}</h2>
       <div class="contact-row">
         <div class="contact-info">
-          <p>Email: <a href="mailto:${meta.email}">${meta.email}</a></p>
-          <p>Phone: <a href="${meta.phone1.wa}">${meta.phone1.display}</a>
+          <p>${t('email', 'Email:')} <a href="mailto:${meta.email}">${meta.email}</a></p>
+          <p>${t('phone', 'Phone:')} <a href="${meta.phone1.wa}">${meta.phone1.display}</a>
             <img src="icons/wts.png" alt="WhatsApp" class="icon"></p>
-          <p>Phone: <a href="${meta.phone2.wa}">${meta.phone2.display}</a>
+          <p>${t('phone', 'Phone:')} <a href="${meta.phone2.wa}">${meta.phone2.display}</a>
             <img src="icons/wts.png" alt="WhatsApp" class="icon"></p>
         </div>
         <div class="contact-download">
           <div class="share-btn-wrap">
             <button class="cv-btn" id="share-resume-btn" type="button">
-              <img src="icons/dwn.png" alt="" class="icon"> Resume &amp; Portfolio
+              <img src="icons/dwn.png" alt="" class="icon"> ${t('resumeBtn', 'Resume &amp; Portfolio')}
             </button>
             <div class="share-panel" id="share-panel" hidden>
               <a href="${meta.cvFile}" class="share-option" download>
-                <span class="share-opt-icon">📄</span> Download PDF
+                <span class="share-opt-icon">📄</span> ${t('downloadPdf', 'Download PDF')}
               </a>
               <a href="https://wa.me/?text=${waText}" class="share-option" target="_blank" rel="noopener">
-                <span class="share-opt-icon">💬</span> Share via WhatsApp
+                <span class="share-opt-icon"><img src="icons/wts.png" alt="" class="icon share-opt-icon-img"></span> ${t('shareWhatsapp', 'Share via WhatsApp')}
               </a>
               <a href="mailto:?subject=${encodeURIComponent('Seif-Eddine Joul – Resume')}&body=${mailBody}" class="share-option">
-                <span class="share-opt-icon">✉️</span> Share via Email
+                <span class="share-opt-icon">✉️</span> ${t('shareEmail', 'Share via Email')}
               </a>
               <button class="share-option" id="copy-link-btn" type="button">
-                <span class="share-opt-icon">🔗</span> Copy Portfolio Link
+                <span class="share-opt-icon">🔗</span> ${t('copyLink', 'Copy Portfolio Link')}
               </button>
             </div>
           </div>
@@ -327,42 +345,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ------------------------------------------
      FOOTER
   ------------------------------------------ */
-  function renderFooter(meta) {
+  function renderFooter(meta, ui) {
     const el = document.getElementById('site-footer');
     if (!el) return;
+
+    const visitsLabel = (ui && ui.footer && ui.footer.visits) || 'visits';
+
+    // hitwebcounter has no CORS-enabled JSON endpoint for reading the count
+    // client-side (that's what was throwing the CORS error and leaving the
+    // number stuck at "—" on every page). Their counter.php endpoint is
+    // meant to be embedded directly as an <img> instead — it increments AND
+    // visually renders the digit count in one request, no JS parsing needed.
+    const counterImg = location.protocol !== 'file:'
+      ? `<img class="visitor-counter-img" alt="${visitsLabel}"
+             src="https://hitwebcounter.com/counter/counter.php?page=21457518&style=0006&nbdigits=5&type=page&initCount=200">`
+      : '—';
 
     el.innerHTML = `
       &copy; ${meta.copyright}
       <br>
       <span class="visitor-badge" id="visitor-count">
-        👁 <span class="visitor-num" id="visitor-num">—</span> visits
+        👁 ${counterImg} ${visitsLabel}
       </span>
     `;
-
-    // Fetch counter via the hitwebcounter pixel (returns a 1px GIF whose
-    // URL contains the count in a header we can't read cross-origin, so
-    // instead we call the plain-text API endpoint they provide).
-    // Fallback: if the network call fails (offline / local) we just leave "—".
-    if (location.protocol !== 'file:') {
-      fetch(
-        'https://hitwebcounter.com/counter/counter.php?page=21457518&style=0006&nbdigits=5&type=page&initCount=200',
-        { mode: 'no-cors' }   // fire-and-forget: increments the counter
-      ).catch(() => {});
-
-      // Use their JSON stats API to read the displayed number
-      fetch('https://hitwebcounter.com/api/get-count?id=21457518', {
-        headers: { 'Accept': 'application/json' }
-      })
-        .then(r => r.ok ? r.json() : null)
-        .then(data => {
-          const num = data && (data.count || data.total || data.page_count);
-          if (num != null) {
-            const span = document.getElementById('visitor-num');
-            if (span) span.textContent = Number(num).toLocaleString();
-          }
-        })
-        .catch(() => {});
-    }
   }
 
   /* ------------------------------------------
@@ -371,15 +376,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   async function bootstrapPage({ activePage, showHomeBtn = true, renderBody } = {}) {
     try {
       const [content, skills] = await Promise.all([loadContent(), loadSkills()]);
-      const { meta } = content;
+      const { meta, ui } = content;
 
       renderHead(meta);
       renderHeader(meta, { showHomeBtn });
-      if (activePage) renderNav(activePage);
+      if (activePage) renderNav(activePage, ui);
       renderBreadcrumb(activePage);
       renderFloatingButtons();
-      renderContact(meta);
-      renderFooter(meta);
+      renderContact(meta, ui);
+      renderFooter(meta, ui);
 
       if (typeof renderBody === 'function') {
         await renderBody(content, skills);

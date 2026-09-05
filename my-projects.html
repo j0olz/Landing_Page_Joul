@@ -17,7 +17,7 @@
 <div   id="floating-buttons"></div>
 
 <section class="content-section">
-  <h2>Featured Projects</h2>
+  <h2 id="projects-title"></h2>
   <div class="project-cards-grid" id="project-grid"></div>
 </section>
 
@@ -30,6 +30,9 @@
   SiteRender.bootstrapPage({
     activePage: 'my-projects.html',
     renderBody(content) {
+      const ui = content.ui.projects;
+      document.getElementById('projects-title').textContent = ui.title;
+
       document.getElementById('project-grid').innerHTML =
         content.projects.map(p => {
           const chips = (p.skills || []).map(s => {
@@ -44,7 +47,7 @@
               <p>${SiteRender.esc(p.body)}</p>
               ${chips ? `
                 <div class="project-card-skills">
-                  <strong>Using:</strong> ${chips}
+                  <strong>${ui.using}</strong> ${chips}
                 </div>` : ''}
             </div>
           `;

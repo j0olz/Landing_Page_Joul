@@ -22,16 +22,16 @@
 <section class="index-who">
   <!-- Hook line (2.3) injected here -->
   <!-- <p class="who-hook" id="who-hook"></p> -->
-  <h2>Who am I...?</h2>
+  <h2 id="who-title"></h2>
   <p id="who-body"></p>
   <h2 style="text-align:right;" id="who-closing"></h2>
 </section>
 
 <section class="content-section">
-  <h2>Virtual CV</h2>
+  <h2 id="virtual-cv-title"></h2>
   <p style="max-width:800px;margin:0 auto 2rem auto;">
-    Navigate through different aspects of my professional and personal journey.
-    Each section provides detailed insights into my experiences, skills, and achievements.
+    <!-- <bdi dir="ltr">Navigate through different aspects of my professional and personal journey.
+    Each section provides detailed insights into my experiences, skills, and achievements.</bdi> -->
   </p>
   <div class="index-cards-grid" id="index-cards"></div>
   <p class="cards-swipe-hint" id="cards-swipe-hint"></p>
@@ -47,10 +47,13 @@
     activePage: null,
     showHomeBtn: false,
     renderBody(content) {
-      const { index } = content;
+      const { index, ui } = content;
 
       // document.getElementById('who-hook').textContent =
       //   'I build things that move, sense, and respond; I lead the people who build them with me.';
+
+      document.getElementById('who-title').textContent = ui.whoTitle;
+      document.getElementById('virtual-cv-title').textContent = ui.virtualCvTitle;
 
       document.getElementById('who-body').innerHTML =
         index.whoAmI.replace(/\n\n/g, '<br><br>');
@@ -66,7 +69,7 @@
       // Show swipe navigation hint on mobile
       const swipeHint = document.getElementById('cards-swipe-hint');
       if (swipeHint) {
-        swipeHint.textContent = '← swipe left or right on any page to navigate →';
+        swipeHint.textContent = ui.cardsSwipeHint;
       }
     }
   });
