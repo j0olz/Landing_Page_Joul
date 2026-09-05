@@ -288,10 +288,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <h2>${t('title', 'Contact &amp; Connect')}</h2>
       <div class="contact-row">
         <div class="contact-info">
-          <p>${t('email', 'Email:')} <a href="mailto:${meta.email}">${meta.email}</a></p>
-          <p>${t('phone', 'Phone:')} <a href="${meta.phone1.wa}">${meta.phone1.display}</a>
+          <p>${t('email', 'Email:')} <bdi dir="ltr"><a href="mailto:${meta.email}">${meta.email}</a></bdi></p>
+          <p>${t('phone', 'Phone:')} <bdi dir="ltr"><a href="${meta.phone1.wa}">${meta.phone1.display}</a></bdi>
             <img src="icons/wts.png" alt="WhatsApp" class="icon"></p>
-          <p>${t('phone', 'Phone:')} <a href="${meta.phone2.wa}">${meta.phone2.display}</a>
+          <p>${t('phone', 'Phone:')} <bdi dir="ltr"><a href="${meta.phone2.wa}">${meta.phone2.display}</a></bdi>
             <img src="icons/wts.png" alt="WhatsApp" class="icon"></p>
         </div>
         <div class="contact-download">
