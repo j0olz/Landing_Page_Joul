@@ -24,7 +24,7 @@
   <!-- <p class="who-hook" id="who-hook"></p> -->
   <h2 id="who-title"></h2>
   <p id="who-body"></p>
-  <h2 style="text-align:right;" id="who-closing"></h2>
+  <h2 id="who-closing"></h2>
 </section>
 
 <section class="content-section">
@@ -57,7 +57,12 @@
 
       document.getElementById('who-body').innerHTML =
         index.whoAmI.replace(/\n\n/g, '<br><br>');
-      document.getElementById('who-closing').textContent = index.whoAmIClosing;
+      const whoClosingEl = document.getElementById('who-closing');
+      whoClosingEl.textContent = index.whoAmIClosing;
+      // Mirror the closing line to the opposite side from the title,
+      // for both LTR (English/French) and RTL (Arabic) layouts.
+      const isRTL = document.documentElement.dir === 'rtl';
+      whoClosingEl.style.textAlign = isRTL ? 'left' : 'right';
 
       document.getElementById('index-cards').innerHTML = index.cards.map(c => `
         <a href="${c.href}" class="index-card">
