@@ -198,6 +198,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     `;
+
+    // Arabic script renders visually smaller than Latin script at the same
+    // font-size, so the name looks disproportionately small in Arabic mode.
+    // Bump it up (~5 "sizes" worth, i.e. ~45% larger) to match the visual
+    // weight of the English/French versions.
+    const nameEl = el.querySelector('.site-name');
+    if (nameEl) {
+      const isRTL = document.documentElement.dir === 'rtl';
+      if (isRTL) {
+        const baseSize = parseFloat(window.getComputedStyle(nameEl).fontSize);
+        nameEl.style.fontSize = (baseSize * 3) + 'px';
+      } else {
+        nameEl.style.fontSize = '';
+      }
+    }
   }
 
   /* ------------------------------------------
