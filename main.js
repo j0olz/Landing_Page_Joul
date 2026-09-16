@@ -16,10 +16,14 @@
     const btn  = document.getElementById('theme-toggle');
     if (!btn) return;
     const icon = btn.querySelector('.icon');
+    // Pages one level deep (/pages/*.html) need '../icons/...'; index.html
+    // at the root needs plain 'icons/...'. Keep in sync with the BASE
+    // constant near the top of render.js.
+    const iconsDir = /\/pages\//.test(location.pathname) ? '../icons/' : 'icons/';
 
     function applyTheme(dark) {
       document.body.classList.toggle('dark', dark);
-      if (icon) icon.src = dark ? 'icons/sun.png' : 'icons/moon.png';
+      if (icon) icon.src = dark ? iconsDir + 'sun.png' : iconsDir + 'moon.png';
     }
 
     // Apply saved preference
@@ -308,18 +312,27 @@
      prev/next in the NAV_LINKS order.
   ------------------------------------------ */
   function initSwipeNav() {
+    // Root-relative paths: index.html lives at the project root, everything
+    // else lives in /pages. resolveHref() below turns these into the correct
+    // href from wherever the CURRENT page happens to sit.
     const NAV_ORDER = [
       'index.html',
-      'professional-experience.html',
-      'my-skills.html',
-      'my-projects.html',
-      'my-certifications.html',
-      'personal-life.html',
-      'education.html',
+      'pages/career.html',
+      'pages/skills.html',
+      'pages/projects.html',
+      'pages/certifications.html',
+      'pages/personal.html',
+      'pages/education.html',
     ];
 
+    function resolveHref(target) {
+      const inPages = /\/pages\//.test(location.pathname);
+      if (!inPages) return target; // at root, root-relative paths work as-is
+      return target.startsWith('pages/') ? target.slice('pages/'.length) : '../' + target;
+    }
+
     const currentPage = location.pathname.split('/').pop() || 'index.html';
-    const idx = NAV_ORDER.indexOf(currentPage);
+    const idx = NAV_ORDER.findIndex(p => p.split('/').pop() === currentPage);
     if (idx === -1) return;
 
     let startX = 0, startY = 0;
@@ -338,9 +351,9 @@
       if (e.target.closest && e.target.closest('.skill-tag')) return;
 
       if (dx < 0 && idx < NAV_ORDER.length - 1) {
-        location.href = NAV_ORDER[idx + 1];
+        location.href = resolveHref(NAV_ORDER[idx + 1]);
       } else if (dx > 0 && idx > 0) {
-        location.href = NAV_ORDER[idx - 1];
+        location.href = resolveHref(NAV_ORDER[idx - 1]);
       }
     }, { passive: true });
 

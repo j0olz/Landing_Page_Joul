@@ -3,7 +3,7 @@
     "name": "Seif-Eddine Joul",
     "tagline": "I run on the dopamine of solving problems, technical, systemic, or social. I thrive in collaborative environments.",
     "linkedin": "https://www.linkedin.com/in/seifjoul",
-    "boldpro": "https://bold.pro/my/s-joul",
+    "boldpro": ".",
     "email": "seifjoul@gmail.com",
     "phone1": {
       "display": "+212 6 3129 3071",
@@ -86,32 +86,32 @@
     "whoAmIClosing": "...the one you're looking for!",
     "cards": [
       {
-        "href": "professional-experience.html",
+        "href": "pages/career.html",
         "icon": "icons/xp.png",
         "label": "Career"
       },
       {
-        "href": "my-skills.html",
+        "href": "pages/skills.html",
         "icon": "icons/skl.png",
         "label": "Skills"
       },
       {
-        "href": "my-projects.html",
+        "href": "pages/projects.html",
         "icon": "icons/pro.png",
         "label": "Projects"
       },
       {
-        "href": "my-certifications.html",
+        "href": "pages/certifications.html",
         "icon": "icons/cert.png",
         "label": "Certificates"
       },
       {
-        "href": "personal-life.html",
+        "href": "pages/personal.html",
         "icon": "icons/life.png",
         "label": "Personal Life"
       },
       {
-        "href": "education.html",
+        "href": "pages/education.html",
         "icon": "icons/edu.png",
         "label": "Education"
       }

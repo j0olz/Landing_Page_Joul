@@ -3,7 +3,7 @@
     "name": "سيف الدين جول",
     "tagline": "أستمد طاقتي من متعة حل المشكلات، سواء كانت تقنية أو منهجية أو اجتماعية. أزدهر في بيئات العمل الجماعي.",
     "linkedin": "https://www.linkedin.com/in/seifjoul",
-    "boldpro": "https://bold.pro/my/s-joul",
+    "boldpro": ".",
     "email": "seifjoul@gmail.com",
     "phone1": {
       "display": "+212 6 3129 3071",
@@ -86,32 +86,32 @@
     "whoAmIClosing": "...الشخص الذي تبحث عنه!",
     "cards": [
       {
-        "href": "professional-experience.html",
+        "href": "pages/career.html",
         "icon": "icons/xp.png",
         "label": "المسيرة المهنية"
       },
       {
-        "href": "my-skills.html",
+        "href": "pages/skills.html",
         "icon": "icons/skl.png",
         "label": "المهارات"
       },
       {
-        "href": "my-projects.html",
+        "href": "pages/projects.html",
         "icon": "icons/pro.png",
         "label": "المشاريع"
       },
       {
-        "href": "my-certifications.html",
+        "href": "pages/certifications.html",
         "icon": "icons/cert.png",
         "label": "الشهادات"
       },
       {
-        "href": "personal-life.html",
+        "href": "pages/personal.html",
         "icon": "icons/life.png",
         "label": "الحياة الشخصية"
       },
       {
-        "href": "education.html",
+        "href": "pages/education.html",
         "icon": "icons/edu.png",
         "label": "التعليم"
       }

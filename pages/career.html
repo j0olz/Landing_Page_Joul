@@ -6,9 +6,9 @@
   <title>Career | Seif Joul</title>
   <meta property="og:title"       content="Career – Seif-Eddine Joul" />
   <meta property="og:description" content="Career timeline: Electromechanical Engineer, Field Technician, Operations Leader." />
-  <meta property="og:image"       content="icons/face.jpeg" />
-  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css" />
+  <meta property="og:image"       content="../icons/face.jpeg" />
+  <link rel="icon" href="../icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
@@ -25,11 +25,11 @@
 <section id="site-contact"></section>
 <footer  id="site-footer"></footer>
 
-<script src="render.js"></script>
-<script src="main.js"></script>
+<script src="../render.js"></script>
+<script src="../main.js"></script>
 <script>
   SiteRender.bootstrapPage({
-    activePage: 'professional-experience.html',
+    activePage: 'career.html',
     renderBody(content) {
       const exp = content.experience;
       const ui  = content.ui.career;
@@ -63,7 +63,7 @@
         const chips = (job.skills || []).map(s => {
           const slug = encodeURIComponent(s.replace(/-/g, ' ').trim());
           const label = s.replace(/-/g, ' ');
-          return `<a href="my-skills.html#${s}" class="skill-tag-mini">${SiteRender.esc(label)}</a>`;
+          return `<a href="skills.html#${s}" class="skill-tag-mini">${SiteRender.esc(label)}</a>`;
         }).join('');
 
         // First item = current role → pulse dot (cat 7)

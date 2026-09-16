@@ -6,9 +6,9 @@
   <title>Projects | Seif Joul</title>
   <meta property="og:title"       content="Projects – Seif-Eddine Joul" />
   <meta property="og:description" content="14 engineering projects spanning robotics, automation, embedded systems, and more." />
-  <meta property="og:image"       content="icons/face.jpeg" />
-  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css" />
+  <meta property="og:image"       content="../icons/face.jpeg" />
+  <link rel="icon" href="../icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
@@ -24,11 +24,11 @@
 <section id="site-contact"></section>
 <footer  id="site-footer"></footer>
 
-<script src="render.js"></script>
-<script src="main.js"></script>
+<script src="../render.js"></script>
+<script src="../main.js"></script>
 <script>
   SiteRender.bootstrapPage({
-    activePage: 'my-projects.html',
+    activePage: 'projects.html',
     renderBody(content) {
       const ui = content.ui.projects;
       document.getElementById('projects-title').textContent = ui.title;
@@ -37,7 +37,7 @@
         content.projects.map(p => {
           const chips = (p.skills || []).map(s => {
             const slug = encodeURIComponent(s.replace(/\s+/g, '-'));
-            return `<a href="my-skills.html#${slug}" class="skill-tag-mini">${SiteRender.esc(s)}</a>`;
+            return `<a href="skills.html#${slug}" class="skill-tag-mini">${SiteRender.esc(s)}</a>`;
           }).join('');
 
           return `

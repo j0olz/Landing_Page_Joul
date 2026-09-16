@@ -3,7 +3,7 @@
     "name": "Seif-Eddine Joul",
     "tagline": "Je fonctionne à la dopamine que procure la résolution de problèmes, techniques, systémiques ou sociaux. Je m'épanouis dans les environnements collaboratifs.",
     "linkedin": "https://www.linkedin.com/in/seifjoul",
-    "boldpro": "https://bold.pro/my/s-joul",
+    "boldpro": ".",
     "email": "seifjoul@gmail.com",
     "phone1": {
       "display": "+212 6 3129 3071",
@@ -86,32 +86,32 @@
     "whoAmIClosing": "...celui que vous cherchez !",
     "cards": [
       {
-        "href": "professional-experience.html",
+        "href": "pages/career.html",
         "icon": "icons/xp.png",
         "label": "Parcours"
       },
       {
-        "href": "my-skills.html",
+        "href": "pages/skills.html",
         "icon": "icons/skl.png",
         "label": "Compétences"
       },
       {
-        "href": "my-projects.html",
+        "href": "pages/projects.html",
         "icon": "icons/pro.png",
         "label": "Projets"
       },
       {
-        "href": "my-certifications.html",
+        "href": "pages/certifications.html",
         "icon": "icons/cert.png",
         "label": "Certificats"
       },
       {
-        "href": "personal-life.html",
+        "href": "pages/personal.html",
         "icon": "icons/life.png",
         "label": "Vie personnelle"
       },
       {
-        "href": "education.html",
+        "href": "pages/education.html",
         "icon": "icons/edu.png",
         "label": "Éducation"
       }
