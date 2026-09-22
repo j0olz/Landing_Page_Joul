@@ -130,6 +130,17 @@
     const tags = document.querySelectorAll(tagSelector);
     if (!tags.length || !popoverEl) return;
 
+    // Move the popover to be a direct child of <body>. It's position:fixed
+    // and meant to be viewport-relative, but if it's left nested inside an
+    // ancestor that ever picks up a transform/filter/perspective (even an
+    // identity one, e.g. from a "both"-fill entrance animation), that
+    // ancestor becomes its containing block instead of the viewport and
+    // all the positioning math below goes wrong after the page scrolls.
+    // Re-parenting to body sidesteps that class of bug entirely.
+    if (popoverEl.parentElement !== document.body) {
+      document.body.appendChild(popoverEl);
+    }
+
     let openTag   = null;
     let hideTimer = null;
 
@@ -451,12 +462,16 @@
     terms.forEach(t => {
       if (!t) return;
       // Short terms (abbreviations like "ms", "it", "cv") are only matched
-      // as whole words — plain substring matching would also hit "ms"
-      // inside "systems", "it" inside "digital", etc.
+      // against the START of a word — plain substring matching would also
+      // hit "ms" inside "systems", "it" inside "digital", etc. This still
+      // lets someone typing the first few letters of a longer word (e.g.
+      // "qua" while typing "quality") match normally, since it only needs
+      // to be a word's *prefix*, not the whole word.
       const wholeWordOnly = t.length <= 3;
+      const startsWithTerm = (words) => words.some(w => w.startsWith(t));
       if (titleNorm === t) best = Math.max(best, 100);
-      else if (wholeWordOnly ? titleWords.includes(t) : titleNorm.includes(t)) best = Math.max(best, 70);
-      else if (wholeWordOnly ? textWords.includes(t) : textNorm.includes(t)) best = Math.max(best, 40);
+      else if (wholeWordOnly ? startsWithTerm(titleWords) : titleNorm.includes(t)) best = Math.max(best, 70);
+      else if (wholeWordOnly ? startsWithTerm(textWords) : textNorm.includes(t)) best = Math.max(best, 40);
     });
     return best;
   }

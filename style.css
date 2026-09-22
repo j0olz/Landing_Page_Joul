@@ -1375,10 +1375,10 @@ body.dark .personal-card h3 { color: var(--amber); }
 .content-section,
 .contact,
 .index-who {
-  animation: fadeUp 0.5s ease both;
+  animation: fadeUp 0.5s ease backwards;
 }
 
-.index-card { animation: fadeUp 0.4s ease both; }
+.index-card { animation: fadeUp 0.4s ease backwards; }
 .index-card:nth-child(1) { animation-delay: 0.05s; }
 .index-card:nth-child(2) { animation-delay: 0.10s; }
 .index-card:nth-child(3) { animation-delay: 0.15s; }
@@ -1386,7 +1386,7 @@ body.dark .personal-card h3 { color: var(--amber); }
 .index-card:nth-child(5) { animation-delay: 0.25s; }
 .index-card:nth-child(6) { animation-delay: 0.30s; }
 
-.skill-category { animation: fadeUp 0.4s ease both; }
+.skill-category { animation: fadeUp 0.4s ease backwards; }
 .skill-category:nth-child(1) { animation-delay: 0.05s; }
 .skill-category:nth-child(2) { animation-delay: 0.10s; }
 .skill-category:nth-child(3) { animation-delay: 0.15s; }
@@ -1776,10 +1776,6 @@ img {
 .skill-tag--open {
   background: var(--amber) !important;
   color: var(--navy) !important;
-  border-radius: var(--radius-sm);
-  flex-direction: column;
-  align-items: flex-start;
-  height: auto;
 }
 .skill-tap-popup {
   display: flex;
