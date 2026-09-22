@@ -34,7 +34,7 @@
 
       document.getElementById('cert-list').innerHTML =
         content.certifications.map(cat => `
-          <div class="skill-category">
+          <div class="skill-category" id="${SiteRender.slug(cat.category)}">
             <h3>${SiteRender.esc(cat.category)}</h3>
             <div class="skill-tags">
               ${cat.items.map(item =>

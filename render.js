@@ -124,6 +124,129 @@
   }
 
   /* ------------------------------------------
+     SLUG (Cat 8: shared between the search index's
+     hash links and the id="" each page puts on its
+     own cards — see projects.html / career.html /
+     certifications.html / education.html / personal.html)
+  ------------------------------------------ */
+  function slug(str) {
+    return encodeURIComponent(String(str || '').trim().replace(/\s+/g, '-'));
+  }
+
+  /* ------------------------------------------
+     SEARCH ALIASES (Cat 8: site search)
+     One shared, language-agnostic file of synonym/
+     abbreviation groups (e.g. "ms" <-> "microsoft").
+     Not critical to the site working, so failures
+     here are silent — search just runs without the
+     extra alias matching.
+  ------------------------------------------ */
+  let _aliases = null;
+
+  async function loadAliases() {
+    if (_aliases) return _aliases;
+    if (location.protocol === 'file:') {
+      _aliases = [];
+      return _aliases;
+    }
+    try {
+      const r = await fetch(DATA_DIR + 'search-aliases.json', { cache: 'no-store' });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      _aliases = await r.json();
+    } catch (err) {
+      console.warn(`[render.js] Could not load search-aliases.json (${err.message}). Search will run without alias matching.`);
+      _aliases = [];
+    }
+    return _aliases;
+  }
+
+  /* ------------------------------------------
+     SEARCH INDEX (Cat 8: site search)
+     Flattens content.json + skills.json into one
+     array of searchable records. Rebuilt whenever
+     content/skills are (re)loaded — see bootstrapPage.
+  ------------------------------------------ */
+  function buildSearchIndex(content, skills) {
+    const records = [];
+    const norm = (s) => String(s || '').trim();
+
+    // Skills — these get real deep links (skills.html#slug), same slug
+    // logic as pages/skills.html itself.
+    (skills.categories || []).forEach(cat => {
+      (cat.skills || []).forEach(skillName => {
+        const slug = encodeURIComponent(skillName.replace(/\s+/g, '-'));
+        records.push({
+          type: 'skill',
+          title: skillName,
+          text: [skillName, cat.title].join(' '),
+          page: 'skills.html',
+          hash: slug,
+          // Sibling skills in the same category — used to build the
+          // "related" suggestions when this record matches.
+          related: (cat.skills || []).filter(s => s !== skillName),
+        });
+      });
+    });
+
+    (content.projects || []).forEach(p => {
+      records.push({
+        type: 'project',
+        title: p.name,
+        text: [p.name, p.categoryLabel, p.body, (p.skills || []).join(' ')].join(' '),
+        page: 'projects.html',
+        hash: slug(p.name),
+        related: p.skills || [],
+      });
+    });
+
+    (content.experience || []).forEach(e => {
+      records.push({
+        type: 'experience',
+        title: [e.title, e.company].filter(Boolean).join(' — '),
+        text: [e.title, e.company, e.location, (e.overview || []).join(' '), (e.achievements || []).join(' '), (e.skills || []).join(' ')].join(' '),
+        page: 'career.html',
+        hash: slug(e.title),
+        related: e.skills || [],
+      });
+    });
+
+    (content.education || []).forEach(ed => {
+      records.push({
+        type: 'education',
+        title: ed.degree,
+        text: [ed.degree, ed.school, ed.location, (ed.courses || []).join(' '), (ed.achievements || []).join(' ')].join(' '),
+        page: 'education.html',
+        hash: slug(ed.degree),
+        related: ed.courses || [],
+      });
+    });
+
+    (content.certifications || []).forEach(c => {
+      records.push({
+        type: 'certification',
+        title: c.category,
+        text: [c.category, (c.items || []).join(' ')].join(' '),
+        page: 'certifications.html',
+        hash: slug(c.category),
+        related: [],
+      });
+    });
+
+    (content.personalLife || []).forEach(p => {
+      records.push({
+        type: 'personal',
+        title: p.title,
+        text: [p.title, p.body].join(' '),
+        page: 'personal.html',
+        hash: slug(p.title),
+        related: [],
+      });
+    });
+
+    return records.map(r => ({ ...r, title: norm(r.title), text: norm(r.text) }));
+  }
+
+  /* ------------------------------------------
      GOOGLE ANALYTICS / GTM INJECTION
   ------------------------------------------ */
   function renderHead(meta) {
@@ -287,6 +410,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   /* ------------------------------------------
+     SEARCH BAR (Cat 8)
+     Sits just under the header banner on the home
+     page (there's no nav/breadcrumb there); on every
+     other page it sits just under the breadcrumb bar
+     instead, since the header+pill-nav are already
+     sticky and the breadcrumb is the last thing before
+     page content starts.
+     Built dynamically (like the header overlay buttons)
+     so no page's HTML shell needs to change.
+  ------------------------------------------ */
+  function renderSearch(ui, activePage) {
+    let el = document.getElementById('site-search');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'site-search';
+      el.className = 'site-search-bar';
+
+      if (!activePage) {
+        const header = document.getElementById('site-header');
+        if (header) header.insertAdjacentElement('afterend', el);
+      } else {
+        const bc  = document.querySelector('.breadcrumb');
+        const nav = document.getElementById('site-nav');
+        const anchor = bc || nav;
+        if (anchor) anchor.insertAdjacentElement('afterend', el);
+      }
+    }
+
+    const s = (ui && ui.search) || {};
+    el.innerHTML = `
+      <div class="search-inner">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="text"
+          id="site-search-input"
+          class="search-input"
+          placeholder="${esc(s.placeholder || 'Search…')}"
+          autocomplete="off"
+          aria-label="${esc(s.placeholder || 'Search…')}"
+        />
+        <button type="button" id="site-search-clear" class="search-clear" hidden aria-label="${esc(s.close || 'Close search')}">✕</button>
+        <div id="site-search-results" class="search-results" hidden></div>
+      </div>
+    `;
+  }
+
+  /* ------------------------------------------
      FLOATING BUTTONS
   ------------------------------------------ */
   function renderFloatingButtons() {
@@ -412,13 +582,25 @@ const counterImg = location.protocol !== 'file:'
   ------------------------------------------ */
   async function bootstrapPage({ activePage, showHomeBtn = true, renderBody } = {}) {
     try {
-      const [content, skills] = await Promise.all([loadContent(), loadSkills()]);
+      const [content, skills, aliases] = await Promise.all([loadContent(), loadSkills(), loadAliases()]);
       const { meta, ui } = content;
+
+      // Rebuilt every time content/skills are (re)loaded (e.g. after a
+      // language switch reload) so search always matches the language
+      // currently on screen. Exposed on window so main.js's initSearch()
+      // (loaded separately, after render.js) can read it without render.js
+      // and main.js needing to import/export modules between each other.
+      window._SEARCH_INDEX   = buildSearchIndex(content, skills);
+      window._SEARCH_ALIASES = aliases;
+      window._SEARCH_BASE    = BASE;
+      window._SEARCH_UI      = ui.search || {};
+      window._SEARCH_NAV     = ui.nav || NAV_LABELS_EN;
 
       renderHead(meta);
       renderHeader(meta, { showHomeBtn });
       if (activePage) renderNav(activePage, ui);
       renderBreadcrumb(activePage);
+      renderSearch(ui, activePage);
       renderFloatingButtons();
       renderContact(meta, ui);
       renderFooter(meta, ui);
@@ -463,11 +645,15 @@ const counterImg = location.protocol !== 'file:'
     bootstrapPage,
     loadContent,
     loadSkills,
+    loadAliases,
+    buildSearchIndex,
+    slug,
     getLang,
     setLang,
     renderHeader,
     renderNav,
     renderBreadcrumb,
+    renderSearch,
     renderFloatingButtons,
     renderContact,
     renderFooter,

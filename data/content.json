@@ -79,6 +79,15 @@
     },
     "footer": {
       "visits": "visits"
+    },
+    "search": {
+      "placeholder": "Search skills, projects, experience…",
+      "resultsFor": "Results for",
+      "relatedTitle": "You might also be interested in",
+      "didYouMean": "Did you mean",
+      "noResultsTitle": "No matches for",
+      "noResultsHint": "Try a different word, or browse:",
+      "close": "Close search"
     }
   },
   "index": {

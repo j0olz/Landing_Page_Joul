@@ -34,7 +34,7 @@
 
       document.getElementById('personal-grid').innerHTML =
         content.personalLife.map(card => `
-          <div class="personal-card">
+          <div class="personal-card" id="${SiteRender.slug(card.title)}">
             <div class="card-icon"></div>
             <h3>${SiteRender.esc(card.title)}</h3>
             <p>${SiteRender.esc(card.body)}</p>

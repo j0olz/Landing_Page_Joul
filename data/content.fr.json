@@ -79,6 +79,15 @@
     },
     "footer": {
       "visits": "visites"
+    },
+    "search": {
+      "placeholder": "Rechercher compétences, projets, expérience…",
+      "resultsFor": "Résultats pour",
+      "relatedTitle": "Vous pourriez aussi être intéressé par",
+      "didYouMean": "Vouliez-vous dire",
+      "noResultsTitle": "Aucun résultat pour",
+      "noResultsHint": "Essayez un autre mot, ou parcourez :",
+      "close": "Fermer la recherche"
     }
   },
   "index": {

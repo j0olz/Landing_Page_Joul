@@ -70,7 +70,7 @@
         const dotClass = i === 0 ? 'timeline-dot timeline-dot--current' : 'timeline-dot';
 
         return `
-          <div class="timeline-item">
+          <div class="timeline-item" id="${SiteRender.slug(job.title)}">
             <div class="timeline-marker">
               <div class="${dotClass}" style="--timeline-color:${SiteRender.esc(job.color)};
                 background:${SiteRender.esc(job.color)};

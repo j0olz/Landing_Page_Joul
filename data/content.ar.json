@@ -79,6 +79,15 @@
     },
     "footer": {
       "visits": "زيارة"
+    },
+    "search": {
+      "placeholder": "ابحث في المهارات والمشاريع والخبرات…",
+      "resultsFor": "نتائج البحث عن",
+      "relatedTitle": "قد يهمك أيضاً",
+      "didYouMean": "هل تقصد",
+      "noResultsTitle": "لا توجد نتائج لـ",
+      "noResultsHint": "جرّب كلمة أخرى، أو تصفّح:",
+      "close": "إغلاق البحث"
     }
   },
   "index": {

@@ -41,7 +41,7 @@
           }).join('');
 
           return `
-            <div class="project-card">
+            <div class="project-card" id="${SiteRender.slug(p.name)}">
               <span class="category-tag ${SiteRender.esc(p.category)}">${SiteRender.esc(p.categoryLabel)}</span>
               <h3>${SiteRender.esc(p.name)}</h3>
               <p>${SiteRender.esc(p.body)}</p>

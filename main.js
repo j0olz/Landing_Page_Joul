@@ -61,15 +61,36 @@
   }
 
   /* ------------------------------------------
-     SKILL HASH DEEP-LINK
+     HASH DEEP-LINK (skills.html chips, and — since
+     Cat 8 — project/timeline/certification/education/
+     personal cards too, all of which now carry a
+     matching id="<slug>" from their own render script)
   ------------------------------------------ */
   function initSkillHashLink() {
-    if (!document.querySelector('.skill-tags')) return;
+    const hashRaw = window.location.hash ? window.location.hash.substring(1) : '';
+    if (!hashRaw) return;
+    let hashDecoded = hashRaw;
+    try { hashDecoded = decodeURIComponent(hashRaw); } catch (e) { /* malformed, ignore */ }
 
-    const rawHash = window.location.hash
-      ? decodeURIComponent(window.location.hash.substring(1))
-      : '';
-    if (!rawHash) return;
+    function highlight(el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.style.outline = '2px solid var(--amber)';
+      el.style.outlineOffset = '3px';
+      setTimeout(() => { el.style.outline = ''; el.style.outlineOffset = ''; }, 2500);
+    }
+
+    // 1) Exact id match. Try the RAW hash first — slug() (render.js) builds
+    // ids with encodeURIComponent, so a comma/ampersand in a title (e.g.
+    // "Data, Quality & Reliability") ends up as a literal "%2C"/"%26" in
+    // the id itself, which is what's still in location.hash verbatim. Only
+    // fall back to the decoded form for a plain, no-special-character hash.
+    const direct = document.getElementById(hashRaw) || document.getElementById(hashDecoded);
+    if (direct) { highlight(direct); return; }
+
+    // 2) Fallback for skills.html specifically: fuzzy-match the hash
+    // against chip text, for older-style links or a hash that doesn't
+    // exactly match any element's id.
+    if (!document.querySelector('.skill-tags')) return;
 
     const normalize = (s) =>
       (s || '').toLowerCase()
@@ -77,7 +98,7 @@
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
 
-    const targetKey = normalize(rawHash);
+    const targetKey = normalize(hashDecoded);
     const tags = Array.from(document.querySelectorAll('.skill-tag'));
 
     tags.forEach(tag => {
@@ -86,7 +107,6 @@
     });
 
     const target =
-      document.getElementById(rawHash) ||
       document.getElementById(targetKey) ||
       tags.find(t => normalize(t.getAttribute('data-skill') || t.textContent) === targetKey) ||
       tags.find(t => {
@@ -94,11 +114,7 @@
         return k.includes(targetKey) || targetKey.includes(k);
       });
 
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      target.style.outline = '2px solid var(--amber)';
-      setTimeout(() => (target.style.outline = ''), 2500);
-    }
+    if (target) highlight(target);
   }
 
   /* ------------------------------------------
@@ -370,6 +386,266 @@
   }
 
   /* ------------------------------------------
+     SITE SEARCH (cat 8)
+     Reads window._SEARCH_INDEX / _SEARCH_ALIASES /
+     _SEARCH_UI / _SEARCH_NAV / _SEARCH_BASE, all set
+     by render.js's bootstrapPage() before _mainInit
+     runs (see render.js §bootstrapPage). Kept here
+     rather than in render.js so all the *interactive*
+     behavior lives in one file, matching the rest of
+     this file's job.
+  ------------------------------------------ */
+
+  // Lowercase, strip accents (so French "électromécanique" matches
+  // "electromecanique"), and drop punctuation so word boundaries compare
+  // cleanly. Unicode-aware so Arabic text passes through untouched instead
+  // of getting mangled by an ASCII-only regex.
+  function normalizeText(s) {
+    return String(s || '')
+      .toLowerCase()
+      .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  // Classic edit-distance, used only as a fallback for typo/close-spelling
+  // suggestions when nothing matched directly (see searchIndex()).
+  function levenshtein(a, b) {
+    if (a === b) return 0;
+    const al = a.length, bl = b.length;
+    if (!al) return bl;
+    if (!bl) return al;
+    let prev = new Array(bl + 1);
+    for (let j = 0; j <= bl; j++) prev[j] = j;
+    for (let i = 1; i <= al; i++) {
+      const cur = [i];
+      for (let j = 1; j <= bl; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+      }
+      prev.splice(0, prev.length, ...cur);
+    }
+    return prev[bl];
+  }
+
+  // If the normalized query matches any term in one of the hand-maintained
+  // alias groups (data/search-aliases.json — e.g. ["ms","microsoft",...]),
+  // search for every term in that group, not just what was typed. This is
+  // the direct fix for "recruiter searches MS, résumé says Microsoft 365".
+  function expandWithAliases(queryNorm, aliases) {
+    const terms = new Set([queryNorm]);
+    (aliases || []).forEach(group => {
+      const normGroup = group.map(normalizeText);
+      if (normGroup.includes(queryNorm)) normGroup.forEach(t => terms.add(t));
+    });
+    return Array.from(terms);
+  }
+
+  function scoreRecord(record, terms) {
+    const titleNorm  = normalizeText(record.title);
+    const textNorm   = normalizeText(record.text);
+    const titleWords = titleNorm.split(' ');
+    const textWords  = textNorm.split(' ');
+    let best = 0;
+    terms.forEach(t => {
+      if (!t) return;
+      // Short terms (abbreviations like "ms", "it", "cv") are only matched
+      // as whole words — plain substring matching would also hit "ms"
+      // inside "systems", "it" inside "digital", etc.
+      const wholeWordOnly = t.length <= 3;
+      if (titleNorm === t) best = Math.max(best, 100);
+      else if (wholeWordOnly ? titleWords.includes(t) : titleNorm.includes(t)) best = Math.max(best, 70);
+      else if (wholeWordOnly ? textWords.includes(t) : textNorm.includes(t)) best = Math.max(best, 40);
+    });
+    return best;
+  }
+
+  // Returns { results, fuzzy }. `results` is empty and `fuzzy` is null if
+  // nothing at all matched, even after a spelling-correction attempt.
+  function searchIndex(query) {
+    const index   = window._SEARCH_INDEX   || [];
+    const aliases = window._SEARCH_ALIASES || [];
+    const qNorm   = normalizeText(query);
+    if (!qNorm) return { results: [], fuzzy: null };
+
+    const terms  = expandWithAliases(qNorm, aliases);
+    const scored = index
+      .map(r => ({ r, score: scoreRecord(r, terms) }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score);
+
+    if (scored.length) return { results: scored.map(x => x.r), fuzzy: null };
+
+    // Nothing matched — look for a close-spelling word among every
+    // record's title (titles only, to keep this cheap) within a small
+    // edit-distance budget, then re-run the search on that corrected word.
+    let bestWord = null, bestDist = Infinity;
+    index.forEach(r => {
+      normalizeText(r.title).split(' ').forEach(word => {
+        if (word.length < 3) return;
+        const threshold = qNorm.length <= 4 ? 1 : 2;
+        const d = levenshtein(qNorm, word);
+        if (d <= threshold && d < bestDist) { bestDist = d; bestWord = word; }
+      });
+    });
+    if (!bestWord) return { results: [], fuzzy: null };
+
+    const correctedTerms  = expandWithAliases(bestWord, aliases);
+    const correctedScored = index
+      .map(r => ({ r, score: scoreRecord(r, correctedTerms) }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score);
+    return { results: correctedScored.map(x => x.r), fuzzy: bestWord };
+  }
+
+  // "Relevant" cross-links: other skills in the same category, or (for a
+  // project/job/degree hit) the skills it lists — each resolved back to
+  // its own index record so it can be shown as a clickable result too.
+  function relatedFor(record, limit) {
+    if (!record || !record.related || !record.related.length) return [];
+    const index = window._SEARCH_INDEX || [];
+    const seen  = new Set([normalizeText(record.title)]);
+    const out   = [];
+    record.related.forEach(name => {
+      const n = normalizeText(name);
+      if (seen.has(n)) return;
+      const hit = index.find(r => normalizeText(r.title) === n);
+      if (hit) { out.push(hit); seen.add(n); }
+    });
+    return out.slice(0, limit);
+  }
+
+  function hrefFor(record) {
+    const base = window._SEARCH_BASE || '';
+    if (record.page === 'index.html') return base + 'index.html';
+    return base + 'pages/' + record.page + (record.hash ? ('#' + record.hash) : '');
+  }
+
+  const SEARCH_TYPE_LABEL = {
+    skill: 'Skill', project: 'Project', experience: 'Experience',
+    education: 'Education', certification: 'Certification', personal: 'Personal',
+  };
+
+  function searchResultItemHtml(r) {
+    const esc = window.SiteRender ? window.SiteRender.esc : (s) => s;
+    return `<a href="${hrefFor(r)}" class="search-result-item" data-type="${r.type}">
+      <span class="search-result-title">${esc(r.title)}</span>
+      <span class="search-result-meta">${SEARCH_TYPE_LABEL[r.type] || ''}</span>
+    </a>`;
+  }
+
+  function renderSearchResults(query, { results, fuzzy }) {
+    const panel = document.getElementById('site-search-results');
+    if (!panel) return;
+    const esc  = window.SiteRender ? window.SiteRender.esc : (s) => s;
+    const S    = window._SEARCH_UI  || {};
+    const NAV  = window._SEARCH_NAV || {};
+    const base = window._SEARCH_BASE || '';
+
+    if (!query) { panel.hidden = true; panel.innerHTML = ''; return; }
+
+    let html = '';
+
+    if (results.length) {
+      if (fuzzy) {
+        html += `<div class="search-section-title search-did-you-mean">${esc(S.didYouMean || 'Did you mean')} "${esc(fuzzy)}"?</div>`;
+      }
+      const main = results.slice(0, 8);
+      html += `<div class="search-section">${main.map(searchResultItemHtml).join('')}</div>`;
+
+      // Only nudge with "related" when direct results are sparse — the
+      // point is to catch someone who didn't quite find what they wanted,
+      // not to clutter a search that already has plenty of hits.
+      if (main.length < 3) {
+        const related = relatedFor(main[0], 4);
+        if (related.length) {
+          html += `<div class="search-section-title">${esc(S.relatedTitle || 'You might also be interested in')}</div>`;
+          html += `<div class="search-section search-section--related">${related.map(searchResultItemHtml).join('')}</div>`;
+        }
+      }
+    } else {
+      html += `<div class="search-empty">
+        <div class="search-empty-title">${esc(S.noResultsTitle || 'No matches for')} "${esc(query)}"</div>
+        <div class="search-empty-hint">${esc(S.noResultsHint || 'Try browsing:')}</div>
+        <div class="search-browse">
+          <a href="${base}pages/skills.html">${esc(NAV.skills || 'Skills')}</a>
+          <a href="${base}pages/projects.html">${esc(NAV.projects || 'Projects')}</a>
+          <a href="${base}pages/career.html">${esc(NAV.career || 'Career')}</a>
+        </div>
+      </div>`;
+    }
+
+    panel.innerHTML = html;
+    panel.hidden = false;
+  }
+
+  function initSearch() {
+    const input    = document.getElementById('site-search-input');
+    const panel    = document.getElementById('site-search-results');
+    const clearBtn = document.getElementById('site-search-clear');
+    if (!input || !panel) return;
+
+    let debounceTimer = null;
+
+    function runSearch() {
+      const q = input.value.trim();
+      if (clearBtn) clearBtn.hidden = !q;
+      if (q.length < 2) {
+        panel.hidden = true;
+        panel.innerHTML = '';
+        return;
+      }
+      renderSearchResults(q, searchIndex(q));
+    }
+
+    input.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(runSearch, 180);
+    });
+
+    input.addEventListener('focus', () => {
+      if (input.value.trim().length >= 2 && panel.innerHTML) panel.hidden = false;
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        panel.hidden = true;
+        input.blur();
+      } else if (e.key === 'Enter') {
+        const first = panel.querySelector('.search-result-item');
+        if (first) first.click();
+      } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        const items = Array.from(panel.querySelectorAll('.search-result-item'));
+        if (!items.length) return;
+        e.preventDefault();
+        const current = items.findIndex(i => i.classList.contains('search-result-item--active'));
+        let next = e.key === 'ArrowDown' ? current + 1 : current - 1;
+        if (next < 0) next = items.length - 1;
+        if (next >= items.length) next = 0;
+        items.forEach(i => i.classList.remove('search-result-item--active'));
+        items[next].classList.add('search-result-item--active');
+        items[next].scrollIntoView({ block: 'nearest' });
+      }
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        input.value = '';
+        panel.hidden = true;
+        panel.innerHTML = '';
+        clearBtn.hidden = true;
+        input.focus();
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (e.target === input || (clearBtn && e.target === clearBtn) || panel.contains(e.target)) return;
+      panel.hidden = true;
+    });
+  }
+
+  /* ------------------------------------------
      PAGE TRANSITION FADE (cat 7)
      Handles fade-out on link clicks so the
      body fadeIn animation pairs nicely.
@@ -402,6 +678,7 @@
     initContentProtection();
     initSwipeNav();
     initPageTransitions();
+    initSearch();
   };
 
   // NOTE: _mainInit() is called by bootstrapPage() in render.js AFTER the full

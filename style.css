@@ -207,6 +207,161 @@ html[lang="ar"] .site-name {
 }
 
 /* ============================================
+   SITE SEARCH (cat 8)
+   Sits right under the header banner on the home
+   page, or right under the breadcrumb bar on every
+   other page — render.js decides which by where it
+   inserts the #site-search element; this stylesheet
+   just gives it one consistent look either way.
+   ============================================ */
+
+.site-search-bar {
+  background: var(--nav-bg);
+  border-bottom: 1px solid rgba(232,160,32,0.15);
+  padding: 0.6rem 1rem;
+}
+
+.search-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.9rem;
+  font-size: 0.9rem;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.55rem 2.2rem 0.55rem 2.1rem;
+  border-radius: var(--pill);
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.07);
+  color: #f0f0f0;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.search-input::placeholder { color: rgba(255,255,255,0.45); }
+
+.search-input:focus {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--amber);
+}
+
+.search-clear {
+  position: absolute;
+  right: 0.7rem;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.2rem;
+  line-height: 1;
+}
+.search-clear:hover { color: var(--amber); }
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 950;
+  padding: 0.4rem;
+}
+
+.search-section-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 0.5rem 0.7rem 0.3rem 0.7rem;
+}
+
+.search-did-you-mean {
+  text-transform: none;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.search-section--related { border-top: 1px dashed var(--border); margin-top: 0.2rem; }
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.search-result-item:hover,
+.search-result-item--active {
+  background: var(--amber-glow);
+}
+
+.search-result-title { font-size: 0.9rem; }
+
+.search-result-meta {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.search-empty {
+  padding: 0.8rem 0.9rem;
+  text-align: center;
+}
+
+.search-empty-title { font-size: 0.9rem; color: var(--text-primary); margin-bottom: 0.2rem; }
+.search-empty-hint  { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+
+.search-browse { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; }
+.search-browse a {
+  font-size: 0.82rem;
+  color: var(--amber-dim);
+  text-decoration: none;
+  font-weight: 600;
+}
+.search-browse a:hover { color: var(--amber); text-decoration: underline; }
+
+body.dark .search-input { color: var(--text-primary); }
+
+[dir="rtl"] .search-icon { left: auto; right: 0.9rem; }
+[dir="rtl"] .search-clear { right: auto; left: 0.7rem; }
+[dir="rtl"] .search-input { padding: 0.55rem 2.1rem 0.55rem 2.2rem; }
+[dir="rtl"] .search-results { text-align: right; }
+[dir="rtl"] .search-result-item { direction: rtl; }
+
+/* Cat 8: keep a deep-linked card clear of the sticky nav pill bar */
+.project-card,
+.timeline-item,
+.skill-category,
+.personal-card {
+  scroll-margin-top: 72px;
+}
+
+/* ============================================
    FLOATING BUTTONS
    ============================================ */
 
@@ -1428,6 +1583,12 @@ img {
     height: 90px;
   }
   .header-text { text-align: center; }
+}
+
+/* --- Cat 8: Search bar on mobile --- */
+@media (max-width: 640px) {
+  .site-search-bar { padding: 0.5rem 0.7rem; }
+  .search-results   { max-height: 50vh; }
 }
 
 /* --- Cat 3.2: Content section borders on mobile --- */
