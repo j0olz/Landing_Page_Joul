@@ -280,28 +280,53 @@
   ],
   "experience": [
     {
-      "title": "Technicien en électricité (EE Technician)",
+      "title": "Travailleur indépendant",
       "company": "Indépendant",
       "location": "Maroc",
       "dateRange": "Avr. 2025 – Présent",
       "duration": "En cours",
       "color": "#e74c3c",
-      "overview": [
-        "Réalisation d'installations électriques sur site pour des projets de rénovation et d'extension, en gérant l'ensemble des systèmes de câblage, des extensions de circuits et des calculs de charge pour des clients résidentiels et commerciaux.",
-        "Installation de systèmes de vidéosurveillance CCTV, avec alimentation électrique centralisée et cheminement discret des câbles pour assurer un fonctionnement fiable 24h/24 et 7j/7 sans surcharger les circuits existants ; formation des clients à l'accès et au contrôle des systèmes via le réseau.",
-        "Conception et fabrication de structures métalliques sur mesure telles que des cadres de fenêtres et supports d'éclairage, à l'aide de techniques précises de découpe/perçage, d'assemblage et de peinture galvanisée pour une durabilité à long terme."
+      "roles": [
+        {
+          "title": "Réparation d'électronique et d'électroménager",
+          "dateRange": "Juin 2026 – Présent",
+          "overview": [
+            "Réparation à la demande d'appareils électroménagers, d'appareils électriques et d'électronique grand public, comme alternative abordable au remplacement : prise en charge, diagnostic des pannes, réparation, test et restitution.",
+            "Diagnostic des pannes au niveau des composants, remplacement et soudure de pièces grillées ou défaillantes, notamment résistances chauffantes, cordons d'alimentation et balais de moteur ; réparation de bouilloires, d'interphones, de machines à laver et de périphériques informatiques tels que souris et casques."
+          ]
+        },
+        {
+          "title": "Installations électriques",
+          "dateRange": "Août 2025 – Févr. 2026",
+          "overview": [
+            "Réalisation d'installations électriques sur site pour des projets de rénovation et d'extension : systèmes de câblage complets, extensions de circuits et calculs de charge.",
+            "Transformation de prises existantes en interrupteurs d'éclairage, séparation en points distincts ou ajout de prises sur des supports d'interrupteurs, avec calculs de charge et respect des bonnes pratiques de câblage en toute sécurité."
+          ]
+        },
+        {
+          "title": "Installation de vidéosurveillance",
+          "dateRange": "Avr. 2025 – Août 2025",
+          "overview": [
+            "Installation et mise en service de systèmes de vidéosurveillance CCTV/DVR, avec planification de l'emplacement des caméras et du cheminement des câbles selon la configuration des bâtiments existants.",
+            "Alimentation électrique centralisée et cheminement discret des câbles pour un fonctionnement fiable 24h/24 et 7j/7 sans surcharger les circuits existants.",
+            "Configuration de l'accès réseau permettant aux clients de consulter et de contrôler leurs systèmes à distance, avec formation à l'utilisation quotidienne."
+          ]
+        }
       ],
       "achievements": [],
       "skills": [
         "Câblage électrique",
         "Gestion des câbles",
-        "Distribution d'énergie",
+        "Appareillage électrique et distribution d'énergie",
         "Résolution de problèmes",
-        "Raccordement/jonction de câbles",
+        "Raccordement de câbles",
         "Calculs de charge",
         "Câblage structuré",
-        "Installation de CCTV et DVR",
-        "Travail des métaux/fabrication"
+        "Installation de vidéosurveillance (CCTV/DVR)",
+        "Travail des métaux/fabrication",
+        "Diagnostic et isolement des pannes",
+        "Soudure",
+        "Réparation d'électronique et d'électroménager"
       ]
     },
     {
@@ -322,7 +347,7 @@
         "Construction d'un système automatisé de pompe et de vannes à énergie solaire à l'aide de circuits sur mesure, d'une logique de microcontrôleur et d'un couplage mécanique pour réguler l'irrigation en amont, avec une batterie rechargeable indépendante et sécurisée, le tout à partir de pièces recyclées."
       ],
       "skills": [
-        "Conception de PCB",
+        "Conception de circuits imprimés (PCB)",
         "Soudure",
         "Arduino",
         "Conception de circuits",
@@ -447,7 +472,7 @@
       "skills": [
         "Commande de moteurs",
         "Capteurs et actionneurs",
-        "Distribution d'énergie",
+        "Appareillage électrique et distribution d'énergie",
         "C/C++",
         "Conception de circuits",
         "Électronique de puissance",
@@ -460,7 +485,7 @@
       "categoryLabel": "Automatisation et automates (PLC)",
       "body": "Programmation et mise en service d'une station de préhension et dépose pneumatique utilisant un automate OMRON et le logiciel CX-ONE. Conception de séquences en logique à contacts (ladder) pour un minutage précis des actionneurs et des transitions d'état déclenchées par capteurs. Le système a atteint une exécution de cycle fiable et reproductible avec une logique complète de détection et de récupération des défauts.",
       "skills": [
-        "Programmation d'automates (PLC)",
+        "Programmation d'automates industriels (API/PLC)",
         "Systèmes pneumatiques",
         "OMRON CX-ONE",
         "Instrumentation",
@@ -468,8 +493,29 @@
         "Langages IEC 61131-3",
         "Contrôle numérique direct",
         "Automatisation industrielle",
-        "Configuration des E/S",
+        "Configuration des entrées/sorties (E/S)",
         "Cartographie des signaux"
+      ]
+    },
+    {
+      "name": "Automated Conveyor Sorting System",
+      "category": "academic",
+      "categoryLabel": "Automatisation et vision industrielle",
+      "body": "Programmation et mise en service d'une ligne de tri pilotée par automate sur un convoyeur à l'échelle d'un laboratoire avec OMRON CX-ONE, intégrant une caméra en hauteur, un capteur inductif de métaux, des capteurs ultrasoniques de position et un déviateur pneumatique. La reconnaissance des couleurs et des formes par caméra comptait et regroupait les objets, les objets non métalliques étaient déviés vers un panier de rejet et une règle de priorité rejetait les objets verts quel que soit le matériau, tandis que les capteurs ultrasoniques signalaient les objets mal placés ou ayant contourné le tri et déclenchaient des alertes IHM, un voyant et un avertisseur sonore. Le réglage itératif de l'alimentation des objets, de la vitesse du tapis, du positionnement des capteurs et du minutage des actionneurs a permis d'atteindre environ 30 objets par minute sur un tapis compact d'environ 1 m, les erreurs de classification restantes étant attribuées à la sensibilité à l'éclairage.",
+      "skills": [
+        "Programmation d'automates industriels (API/PLC)",
+        "OMRON CX-ONE",
+        "Logique à contacts (Ladder)",
+        "Vision industrielle",
+        "Détection d'objets",
+        "Capteurs et actionneurs",
+        "Systèmes pneumatiques",
+        "Conception d'IHM (Interface Homme-Machine)",
+        "Configuration des entrées/sorties (E/S)",
+        "Cartographie des signaux",
+        "Automatisation industrielle",
+        "Amélioration continue",
+        "Résolution de problèmes"
       ]
     },
     {
@@ -495,7 +541,7 @@
         "Capteurs et actionneurs",
         "Instrumentation",
         "Impression 3D",
-        "IoT",
+        "Internet des objets (IoT)",
         "Protocoles de communication",
         "Microcontrôleurs"
       ]
@@ -507,7 +553,7 @@
       "body": "Conception et réalisation d'un plan d'expériences (DoE) basé sur simulation évaluant l'impact de la capacité de la plateforme de drone sur le temps de livraison, en analysant 5 configurations avec plus de 20 essais de simulation chacune. Application d'une ANOVA à un facteur pour confirmer l'effet statistiquement significatif de la taille de la plateforme sur l'efficacité de livraison. Observation d'un doublement du temps de livraison entre les tailles de plateforme 2 et 10 ; utilisation d'une modélisation par régression pour ajuster une courbe polynomiale du 3e ordre en vue de la prédiction des performances.",
       "skills": [
         "Minitab",
-        "ANOVA",
+        "ANOVA (analyse de variance)",
         "Plans d'expériences (DoE)",
         "Esprit analytique",
         "Modélisation par régression",
@@ -531,8 +577,8 @@
         "Analyse des contraintes",
         "Planification de la vérification de conception",
         "Inspection basée sur les risques (RBI)",
-        "AMDEC (FMEA)",
-        "MSP (SPC)",
+        "AMDEC (Analyse des Modes de Défaillance et de leurs Effets)",
+        "Maîtrise statistique des procédés (MSP/SPC)",
         "Cycle PDCA",
         "Analyse de Pareto",
         "Documentation technique"
@@ -552,11 +598,11 @@
         "Communication interculturelle",
         "Gestion d'équipe",
         "Gestion du temps",
-        "Suite Microsoft Office"
+        "Microsoft 365"
       ]
     },
     {
-      "name": "Explorace – Large-Scale Campus Challenge Event",
+      "name": "Explorace - Large-Scale Campus Challenge Event",
       "category": "extracurricular",
       "categoryLabel": "Organisation et gestion",
       "body": "Organisation et exécution d'un défi Explorace à l'échelle de l'université, impliquant une logistique complexe, une coordination multi-sites et une résolution de problèmes en temps réel. Collaboration avec des équipes transversales pour gérer les participants, les points de contrôle, la sécurité et le bon déroulement de l'événement sous contraintes de temps et de ressources.",

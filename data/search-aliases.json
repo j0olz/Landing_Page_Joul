@@ -23,5 +23,9 @@
   ["gh", "github", "git"],
   ["cv builder", "resume builder"],
   ["ux", "user experience"],
-  ["ui", "user interface"]
+  ["ui", "user interface"],
+  ["machine vision", "computer vision", "vision system"],
+  ["omron", "omron cx-one", "cx-one"],
+  ["repair", "appliance repair", "electronics repair", "troubleshooting"],
+  ["conveyor", "sorting", "sorting line"]
 ]

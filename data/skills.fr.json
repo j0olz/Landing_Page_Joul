@@ -3,12 +3,15 @@
     {
       "title": "Compétences techniques",
       "skills": [
-        "CAO (SolidWorks, AutoCAD)",
+        "SolidWorks",
+        "AutoCAD",
         "KiCAD",
-        "MATLAB/Simulink",
+        "MATLAB et Simulink",
         "NI LabVIEW",
         "OrCAD (Capture et PSpice)",
-        "Systèmes embarqués (Arduino, Raspberry Pi)",
+        "Systèmes embarqués",
+        "Arduino",
+        "Raspberry Pi",
         "Microcontrôleurs",
         "OMRON CX-ONE",
         "CODESYS",
@@ -20,17 +23,18 @@
         "Systèmes d'énergie solaire",
         "Électromécanique",
         "Commande de moteurs",
-        "Capteurs et instrumentation",
+        "Capteurs et actionneurs",
+        "Instrumentation",
         "Fusion de capteurs",
-        "LiDAR",
+        "Capteurs LiDAR",
         "Communication par fibre optique",
         "Protocoles de communication",
         "Câblage structuré",
         "Impression 3D",
         "Programmation d'automates industriels (API/PLC)",
         "Logique à contacts (Ladder)",
-        "IEC 61131-3",
-        "Régulation PID",
+        "Langages IEC 61131-3",
+        "Réglage PID",
         "Automatisation industrielle",
         "Robotique et automatisation",
         "Assemblage et couplage mécanique",
@@ -39,7 +43,26 @@
         "Appareillage électrique et distribution d'énergie",
         "Configuration réseau et Wi-Fi",
         "Installation de vidéosurveillance (CCTV/DVR)",
-        "Internet des objets (IoT)"
+        "Internet des objets (IoT)",
+        "Conception de circuits",
+        "Électronique de puissance",
+        "Calculs de charge",
+        "Cinématique (directe/inverse)",
+        "Contrôle numérique direct",
+        "Systèmes pneumatiques",
+        "Cartographie des signaux",
+        "Détection d'objets",
+        "Vision industrielle",
+        "Systèmes de communication cuivre",
+        "Usinage CNC",
+        "Conception de schémas",
+        "Dessins techniques pour la fabrication",
+        "Tableaux électriques et variateurs de fréquence",
+        "Transformateurs",
+        "Programmation en blocs fonctionnels",
+        "Logique d'interverrouillage de mouvement",
+        "Techniques de protection des circuits électroniques",
+        "Filtrage et amplification de signaux analogiques"
       ]
     },
     {
@@ -49,7 +72,7 @@
         "Python",
         "Git et GitHub",
         "OpenCV",
-        "YOLO",
+        "Algorithmes YOLO",
         "Microsoft 365"
       ]
     },
@@ -72,7 +95,15 @@
         "Production allégée (Lean Manufacturing)",
         "Amélioration continue",
         "Power BI",
-        "Excel"
+        "Excel",
+        "Planification de la vérification de conception",
+        "Distribution de Weibull",
+        "Inspection basée sur les risques (RBI)",
+        "Maintenance centrée sur la fiabilité (RCM)",
+        "Temps moyen de réparation (MTTR)",
+        "Cycle PDCA",
+        "Kaizen",
+        "Contrôle statistique de la qualité"
       ]
     },
     {
@@ -81,13 +112,14 @@
         "Agile (Kanban)",
         "Gestion du changement",
         "Gestion des risques",
-        "Leadership",
         "Coordination d'équipe",
         "MS Project",
         "Gestion budgétaire",
         "Gestion des stocks",
         "Nomenclature technique (BOM)",
-        "Organisation d'événements"
+        "Organisation d'événements",
+        "Gestion d'équipe",
+        "Définition d'objectifs SMART"
       ]
     },
     {
@@ -98,7 +130,8 @@
         "Zendesk",
         "HubSpot Service Hub",
         "Documentation technique",
-        "Service client"
+        "Service client",
+        "Fidélisation de la clientèle"
       ]
     },
     {
@@ -106,7 +139,13 @@
       "skills": [
         "Leadership",
         "Prise de parole en public",
-        "Communication interculturelle"
+        "Communication interculturelle",
+        "Communication",
+        "Esprit critique",
+        "Gestion du temps",
+        "Résolution de problèmes",
+        "Adaptabilité",
+        "Esprit analytique"
       ]
     },
     {
@@ -116,160 +155,227 @@
         "Câblage électrique",
         "Gestion des câbles",
         "Raccordement de câbles",
-        "Outils manuels et électroportatifs"
+        "Outils manuels et électroportatifs",
+        "Travail des métaux/fabrication",
+        "Découpe et perçage de précision",
+        "Réparation d'électronique et d'électroménager"
       ]
     }
   ],
   "projectMappings": {
-    "CAO (SolidWorks, AutoCAD)": [
-      "Field Technician - General Contractors",
-      "Electromechanical Engineer - Hitronik",
-      "4-DOF Robotic Arm",
+    "SolidWorks": [
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Search and Rescue Robot"
     ],
-    "KiCAD": [
-      "Electromechanical Engineer - Hitronik"
+    "AutoCAD": [
+      "Ingénieur assistant (Électromécanique)"
     ],
-    "MATLAB/Simulink": [
+    "KiCAD": [
+      "Ingénieur assistant (Électromécanique)"
+    ],
+    "MATLAB et Simulink": [
       "LiDAR-Camera Sensor Fusion System",
-      "4-DOF Robotic Arm",
-      "Fruit Harvesting Robotic Arm (4-DOF)",
-      "Drone Delivery Optimization via DoE & ANOVA"
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
+      "Drone Delivery Optimization via DoE & ANOVA",
+      "Fruit Harvesting Robotic Arm (4-DOF)"
     ],
     "NI LabVIEW": [
-      "4-DOF Robotic Arm",
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Fruit Harvesting Robotic Arm (4-DOF)"
     ],
     "OrCAD (Capture et PSpice)": [
-      "Electromechanical Engineer - Hitronik"
+      "Ingénieur assistant (Électromécanique)"
     ],
-    "Systèmes embarqués (Arduino, Raspberry Pi)": [
-      "4-DOF Robotic Arm",
+    "Systèmes embarqués": [
+      "Ingénieur assistant (Électromécanique)",
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Search and Rescue Robot",
       "Regenerative Braking System",
-      "Automatic Plant Care System",
-      "Electromechanical Engineer - Hitronik"
+      "Automatic Plant Care System"
     ],
+    "Arduino": [
+      "Ingénieur assistant (Électromécanique)",
+      "Search and Rescue Robot",
+      "Automatic Plant Care System"
+    ],
+    "Raspberry Pi": [],
     "Microcontrôleurs": [
-      "Electromechanical Engineer - Hitronik",
-      "Automatic Plant Care System",
-      "Regenerative Braking System"
+      "Ingénieur assistant (Électromécanique)",
+      "Regenerative Braking System",
+      "Automatic Plant Care System"
     ],
     "OMRON CX-ONE": [
-      "Vacuum Pick-and-Place Station"
+      "Vacuum Pick-and-Place Station",
+      "Automated Conveyor Sorting System"
     ],
     "CODESYS": [],
     "Conception d'IHM (Interface Homme-Machine)": [
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Vacuum Pick-and-Place Station",
-      "4-DOF Robotic Arm"
+      "Automated Conveyor Sorting System"
     ],
     "Conception de circuits imprimés (PCB)": [
-      "Electromechanical Engineer - Hitronik"
+      "Ingénieur assistant (Électromécanique)"
     ],
     "Conception de circuits analogiques": [
-      "Electromechanical Engineer - Hitronik",
+      "Ingénieur assistant (Électromécanique)",
       "Regenerative Braking System"
     ],
     "Conditionnement de signal": [],
     "Systèmes électriques de puissance": [
-      "Regenerative Braking System",
-      "Electromechanical Engineer - Hitronik"
+      "Ingénieur assistant (Électromécanique)",
+      "Regenerative Braking System"
     ],
     "Systèmes d'énergie solaire": [
-      "Electromechanical Engineer - Hitronik"
+      "Ingénieur assistant (Électromécanique)"
     ],
     "Électromécanique": [
-      "Electromechanical Engineer - Hitronik",
+      "Ingénieur assistant (Électromécanique)",
       "Regenerative Braking System"
     ],
     "Commande de moteurs": [
-      "4-DOF Robotic Arm",
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Search and Rescue Robot",
       "Regenerative Braking System"
     ],
-    "Capteurs et instrumentation": [
+    "Capteurs et actionneurs": [
       "LiDAR-Camera Sensor Fusion System",
+      "Search and Rescue Robot",
       "Regenerative Braking System",
       "Automatic Plant Care System",
-      "Search and Rescue Robot",
+      "Automated Conveyor Sorting System"
+    ],
+    "Instrumentation": [
       "Vacuum Pick-and-Place Station",
+      "Automatic Plant Care System",
       "Fruit Harvesting Robotic Arm (4-DOF)"
     ],
     "Fusion de capteurs": [
       "LiDAR-Camera Sensor Fusion System"
     ],
-    "LiDAR": [
+    "Capteurs LiDAR": [
       "LiDAR-Camera Sensor Fusion System"
     ],
     "Communication par fibre optique": [
-      "Field Technician - General Contractors"
+      "Travailleur indépendant"
     ],
     "Protocoles de communication": [
       "Vacuum Pick-and-Place Station",
       "Automatic Plant Care System"
     ],
     "Câblage structuré": [
-      "Field Technician - General Contractors"
+      "Travailleur indépendant"
     ],
     "Impression 3D": [
-      "4-DOF Robotic Arm",
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Search and Rescue Robot",
       "Automatic Plant Care System"
     ],
     "Programmation d'automates industriels (API/PLC)": [
-      "Vacuum Pick-and-Place Station"
+      "Vacuum Pick-and-Place Station",
+      "Automated Conveyor Sorting System"
     ],
     "Logique à contacts (Ladder)": [
+      "Vacuum Pick-and-Place Station",
+      "Automated Conveyor Sorting System"
+    ],
+    "Langages IEC 61131-3": [
       "Vacuum Pick-and-Place Station"
     ],
-    "IEC 61131-3": [
-      "Vacuum Pick-and-Place Station"
-    ],
-    "Régulation PID": [
-      "4-DOF Robotic Arm",
+    "Réglage PID": [
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Fruit Harvesting Robotic Arm (4-DOF)"
     ],
     "Automatisation industrielle": [
+      "Ingénieur assistant (Électromécanique)",
       "Vacuum Pick-and-Place Station",
-      "Electromechanical Engineer - Hitronik"
+      "Automated Conveyor Sorting System"
     ],
     "Robotique et automatisation": [
-      "4-DOF Robotic Arm",
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Search and Rescue Robot",
       "Fruit Harvesting Robotic Arm (4-DOF)"
     ],
     "Assemblage et couplage mécanique": [
-      "Electromechanical Engineer - Hitronik",
-      "4-DOF Robotic Arm",
+      "Ingénieur assistant (Électromécanique)",
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Search and Rescue Robot"
     ],
     "Diagnostic et isolement des pannes": [
-      "Field Technician - General Contractors",
-      "Electromechanical Engineer - Hitronik",
-      "Evening Shift Supervisor - Beauhope Café"
+      "Travailleur indépendant",
+      "Ingénieur assistant (Électromécanique)",
+      "Superviseur de l'équipe du soir"
     ],
     "Configuration des entrées/sorties (E/S)": [
+      "Ingénieur assistant (Électromécanique)",
       "Vacuum Pick-and-Place Station",
-      "Electromechanical Engineer - Hitronik"
+      "Automated Conveyor Sorting System"
     ],
     "Appareillage électrique et distribution d'énergie": [
-      "Regenerative Braking System",
-      "Field Technician - General Contractors"
+      "Travailleur indépendant",
+      "Regenerative Braking System"
     ],
     "Configuration réseau et Wi-Fi": [
-      "Evening Shift Supervisor - Beauhope Café",
-      "Field Technician - General Contractors"
+      "Travailleur indépendant",
+      "Superviseur de l'équipe du soir"
     ],
     "Installation de vidéosurveillance (CCTV/DVR)": [
-      "Field Technician - General Contractors",
-      "Evening Shift Supervisor - Beauhope Café"
+      "Travailleur indépendant",
+      "Superviseur de l'équipe du soir"
     ],
     "Internet des objets (IoT)": [
-      "Automatic Plant Care System",
-      "Evening Shift Supervisor - Beauhope Café"
+      "Superviseur de l'équipe du soir",
+      "Automatic Plant Care System"
     ],
+    "Conception de circuits": [
+      "Ingénieur assistant (Électromécanique)",
+      "Regenerative Braking System"
+    ],
+    "Électronique de puissance": [
+      "Ingénieur assistant (Électromécanique)",
+      "Regenerative Braking System"
+    ],
+    "Calculs de charge": [
+      "Travailleur indépendant"
+    ],
+    "Cinématique (directe/inverse)": [
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
+      "Fruit Harvesting Robotic Arm (4-DOF)"
+    ],
+    "Contrôle numérique direct": [
+      "Vacuum Pick-and-Place Station"
+    ],
+    "Systèmes pneumatiques": [
+      "Vacuum Pick-and-Place Station",
+      "Automated Conveyor Sorting System"
+    ],
+    "Cartographie des signaux": [
+      "Vacuum Pick-and-Place Station",
+      "Automated Conveyor Sorting System"
+    ],
+    "Détection d'objets": [
+      "LiDAR-Camera Sensor Fusion System",
+      "Coin Measurement System",
+      "Automated Conveyor Sorting System"
+    ],
+    "Vision industrielle": [
+      "Automated Conveyor Sorting System",
+      "Coin Measurement System"
+    ],
+    "Systèmes de communication cuivre": [],
+    "Usinage CNC": [
+      "Ingénieur assistant (Électromécanique)"
+    ],
+    "Conception de schémas": [],
+    "Dessins techniques pour la fabrication": [],
+    "Tableaux électriques et variateurs de fréquence": [],
+    "Transformateurs": [],
+    "Programmation en blocs fonctionnels": [],
+    "Logique d'interverrouillage de mouvement": [],
+    "Techniques de protection des circuits électroniques": [],
+    "Filtrage et amplification de signaux analogiques": [],
     "C/C++": [
-      "4-DOF Robotic Arm",
+      "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Search and Rescue Robot",
       "Regenerative Braking System",
       "Automatic Plant Care System"
@@ -283,14 +389,14 @@
       "Coin Measurement System"
     ],
     "OpenCV": [
-      "Coin Measurement System",
-      "LiDAR-Camera Sensor Fusion System"
+      "LiDAR-Camera Sensor Fusion System",
+      "Coin Measurement System"
     ],
-    "YOLO": [
+    "Algorithmes YOLO": [
       "LiDAR-Camera Sensor Fusion System"
     ],
     "Microsoft 365": [
-      "USMi Deputy President",
+      "Vice-président de USMi",
       "International Food Fiesta 2024"
     ],
     "ANOVA (analyse de variance)": [
@@ -315,120 +421,190 @@
     ],
     "Les 7 outils de la qualité": [],
     "Six Sigma (DMAIC)": [
-      "Adhesive Hook Reliability Project",
-      "Drone Delivery Optimization via DoE & ANOVA"
+      "Drone Delivery Optimization via DoE & ANOVA",
+      "Adhesive Hook Reliability Project"
     ],
     "AMDEC (Analyse des Modes de Défaillance et de leurs Effets)": [
-      "Adhesive Hook Reliability Project",
-      "Vacuum Pick-and-Place Station"
+      "Vacuum Pick-and-Place Station",
+      "Adhesive Hook Reliability Project"
     ],
     "Analyse des causes profondes": [
-      "Adhesive Hook Reliability Project",
-      "Field Technician - General Contractors"
+      "Travailleur indépendant",
+      "Adhesive Hook Reliability Project"
     ],
     "Analyse de Pareto": [
       "Adhesive Hook Reliability Project"
     ],
     "Ingénierie de la fiabilité": [
-      "Field Technician - General Contractors"
+      "Travailleur indépendant"
     ],
     "Essais de fiabilité": [
       "Adhesive Hook Reliability Project"
     ],
     "Production allégée (Lean Manufacturing)": [
-      "Vacuum Pick-and-Place Station",
-      "Electromechanical Engineer - Hitronik"
+      "Ingénieur assistant (Électromécanique)",
+      "Vacuum Pick-and-Place Station"
     ],
     "Amélioration continue": [
-      "USMi Deputy President",
-      "Evening Shift Supervisor - Beauhope Café"
+      "Vice-président de USMi",
+      "Superviseur de l'équipe du soir",
+      "Automated Conveyor Sorting System"
     ],
     "Power BI": [
       "Drone Delivery Optimization via DoE & ANOVA"
     ],
     "Excel": [
+      "Vice-président de USMi",
       "Drone Delivery Optimization via DoE & ANOVA",
-      "Adhesive Hook Reliability Project",
-      "USMi Deputy President"
+      "Adhesive Hook Reliability Project"
     ],
+    "Planification de la vérification de conception": [
+      "Adhesive Hook Reliability Project"
+    ],
+    "Distribution de Weibull": [
+      "Adhesive Hook Reliability Project"
+    ],
+    "Inspection basée sur les risques (RBI)": [
+      "Adhesive Hook Reliability Project"
+    ],
+    "Maintenance centrée sur la fiabilité (RCM)": [],
+    "Temps moyen de réparation (MTTR)": [],
+    "Cycle PDCA": [
+      "Drone Delivery Optimization via DoE & ANOVA",
+      "Adhesive Hook Reliability Project"
+    ],
+    "Kaizen": [],
+    "Contrôle statistique de la qualité": [],
     "Agile (Kanban)": [],
     "Gestion du changement": [
-      "USMi Deputy President"
+      "Vice-président de USMi"
     ],
     "Gestion des risques": [
-      "USMi Deputy President",
+      "Vice-président de USMi",
       "Explorace - Large-Scale Campus Challenge Event"
-    ],
-    "Leadership": [
-      "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "Explorace - Large-Scale Campus Challenge Event",
-      "Evening Shift Supervisor - Beauhope Café"
     ],
     "Coordination d'équipe": [
+      "Vice-président de USMi",
+      "Superviseur de l'équipe du soir",
       "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "Evening Shift Supervisor - Beauhope Café",
-      "Explorace - Large-Scale Campus Challenge Event"
+      "Explorace - Large-Scale Campus Challenge Event",
+      "International Mobility & Global Representation Programs"
     ],
     "MS Project": [],
     "Gestion budgétaire": [
-      "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "Evening Shift Supervisor - Beauhope Café"
+      "Vice-président de USMi",
+      "Superviseur de l'équipe du soir",
+      "International Food Fiesta 2024"
     ],
     "Gestion des stocks": [
-      "Evening Shift Supervisor - Beauhope Café"
+      "Superviseur de l'équipe du soir"
     ],
     "Nomenclature technique (BOM)": [],
     "Organisation d'événements": [
+      "Vice-président de USMi",
       "International Food Fiesta 2024",
-      "USMi Deputy President",
-      "Explorace - Large-Scale Campus Challenge Event"
+      "Explorace - Large-Scale Campus Challenge Event",
+      "International Mobility & Global Representation Programs"
+    ],
+    "Gestion d'équipe": [
+      "Vice-président de USMi",
+      "International Food Fiesta 2024"
+    ],
+    "Définition d'objectifs SMART": [
+      "Vice-président de USMi"
     ],
     "Support informatique (Service Desk)": [
-      "Evening Shift Supervisor - Beauhope Café"
+      "Superviseur de l'équipe du soir"
     ],
     "Systèmes de tickets (Ticketing)": [
-      "Evening Shift Supervisor - Beauhope Café"
+      "Superviseur de l'équipe du soir"
     ],
     "Zendesk": [],
     "HubSpot Service Hub": [],
     "Documentation technique": [
       "LiDAR-Camera Sensor Fusion System",
-      "Fruit Harvesting Robotic Arm (4-DOF)",
       "Drone Delivery Optimization via DoE & ANOVA",
-      "Adhesive Hook Reliability Project"
+      "Adhesive Hook Reliability Project",
+      "Academic & English Language Support",
+      "Fruit Harvesting Robotic Arm (4-DOF)"
     ],
     "Service client": [
-      "Evening Shift Supervisor - Beauhope Café",
-      "Field Technician - General Contractors"
+      "Travailleur indépendant",
+      "Superviseur de l'équipe du soir"
+    ],
+    "Fidélisation de la clientèle": [
+      "Superviseur de l'équipe du soir"
+    ],
+    "Leadership": [
+      "Vice-président de USMi",
+      "Superviseur de l'équipe du soir",
+      "International Food Fiesta 2024",
+      "Explorace - Large-Scale Campus Challenge Event",
+      "International Mobility & Global Representation Programs"
+    ],
+    "Prise de parole en public": [
+      "Vice-président de USMi",
+      "International Food Fiesta 2024",
+      "International Mobility & Global Representation Programs"
     ],
     "Communication interculturelle": [
       "International Food Fiesta 2024",
       "International Mobility & Global Representation Programs"
     ],
-    "Prise de parole en public": [
-      "International Food Fiesta 2024",
-      "USMi Deputy President",
+    "Communication": [
+      "Vice-président de USMi",
+      "Superviseur de l'équipe du soir",
+      "Academic & English Language Support",
       "International Mobility & Global Representation Programs"
     ],
+    "Esprit critique": [
+      "Drone Delivery Optimization via DoE & ANOVA",
+      "Academic & English Language Support"
+    ],
+    "Gestion du temps": [
+      "Superviseur de l'équipe du soir",
+      "International Food Fiesta 2024"
+    ],
+    "Résolution de problèmes": [
+      "Travailleur indépendant",
+      "Search and Rescue Robot",
+      "Explorace - Large-Scale Campus Challenge Event",
+      "Automated Conveyor Sorting System"
+    ],
+    "Adaptabilité": [
+      "Academic & English Language Support"
+    ],
+    "Esprit analytique": [
+      "Coin Measurement System",
+      "Drone Delivery Optimization via DoE & ANOVA",
+      "Adhesive Hook Reliability Project"
+    ],
     "Soudure": [
-      "Electromechanical Engineer - Hitronik"
+      "Travailleur indépendant",
+      "Ingénieur assistant (Électromécanique)"
     ],
     "Câblage électrique": [
-      "Field Technician - General Contractors",
-      "Evening Shift Supervisor - Beauhope Café"
+      "Travailleur indépendant",
+      "Superviseur de l'équipe du soir"
     ],
     "Gestion des câbles": [
-      "Field Technician - General Contractors"
-    ],
-    "Outils manuels et électroportatifs": [
-      "Field Technician - General Contractors",
-      "Electromechanical Engineer - Hitronik"
+      "Travailleur indépendant"
     ],
     "Raccordement de câbles": [
-      "Field Technician - General Contractors"
+      "Travailleur indépendant"
+    ],
+    "Outils manuels et électroportatifs": [
+      "Travailleur indépendant",
+      "Ingénieur assistant (Électromécanique)"
+    ],
+    "Travail des métaux/fabrication": [
+      "Travailleur indépendant"
+    ],
+    "Découpe et perçage de précision": [
+      "Travailleur indépendant"
+    ],
+    "Réparation d'électronique et d'électroménager": [
+      "Travailleur indépendant"
     ]
   }
 }

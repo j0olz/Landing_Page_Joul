@@ -56,6 +56,16 @@
           `<li>${SiteRender.esc(line)}</li>`
         ).join('');
 
+        const roles = (job.roles || []).map(r => `
+          <div class="role-block">
+            <div class="role-head">
+              <span class="role-title">${SiteRender.esc(r.title)}</span>
+              <span class="role-date">${SiteRender.esc(r.dateRange)}</span>
+            </div>
+            <ul>${(r.overview || []).map(l => `<li>${SiteRender.esc(l)}</li>`).join('')}</ul>
+          </div>
+        `).join('');
+
         const achievements = (job.achievements || []).map(line =>
           `<li>${SiteRender.esc(line)}</li>`
         ).join('');
@@ -89,6 +99,7 @@
                 </div>
               </div>
               <div class="timeline-body">
+                ${roles        ? `<h4>${ui.overview}</h4>${roles}` : ''}
                 ${overview     ? `<h4>${ui.overview}</h4><ul>${overview}</ul>` : ''}
                 ${achievements ? `<h4>${ui.keyAchievements}</h4><ul>${achievements}</ul>` : ''}
                 ${chips ? `

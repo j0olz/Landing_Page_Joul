@@ -144,7 +144,7 @@
         "Quality Engineering"
       ],
       "achievements": [
-        "Registred on the Board of Engineers of Malaysia",
+        "Registered on the Board of Engineers of Malaysia",
         "Dean's List Conferment",
         "Vice President of Student Society",
         "Officially recognized under the Washington Accord, meeting international professional engineering standards.",
@@ -185,7 +185,7 @@
         "Dean's List Conferment",
         "SAT Math 600/800",
         "IELTS (C1 / Score 7)",
-        "ICDL (Internatinal Computer Driving License)",
+        "ICDL (International Computer Driving License)",
         "PISA (Programme for International Student Assessment)",
         "S.M.A.R.T Math"
       ]
@@ -201,7 +201,7 @@
         "Copper & Fiber Optic Communication Systems",
         "Electrical Panel Boards, Frequency Drives & Transformers",
         "HVAC & Plumbing Schematics",
-        "ICWF lEVEL 1 Programme",
+        "ICWF Level 1 Programme",
         "Electronics Foundations: Semiconductor Devices"
       ]
     },
@@ -280,28 +280,53 @@
   ],
   "experience": [
     {
-      "title": "EE Technician",
+      "title": "Self-Employed",
       "company": "Independent",
       "location": "Morocco",
       "dateRange": "Apr 2025 – Present",
       "duration": "Ongoing",
       "color": "#e74c3c",
-      "overview": [
-        "Performed on-site electrical installations for renovation and expansion projects, handling full wiring systems, circuit extensions, and load calculations for residential and commercial clients.",
-        "Installed CCTV surveillance systems, along with centralized power supply and discreet cable routing to ensure reliable 24/7 operation without overloading existing circuits, educated clients to access and control the systems over a network.",
-        "Designed and fabricated custom metal structures such as window frames and light support using precise cutting/drilling, coupling, and galvanized painting techniques for long-term durability."
+      "roles": [
+        {
+          "title": "Appliance & Electronics Repair",
+          "dateRange": "Jun 2026 – Present",
+          "overview": [
+            "Provided on-demand repair of household appliances, electrical devices and consumer electronics as an affordable alternative to replacement, covering collection, fault diagnosis, repair, testing and return.",
+            "Diagnosed faults at component level and replaced and soldered burnt or failed parts, including heating elements, power cords and motor brushes; repaired kettles, intercom phones, washing machines and computer peripherals such as mice and headphones."
+          ]
+        },
+        {
+          "title": "Electrical Installations",
+          "dateRange": "Aug 2025 – Feb 2026",
+          "overview": [
+            "Performed on-site electrical installations for renovation and expansion projects, handling full wiring systems, circuit extensions, and load calculations.",
+            "Reworked existing outlets and fixtures by repurposing outlets into light switches, splitting them into separate points, or adding plugs to switch fixtures, with load calculations and safe wiring practice throughout."
+          ]
+        },
+        {
+          "title": "CCTV Installation",
+          "dateRange": "Apr 2025 – Aug 2025",
+          "overview": [
+            "Installed and commissioned CCTV and DVR-based surveillance systems, planning camera positions and cable routes around existing building layouts.",
+            "Provided centralized power supply and discreet cable routing for reliable 24/7 operation without overloading existing circuits.",
+            "Configured network access so clients could view and control their systems remotely, and trained them on day-to-day use."
+          ]
+        }
       ],
       "achievements": [],
       "skills": [
         "Electrical Wiring",
         "Cable Management",
-        "Power Distribution",
+        "Switchgears & Power Distribution",
         "Problem Solving",
-        "Cable Junction/Termination",
+        "Cable Termination",
         "Load Calculations",
         "Structured Cabling",
         "CCTV & DVR Installation",
-        "Metalworking/Fabrication"
+        "Metalworking/Fabrication",
+        "Fault Isolation & Diagnostics",
+        "Soldering",
+        "Electronics & Appliance Repair"
       ]
     },
     {
@@ -447,7 +472,7 @@
       "skills": [
         "Motor Control",
         "Sensors and Actuators",
-        "Power Distribution",
+        "Switchgears & Power Distribution",
         "C/C++",
         "Circuit Design",
         "Power Electronics",
@@ -470,6 +495,26 @@
         "Industrial Automation",
         "I/O Configuration",
         "Signal Mapping"
+      ]
+    },
+    {
+      "name": "Automated Conveyor Sorting System",
+      "category": "academic",
+      "categoryLabel": "Automation and Machine Vision",
+      "body": "A PLC-controlled sorting line on a conveyor using OMRON CX-ONE, integrating a camera(via PI controller), an inductive metal sensor, ultrasonic sensors and a pneumatic diverter. Camera-based colour and shape recognition counted and grouped items, non-metals diverted into a reject basket, while ultrasonic sensors flagged bypassing items and triggered HMI alerts with a warning light and buzzer. Iterative tuning of belt speed, sensor placement and actuator timing achieved roughly 30 items per minute over a compact ~1 m belt.",
+      "skills": [
+        "PLC Programming",
+        "OMRON CX-ONE",
+        "Ladder Logic",
+        "Machine Vision",
+        "Object Detection",
+        "Sensors and Actuators",
+        "Pneumatic Systems",
+        "HMI Design",
+        "I/O Configuration",
+        "Signal Mapping",
+        "Continuous Improvement",
+        "Problem Solving"
       ]
     },
     {
@@ -531,8 +576,8 @@
         "Stress Analysis",
         "Design Verification Planning",
         "Risk-Based Inspection (RBI)",
-        "FMEA",
-        "SPC",
+        "FMEA (Failure Mode and Effects Analysis)",
+        "Statistical Process Control (SPC)",
         "PDCA Cycle",
         "Pareto Analysis",
         "Technical Documentation"
@@ -552,11 +597,11 @@
         "Multicultural Communication",
         "Team Management",
         "Time Management",
-        "Microsoft Office Suite"
+        "Microsoft 365"
       ]
     },
     {
-      "name": "Explorace – Large-Scale Campus Challenge Event",
+      "name": "Explorace - Large-Scale Campus Challenge Event",
       "category": "extracurricular",
       "categoryLabel": "Organisation and Management",
       "body": "Organized and executed a university-wide Explorace challenge involving complex logistics, multi-location coordination, and real-time problem solving. Worked with cross-functional teams to manage participants, checkpoints, safety, and smooth event flow under time and resource constraints.",
@@ -581,10 +626,10 @@
       ]
     },
     {
-      "name": "Fruit Harvesting Robotic Arm (4-DOF)",
+      "name": "Fruit Harvesting Robotic Arm",
       "category": "academic",
       "categoryLabel": "Computer Aided Design and Robotics",
-      "body": "Developed a 4-DOF fruit-harvesting robotic arm concept and simulation, using DH-based kinematic modeling and MATLAB analysis. Contributed to trajectory planning (joint position/velocity/acceleration), NI myRIO + LabVIEW hardware integration, and system documentation as part of a NI x USM collaboration event robotics project.",
+      "body": "Developed a fruit-harvesting robotic arm concept and simulation, using DH-based kinematic modeling and MATLAB analysis. Contributed to trajectory planning (joint position/velocity/acceleration), NI myRIO + LabVIEW hardware integration, and system documentation as part of a NI x USM collaboration event robotics project.",
       "skills": [
         "MATLAB & Simulink",
         "NI LabVIEW",

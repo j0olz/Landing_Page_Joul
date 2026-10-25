@@ -203,7 +203,7 @@
       records.push({
         type: 'experience',
         title: [e.title, e.company].filter(Boolean).join(' — '),
-        text: [e.title, e.company, e.location, (e.overview || []).join(' '), (e.achievements || []).join(' '), (e.skills || []).join(' ')].join(' '),
+        text: [e.title, e.company, e.location, (e.overview || []).join(' '), (e.roles || []).map(r => [r.title, (r.overview || []).join(' ')].join(' ')).join(' '), (e.achievements || []).join(' '), (e.skills || []).join(' ')].join(' '),
         page: 'career.html',
         hash: slug(e.title),
         related: e.skills || [],
