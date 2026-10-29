@@ -177,11 +177,11 @@
       "LiDAR-Camera Sensor Fusion System",
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Drone Delivery Optimization via DoE & ANOVA",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm"
     ],
     "NI LabVIEW": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm"
     ],
     "OrCAD (Capture & PSpice)": [
       "Assistant Engineer (Electromechanical)"
@@ -206,16 +206,19 @@
     ],
     "OMRON CX-ONE": [
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "CODESYS": [],
     "HMI Design": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "PCB Design": [
-      "Assistant Engineer (Electromechanical)"
+      "Assistant Engineer (Electromechanical)",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Analog Circuit Design": [
       "Assistant Engineer (Electromechanical)",
@@ -224,14 +227,17 @@
     "Signal Conditioning": [],
     "Electrical Power Systems": [
       "Assistant Engineer (Electromechanical)",
-      "Regenerative Braking System"
+      "Regenerative Braking System",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Solar Power Systems": [
-      "Assistant Engineer (Electromechanical)"
+      "Assistant Engineer (Electromechanical)",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Electromechanics": [
       "Assistant Engineer (Electromechanical)",
-      "Regenerative Braking System"
+      "Regenerative Braking System",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Motor Control": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
@@ -243,12 +249,14 @@
       "Search and Rescue Robot",
       "Regenerative Braking System",
       "Automatic Plant Care System",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Instrumentation": [
       "Vacuum Pick-and-Place Station",
       "Automatic Plant Care System",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm",
+      "Automated Hot Water Tank Control System"
     ],
     "Sensor Fusion": [
       "LiDAR-Camera Sensor Fusion System"
@@ -273,33 +281,39 @@
     ],
     "PLC Programming": [
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Ladder Logic": [
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "IEC 61131-3 Languages": [
-      "Vacuum Pick-and-Place Station"
+      "Vacuum Pick-and-Place Station",
+      "Automated Hot Water Tank Control System"
     ],
     "PID Tuning": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm",
+      "Automated Hot Water Tank Control System"
     ],
     "Industrial Automation": [
       "Assistant Engineer (Electromechanical)",
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Robotics & Automation": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Search and Rescue Robot",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm"
     ],
     "Mechanical Assembly & Coupling": [
       "Assistant Engineer (Electromechanical)",
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
-      "Search and Rescue Robot"
+      "Search and Rescue Robot",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Fault Isolation & Diagnostics": [
       "Self-Employed",
@@ -309,7 +323,8 @@
     "I/O Configuration": [
       "Assistant Engineer (Electromechanical)",
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Switchgears & Power Distribution": [
       "Self-Employed",
@@ -329,7 +344,8 @@
     ],
     "Circuit Design": [
       "Assistant Engineer (Electromechanical)",
-      "Regenerative Braking System"
+      "Regenerative Braking System",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Power Electronics": [
       "Assistant Engineer (Electromechanical)",
@@ -340,10 +356,11 @@
     ],
     "Kinematics (Forward/Inverse)": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm"
     ],
     "Direct Digital Control": [
-      "Vacuum Pick-and-Place Station"
+      "Vacuum Pick-and-Place Station",
+      "Automated Hot Water Tank Control System"
     ],
     "Pneumatic Systems": [
       "Vacuum Pick-and-Place Station",
@@ -351,7 +368,8 @@
     ],
     "Signal Mapping": [
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Object Detection": [
       "LiDAR-Camera Sensor Fusion System",
@@ -526,7 +544,7 @@
       "Drone Delivery Optimization via DoE & ANOVA",
       "Adhesive Hook Reliability Project",
       "Academic & English Language Support",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm"
     ],
     "Customer Service": [
       "Self-Employed",
@@ -569,7 +587,8 @@
       "Self-Employed",
       "Search and Rescue Robot",
       "Explorace - Large-Scale Campus Challenge Event",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Adaptability": [
       "Academic & English Language Support"

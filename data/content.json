@@ -518,6 +518,26 @@
       ]
     },
     {
+      "name": "Automated Hot Water Tank Control System",
+      "category": "academic",
+      "categoryLabel": "Automation and Process Control",
+      "body": "Designed and programmed an automated hot water tank cycle in ladder logic and Structured Text on OMRON CX-ONE, paired with a custom HMI. Level, temperature and flow sensors drove a continuous fill, heat and discharge loop on a 50 L tank held at a 45 L working volume, with 15 °C inlet water at 250 ml/s (roughly a 180 s turnover). Instead of switching the ~50 kW heater fully on and off, a PID loop (PIDAT instruction) modulated its output to offset the cooling from incoming water, holding the water at 65 °C ±1.5 °C as it discharged. The HMI showed live temperature, flow rate and volume on a process diagram, with controls to adjust the temperature and volume thresholds.",
+      "skills": [
+        "PLC Programming",
+        "OMRON CX-ONE",
+        "Ladder Logic",
+        "IEC 61131-3 Languages",
+        "PID Tuning",
+        "HMI Design",
+        "Sensors and Actuators",
+        "Instrumentation",
+        "Industrial Automation",
+        "I/O Configuration",
+        "Signal Mapping",
+        "Direct Digital Control"
+      ]
+    },
+    {
       "name": "Coin Measurement System",
       "category": "academic",
       "categoryLabel": "Computer Vision",
@@ -543,6 +563,21 @@
         "IoT",
         "Communication Protocols",
         "Microcontrollers"
+      ]
+    },
+    {
+      "name": "Automated Solar Irrigation & Smart Signage System",
+      "category": "personal",
+      "categoryLabel": "Renewable Energy and Sustainable Systems",
+      "body": "Designed and commissioned an autonomous solar-powered irrigation and LED signage system. Handled PV installation, custom PCB circuitry, mechanical coupling, and power storage, using repurposed components modified for compatibility. Improved water-flow efficiency and energy autonomy by approximately 60%.",
+      "skills": [
+        "Solar Power Systems",
+        "Electrical Power Systems",
+        "PCB Design",
+        "Circuit Design",
+        "Mechanical Assembly & Coupling",
+        "Electromechanics",
+        "Problem Solving"
       ]
     },
     {

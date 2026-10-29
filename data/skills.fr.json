@@ -206,16 +206,19 @@
     ],
     "OMRON CX-ONE": [
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "CODESYS": [],
     "Conception d'IHM (Interface Homme-Machine)": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Conception de circuits imprimés (PCB)": [
-      "Ingénieur assistant (Électromécanique)"
+      "Ingénieur assistant (Électromécanique)",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Conception de circuits analogiques": [
       "Ingénieur assistant (Électromécanique)",
@@ -224,14 +227,17 @@
     "Conditionnement de signal": [],
     "Systèmes électriques de puissance": [
       "Ingénieur assistant (Électromécanique)",
-      "Regenerative Braking System"
+      "Regenerative Braking System",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Systèmes d'énergie solaire": [
-      "Ingénieur assistant (Électromécanique)"
+      "Ingénieur assistant (Électromécanique)",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Électromécanique": [
       "Ingénieur assistant (Électromécanique)",
-      "Regenerative Braking System"
+      "Regenerative Braking System",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Commande de moteurs": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
@@ -243,12 +249,14 @@
       "Search and Rescue Robot",
       "Regenerative Braking System",
       "Automatic Plant Care System",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Instrumentation": [
       "Vacuum Pick-and-Place Station",
       "Automatic Plant Care System",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm (4-DOF)",
+      "Automated Hot Water Tank Control System"
     ],
     "Fusion de capteurs": [
       "LiDAR-Camera Sensor Fusion System"
@@ -273,23 +281,28 @@
     ],
     "Programmation d'automates industriels (API/PLC)": [
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Logique à contacts (Ladder)": [
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Langages IEC 61131-3": [
-      "Vacuum Pick-and-Place Station"
+      "Vacuum Pick-and-Place Station",
+      "Automated Hot Water Tank Control System"
     ],
     "Réglage PID": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
-      "Fruit Harvesting Robotic Arm (4-DOF)"
+      "Fruit Harvesting Robotic Arm (4-DOF)",
+      "Automated Hot Water Tank Control System"
     ],
     "Automatisation industrielle": [
       "Ingénieur assistant (Électromécanique)",
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Robotique et automatisation": [
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
@@ -299,7 +312,8 @@
     "Assemblage et couplage mécanique": [
       "Ingénieur assistant (Électromécanique)",
       "4-DOF Robotic Arm – Simulation, Fabrication and Control",
-      "Search and Rescue Robot"
+      "Search and Rescue Robot",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Diagnostic et isolement des pannes": [
       "Travailleur indépendant",
@@ -309,7 +323,8 @@
     "Configuration des entrées/sorties (E/S)": [
       "Ingénieur assistant (Électromécanique)",
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Appareillage électrique et distribution d'énergie": [
       "Travailleur indépendant",
@@ -329,7 +344,8 @@
     ],
     "Conception de circuits": [
       "Ingénieur assistant (Électromécanique)",
-      "Regenerative Braking System"
+      "Regenerative Braking System",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Électronique de puissance": [
       "Ingénieur assistant (Électromécanique)",
@@ -343,7 +359,8 @@
       "Fruit Harvesting Robotic Arm (4-DOF)"
     ],
     "Contrôle numérique direct": [
-      "Vacuum Pick-and-Place Station"
+      "Vacuum Pick-and-Place Station",
+      "Automated Hot Water Tank Control System"
     ],
     "Systèmes pneumatiques": [
       "Vacuum Pick-and-Place Station",
@@ -351,7 +368,8 @@
     ],
     "Cartographie des signaux": [
       "Vacuum Pick-and-Place Station",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Hot Water Tank Control System"
     ],
     "Détection d'objets": [
       "LiDAR-Camera Sensor Fusion System",
@@ -569,7 +587,8 @@
       "Travailleur indépendant",
       "Search and Rescue Robot",
       "Explorace - Large-Scale Campus Challenge Event",
-      "Automated Conveyor Sorting System"
+      "Automated Conveyor Sorting System",
+      "Automated Solar Irrigation & Smart Signage System"
     ],
     "Adaptabilité": [
       "Academic & English Language Support"

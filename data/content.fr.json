@@ -519,6 +519,26 @@
       ]
     },
     {
+      "name": "Automated Hot Water Tank Control System",
+      "category": "academic",
+      "categoryLabel": "Automatisation et contrôle de procédés",
+      "body": "Conception et programmation d'un cycle automatisé de chauffage d'eau sur réservoir en logique à contacts (ladder) et en texte structuré (ST) sous OMRON CX-ONE, accompagné d'une IHM sur mesure. Des capteurs de niveau, de température et de débit pilotaient une boucle continue de remplissage, de chauffe et de soutirage sur un réservoir de 50 L maintenu à un volume de travail de 45 L, avec de l'eau d'entrée à 15 °C et un débit de 250 ml/s (soit un renouvellement d'environ 180 s). Au lieu de commuter l'élément chauffant d'environ 50 kW en tout ou rien, une boucle PID (instruction PIDAT) modulait sa puissance pour compenser le refroidissement dû à l'eau entrante, maintenant l'eau à 65 °C ±1,5 °C pendant le soutirage. L'IHM affichait en temps réel la température, le débit et le volume sur un schéma du procédé, avec des commandes pour ajuster les seuils de température et de volume.",
+      "skills": [
+        "Programmation d'automates industriels (API/PLC)",
+        "OMRON CX-ONE",
+        "Logique à contacts (Ladder)",
+        "Langages IEC 61131-3",
+        "Réglage PID",
+        "Conception d'IHM (Interface Homme-Machine)",
+        "Capteurs et actionneurs",
+        "Instrumentation",
+        "Automatisation industrielle",
+        "Configuration des entrées/sorties (E/S)",
+        "Cartographie des signaux",
+        "Contrôle numérique direct"
+      ]
+    },
+    {
       "name": "Coin Measurement System",
       "category": "academic",
       "categoryLabel": "Vision par ordinateur",
@@ -544,6 +564,21 @@
         "Internet des objets (IoT)",
         "Protocoles de communication",
         "Microcontrôleurs"
+      ]
+    },
+    {
+      "name": "Automated Solar Irrigation & Smart Signage System",
+      "category": "personal",
+      "categoryLabel": "Énergies renouvelables et systèmes durables",
+      "body": "Conception et mise en service d'un système autonome d'irrigation et de signalisation LED alimenté par énergie solaire. Prise en charge de l'installation photovoltaïque (PV), de la circuiterie PCB sur mesure, de l'accouplement mécanique et du stockage d'énergie, en utilisant des composants réutilisés et modifiés pour en assurer la compatibilité. Amélioration de l'efficacité du débit d'eau et de l'autonomie énergétique d'environ 60 %.",
+      "skills": [
+        "Systèmes d'énergie solaire",
+        "Systèmes électriques de puissance",
+        "Conception de circuits imprimés (PCB)",
+        "Conception de circuits",
+        "Assemblage et couplage mécanique",
+        "Électromécanique",
+        "Résolution de problèmes"
       ]
     },
     {
